@@ -1,4 +1,4 @@
-name: creeper balance v1.3.1
+name: creeper balance v1.3.4
 unit: {
   quell-missile: {
     weapons: {
@@ -294,12 +294,14 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
+          creeperAmount: 100
         }
         xRand: 10
         yRand: 10
         shoot: {
           shotDelay: 5
         }
+        reload: 300
       }
       1: {
         bullet: {
@@ -327,12 +329,14 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
+          creeperAmount: 100
         }
         shoot: {
           shotDelay: 5
         }
         xRand: 10
         yRand: 10
+        reload: 300
       }
     }
     targetHighestCreeper: "true"
@@ -923,6 +927,7 @@ unit: {
           splashDamageRadius: 48
           hitEffect: blastExplosion
           splashDamage: 160
+          creeperAmount: 25
         }
       }
     }
@@ -1458,6 +1463,7 @@ unit: {
         reload: 24
         bullet: {
           killShooter: "true"
+          creeperAmount: 25000
         }
         minShootVelocity: 0
       }
@@ -1471,12 +1477,14 @@ unit: {
       0: {
         bullet: {
           killShooter: "true"
+          creeperAmount: 125
         }
         minShootVelocity: 0
       }
       1: {
         bullet: {
           killShooter: "true"
+          creeperAmount: 125
         }
         minShootVelocity: 0
       }
@@ -1718,32 +1726,6 @@ block: {
       向空中和地面目标发射大型穿甲子弹。 
       [cyan]石墨幽灵打单体带分裂弹，钍幽灵打群体，硫化物幽灵在没钍时打群体
       '''
-  }
-  slag-centrifuge: {
-    requirements: [
-      {
-        item: silicon
-        amount: 50
-      }
-      {
-        item: graphite
-        amount: 100
-      }
-      {
-        item: thorium
-        amount: 100
-      }
-    ]
-    consumes: {
-      remove: [
-        items
-        liquid
-      ]
-      liquid: {
-        liquid: slag
-        amount: 0.2
-      }
-    }
   }
   thorium-reactor: {
     powerProduction: 20
@@ -2364,18 +2346,52 @@ block: {
       }
     }
   }
-  ship-assembler: {
-    plans: {
-      1: {
-        requirements: {
-          0: {
-            amount: 12
-          }
-          1: {
-            amount: 40
-          }
-        }
+  basic-assembler-module: {
+    requirements: [
+      {
+        item: silicon
+        amount: 3000
       }
-    }
+      {
+        item: phase-fabric
+        amount: 1000
+      }
+      {
+        item: surge-alloy
+        amount: 1000
+      }
+      {
+        item: oxide
+        amount: 500
+      }
+      {
+        item: carbide
+        amount: 1500
+      }
+    ]
+  }
+  carbide-wall-large: {
+    requirements: [
+      {
+        item: thorium
+        amount: 48
+      }
+      {
+        item: phase-fabric
+        amount: 24
+      }
+      {
+        item: surge-alloy
+        amount: 24
+      }
+      {
+        item: oxide
+        amount: 12
+      }
+      {
+        item: carbide
+        amount: 24
+      }
+    ]
   }
 }
