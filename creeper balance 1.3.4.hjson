@@ -348,11 +348,33 @@ unit: {
       0: {
         bullet: {
           pierceCap: -1
-          hitEffect: hitBulletBig
-          damage: 420
+          damage: 200
+          type: ArtilleryBulletType
+          speed: 5
+          lifetime: 140
+          backRegion: missile-large-back
+          frontRegion: missile-large-back
+          sprite: missile-large-back
+          backColor: ff894bff
+          width: 20
+          height: 30
+          frontColor: ff894aff
+          shootEffect: scatheExplosionSmall
+          hitColor: ff7335ff
+          trailLength: 20
+          trailWidth: 7
+          despawnEffect: titanExplosionLarge
+          despawnHit: "true"
+          splashDamageRadius: 120
+          splashDamage: 200
+          hitEffect: titanSmokeLarge
+          ARCreeperDamageMultiplier: 5
         }
+        reload: 600
       }
     }
+    range: 700
+    maxRange: 700
   }
   toxopid: {
     creeperEvade: 0.9
