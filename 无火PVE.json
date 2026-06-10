@@ -1,0 +1,1 @@
+{"name":"无火PVE","block":{"interplanetary-accelerator":{"placeableLiquid":"true"},"overdrive-projector":{"phaseRangeBoost":0.0,"speedBoostPhase":0.0,"speedBoost":1.25},"overdrive-dome":{"phaseRangeBoost":0.0,"speedBoostPhase":0.0,"speedBoost":1.5,"requirements.+":[{"item":"oxide","amount":50.0},{"item":"carbide","amount":100.0}]}}}

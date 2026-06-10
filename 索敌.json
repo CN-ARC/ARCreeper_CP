@@ -1,0 +1,113 @@
+{
+    "name": "炮塔瞬间索敌+打深水",
+    "block": {
+        "duo": {
+            "targetInterval": 0.0
+        },
+        "scatter": {
+            "targetInterval": 0.0
+        },
+        "scorch": {
+            "targetInterval": 0.0
+        },
+        "hail": {
+            "targetInterval": 0.0
+        },
+        "wave": {
+            "targetInterval": 0.0
+        },
+        "lancer": {
+            "targetInterval": 0.0
+        },
+        "arc": {
+            "targetInterval": 0.0
+        },
+        "parallax": {
+            "targetInterval": 0.0
+        },
+        "swarmer": {
+            "targetInterval": 0.0
+        },
+        "salvo": {
+            "targetInterval": 0.0
+        },
+        "segment": {
+            "targetInterval": 0.0
+        },
+        "tsunami": {
+            "targetInterval": 0.0
+        },
+        "fuse": {
+            "targetInterval": 0.0
+        },
+        "ripple": {
+            "targetInterval": 0.0
+        },
+        "cyclone": {
+            "targetInterval": 0.0
+        },
+        "foreshadow": {
+            "targetInterval": 0.0
+        },
+        "spectre": {
+            "targetInterval": 0.0
+        },
+        "meltdown": {
+            "targetInterval": 0.0
+        },
+        "breach": {
+            "targetInterval": 0.0
+        },
+        "diffuse": {
+            "targetInterval": 0.0
+        },
+        "sublimate": {
+            "targetInterval": 0.0
+        },
+        "titan": {
+            "targetInterval": 0.0
+        },
+        "disperse": {
+            "targetInterval": 0.0
+        },
+        "afflict": {
+            "targetInterval": 0.0
+        },
+        "lustre": {
+            "targetInterval": 0.0
+        },
+        "scathe": {
+            "targetInterval": 0.0
+        },
+        "smite": {
+            "targetInterval": 0.0
+        },
+        "malign": {
+            "targetInterval": 0.0
+        },
+        "hail": {
+            "targetHighestCreeper": "true"
+        },
+        "lancer": {
+            "targetHighestCreeper": "true"
+        },
+        "fuse": {
+            "targetHighestCreeper": "true"
+        },
+        "ripple": {
+            "targetHighestCreeper": "true"
+        },
+        "foreshadow": {
+            "targetHighestCreeper": "true"
+        },
+        "meltdown": {
+            "targetHighestCreeper": "true"
+        },
+        "titan": {
+            "targetHighestCreeper": "true"
+        },
+        "lustre": {
+            "targetHighestCreeper": "true"
+        }
+    }
+}
