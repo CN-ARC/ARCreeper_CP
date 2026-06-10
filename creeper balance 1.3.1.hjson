@@ -1,4 +1,4 @@
-name: creeper balance v1.3.1
+name: creeper balanceLC v1.3.3
 unit: {
   quell-missile: {
     weapons: {
@@ -280,26 +280,24 @@ unit: {
           frontColor: f5ecffff
           width: 12
           height: 22
-          damage: 140
-          splashDamage: 140
-          splashDamageRadius: 64
-          followAimSpeed: 6
           trailColor: 6d55beff
           trailWidth: 3
           trailLength: 12
           hitEffect: scatheExplosionSmall
           hitColor: a88eff41
           randomAngleOffset: 5
-          spawnBulletRandomSpread: 5
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
+          creeperAmount: 100
+          creeperReleaseOnRemove: 250
         }
         xRand: 10
         yRand: 10
         shoot: {
           shotDelay: 5
         }
+        reload: 600
       }
       1: {
         bullet: {
@@ -327,28 +325,122 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
+          creeperAmount: 100
+          creeperReleaseOnRemove: 250
+          bullet: {
+            type: BasicBulletType
+            speed: 5
+            lifetime: 96
+            backRegion: missile-large-back
+            frontRegion: missile-large
+            sprite: missile-large
+            backColor: 6d55beff
+            frontColor: f5ecffff
+            width: 12
+            height: 22
+            damage: 300
+            splashDamage: 300
+            splashDamageRadius: 64
+            followAimSpeed: 6
+            trailColor: 6d55beff
+            trailWidth: 3
+            trailLength: 12
+            hitEffect: scatheExplosionSmall
+            hitColor: a88eff41
+            randomAngleOffset: 5
+            spawnBulletRandomSpread: 5
+            collidesAir: "false"
+            hitSize: 8
+            drawSize: 120
+            creeperAmount: 100
+            creeperReleaseOnRemove: 250
+          }
+          xRand: 10
+          yRand: 10
+          shoot: {
+            shotDelay: 5
+          }
+          reload: 600
         }
         shoot: {
           shotDelay: 5
         }
         xRand: 10
         yRand: 10
+        reload: 600
       }
     }
-    targetHighestCreeper: "true"
+    description: 发射带少量伤害和AC的导弹，支援型单位。
   }
   conquer: {
-    creeperEvade: 0.75
+    creeperEvade: 0.99
     targetHighestCreeper: "true"
     weapons: {
       0: {
         bullet: {
           pierceCap: -1
-          hitEffect: hitBulletBig
-          damage: 420
+          hitEffect: {
+            type: MultiEffect
+            effects: [
+              titanExplosion
+              titanSmoke
+            ]
+          }
+          damage: 2000
+          bulletInterval: -1
+          intervalBullets: -1
+          splashDamageRadius: 120
+          type: ArtilleryBulletType
+          lifetime: 400
+          speed: 2
+          drawSize: 160
+          shootEffect: shootTitan
+          smokeEffect: shootSmokeTitan
+          hitSound: explosionTitan
+          ammoMultiplier: 1
+          scaledSplashDamage: "true"
+          knockback: 2
+          status: blasted
+          despawnHit: "true"
+          despawnShake: 7
+          hitColor: "#f49d7cff"
+          trailColor: "#f49d7cff"
+          trailEffect: steam
+          trailLength: 32
+          trailWidth: 3.3499999046325684
+          trailSinMag: 0.5
+          trailSinScl: 2.5
+          lightningType: damageLightningGround
+          lightRadius: 20
+          backColor: "#f49d7cff"
+          frontColor: "#ffffffff"
+          width: 17
+          height: 19
+          shrinkX: 0.20000000298023224
+          shrinkY: 0.10000000149011612
+          backRegion: shell-back
+          frontRegion: shell
+          fragVelocityMin: 0.6
+          fragLifeMax: 1.2
+          fragOffsetMin: 1.5
+          despawnEffect: none
+          fragVelocityMax: 1.2
+          fragLifeMin: 0.8
+          fragBullets: 0
+          splashDamage: 200
+          range: 800
+          ARCreeperDamageMultiplier: 15
         }
+        reload: 900
+        targetInterval: 60
+        aimChangeSpeed: 60
+        rotateSpeed: 1
+        inaccuracy: 10
+        shootWarmupSpeed: 0.01
       }
     }
+    range: 800
+    maxRange: 800
   }
   toxopid: {
     creeperEvade: 0.9
@@ -923,6 +1015,7 @@ unit: {
           splashDamageRadius: 48
           hitEffect: blastExplosion
           splashDamage: 160
+          creeperAmount: 25
         }
       }
     }
@@ -1458,6 +1551,7 @@ unit: {
         reload: 24
         bullet: {
           killShooter: "true"
+          creeperAmount: 25000
         }
         minShootVelocity: 0
       }
@@ -1471,12 +1565,14 @@ unit: {
       0: {
         bullet: {
           killShooter: "true"
+          creeperAmount: 125
         }
         minShootVelocity: 0
       }
       1: {
         bullet: {
           killShooter: "true"
+          creeperAmount: 125
         }
         minShootVelocity: 0
       }
@@ -1575,16 +1671,6 @@ block: {
     requirements: {
       0: {
         amount: 80
-      }
-    }
-  }
-  ship-fabricator: {
-    requirements: {
-      0: {
-        amount: 60
-      }
-      1: {
-        amount: 120
       }
     }
   }
@@ -2315,28 +2401,6 @@ block: {
     }
   }
   exponential-reconstructor: {
-    requirements: [
-      {
-        item: lead
-        amount: 2000
-      }
-      {
-        item: titanium
-        amount: 2000
-      }
-      {
-        item: thorium
-        amount: 750
-      }
-      {
-        item: silicon
-        amount: 1000
-      }
-      {
-        item: plastanium
-        amount: 450
-      }
-    ]
     consumes: {
       remove: [
         items
@@ -2364,18 +2428,161 @@ block: {
       }
     }
   }
-  ship-assembler: {
-    plans: {
+  large-constructor: {
+    requirements: {
+      0: {
+        amount: 1000
+      }
+      3: {
+        amount: 400
+      }
+      2: {
+        amount: 2000
+      }
       1: {
-        requirements: {
-          0: {
-            amount: 12
-          }
-          1: {
-            amount: 40
-          }
-        }
+        amount: 1500
       }
     }
+    requirements.+: [
+      {
+        item: carbide
+        amount: 300
+      }
+    ]
+    description: 构筑 3x3 至 4x4 大小的方块 /n代表着eT4构造阶段
+  }
+  tank-assembler: {
+    requirements: {
+      2: {
+        amount: 20
+      }
+      3: {
+        amount: 10
+      }
+      0: {
+        amount: 200
+      }
+      1: {
+        amount: 100
+      }
+    }
+    health: 250
+    plans: {
+      1: {
+        requirements: [
+          {
+            item: scathe
+            amount: 5
+          }
+        ]
+      }
+      0: {
+        requirements: [
+          {
+            item: lustre
+            amount: 3
+          }
+        ]
+      }
+    }
+  }
+  ship-assembler: {
+    health: 360
+    requirements: {
+      0: {
+        amount: 100
+      }
+      1: {
+        amount: 150
+      }
+      2: {
+        amount: 50
+      }
+      3: {
+        amount: 20
+      }
+      4: {
+        amount: 10
+      }
+    }
+    plans: {
+      1: {
+        requirements: [
+          {
+            item: scathe
+            amount: 5
+          }
+        ]
+      }
+      0: {
+        requirements: [
+          {
+            item: lustre
+            amount: 3
+          }
+        ]
+      }
+    }
+  }
+  mech-assembler: {
+    health: 360
+    requirements: {
+      0: {
+        amount: 100
+      }
+      1: {
+        amount: 150
+      }
+      2: {
+        amount: 50
+      }
+      3: {
+        amount: 20
+      }
+      4: {
+        amount: 20
+      }
+    }
+    plans: {
+      1: {
+        requirements: [
+          {
+            item: scathe
+            amount: 5
+          }
+        ]
+      }
+      0: {
+        requirements: [
+          {
+            item: lustre
+            amount: 3
+          }
+        ]
+      }
+    }
+  }
+  basic-assembler-module: {
+    requirements: {
+      0: {
+        amount: 5000
+      }
+      1: {
+        amount: 1000
+      }
+      2: {
+        amount: 1000
+      }
+      3: {
+        amount: 1000
+      }
+    }
+    requirements.+: [
+      {
+        item: tungsten
+        amount: 4000
+      }
+    ]
+    description: 当放置在构造边界旁边时，增加输出等级。需要电力。可以用作载荷输入。/n代表着eT5构造阶段
   }
 }
