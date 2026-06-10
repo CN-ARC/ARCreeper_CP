@@ -373,7 +373,7 @@ unit: {
     description: 发射带少量伤害和AC的导弹，支援型单位。
   }
   conquer: {
-    creeperEvade: 0.99
+    creeperEvade: 0.75
     targetHighestCreeper: "true"
     weapons: {
       0: {
@@ -429,14 +429,9 @@ unit: {
           fragBullets: 0
           splashDamage: 200
           range: 800
-          ARCreeperDamageMultiplier: 15
+          ARCreeperDamageMultiplier: 10
         }
         reload: 900
-        targetInterval: 60
-        aimChangeSpeed: 60
-        rotateSpeed: 1
-        inaccuracy: 10
-        shootWarmupSpeed: 0.01
       }
     }
     range: 800
