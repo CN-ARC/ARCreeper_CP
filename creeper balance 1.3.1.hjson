@@ -429,7 +429,7 @@ unit: {
           fragBullets: 0
           splashDamage: 200
           range: 800
-          ARCreeperDamageMultiplier: 10
+          ARCreeperDamageMultiplier: 25
         }
         reload: 900
       }
@@ -598,10 +598,9 @@ unit: {
     creeperEvade: 0.92
     weapons.+: [
       {
-        reload: 480
+        reload: 900
         bullet: {
-          speed: 4
-          lifetime: 120
+          lifetime: 300
           sprite: large-bomb
           width: 100
           height: 100
@@ -615,47 +614,18 @@ unit: {
           hitEffect: greenBomb
           despawnEffect: greenBomb
           damage: 0
-          splashDamage: 480
-          splashDamageRadius: 100
-          healPercent: 15
+          splashDamageRadius: 60
           type: ArtilleryBulletType
           keepVelocity: "false"
+          ARCreeperAppliedMultiplier: -0.5
         }
-        y: -12
-        x: -60
+        y: 0
+        x: 0
         ignoreRotation: "true"
         rotate: "true"
         ejectEffect: greenBomb
-      }
-      {
-        reload: 480
-        bullet: {
-          speed: 4
-          lifetime: 120
-          sprite: large-bomb
-          width: 100
-          height: 100
-          backColor: 97ffa8ff
-          frontColor: 97ffa8ff
-          shrinkY: 0
-          spin: 10
-          shootEffect: teleportOut
-          trailEffect: squareWaveEffect
-          trailColor: 97ffa8ff
-          hitEffect: greenBomb
-          despawnEffect: greenBomb
-          damage: 0
-          splashDamage: 480
-          splashDamageRadius: 100
-          healPercent: 15
-          type: ArtilleryBulletType
-          keepVelocity: "false"
-        }
-        y: -12
-        x: 60
-        ignoreRotation: "true"
-        rotate: "true"
-        ejectEffect: greenBomb
+        name: 反转炮
+        autoTargetHighestCreeper: "true"
       }
     ]
     targetHighestCreeper: "true"
