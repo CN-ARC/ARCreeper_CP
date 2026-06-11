@@ -294,7 +294,7 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
-          creeperAmount: 100
+          creeperReleaseOnRemove: 100
         }
         xRand: 10
         yRand: 10
@@ -329,7 +329,7 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
-          creeperAmount: 100
+          creeperReleaseOnRemove: 100
         }
         shoot: {
           shotDelay: 5
@@ -368,7 +368,7 @@ unit: {
           splashDamageRadius: 120
           splashDamage: 200
           hitEffect: titanSmokeLarge
-          ARCreeperDamageMultiplier: 5
+          ARCreeperDamageMultiplier: 10
         }
         reload: 600
       }
@@ -949,7 +949,7 @@ unit: {
           splashDamageRadius: 48
           hitEffect: blastExplosion
           splashDamage: 160
-          creeperAmount: 25
+          creeperReleaseOnRemove: 50
         }
       }
     }
@@ -1485,7 +1485,7 @@ unit: {
         reload: 24
         bullet: {
           killShooter: "true"
-          creeperAmount: 25000
+          creeperReleaseOnRemove: 25000
         }
         minShootVelocity: 0
       }
@@ -1499,14 +1499,14 @@ unit: {
       0: {
         bullet: {
           killShooter: "true"
-          creeperAmount: 125
+          creeperReleaseOnRemove: 125
         }
         minShootVelocity: 0
       }
       1: {
         bullet: {
           killShooter: "true"
-          creeperAmount: 125
+          creeperReleaseOnRemove: 125
         }
         minShootVelocity: 0
       }
