@@ -1,4 +1,4 @@
-name: creeper balance v1.3.4
+name: creeper balance v1.3.5
 unit: {
   quell-missile: {
     weapons: {
@@ -48,14 +48,14 @@ unit: {
             backRegion: large-bomb-back
             frontRegion: large-bomb
             splashDamage: 35
-            ARCreeperDamageMultiplier: 4
+            creeperDamageMultiplier: 4
           }
           lightningDelay: 4
           lightningAngleRand: 0
           lightningLengthRand: 0
           lightningCone: 360
           lightningLength: 3
-          ARCreeperDamageMultiplier: 2
+          creeperDamageMultiplier: 2
         }
       }
     }
@@ -294,7 +294,7 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
-          creeperReleaseOnRemove: 100
+          creeperOnRemove: 100
         }
         xRand: 10
         yRand: 10
@@ -329,7 +329,7 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
-          creeperReleaseOnRemove: 100
+          creeperOnRemove: 100
         }
         shoot: {
           shotDelay: 5
@@ -368,7 +368,7 @@ unit: {
           splashDamageRadius: 120
           splashDamage: 200
           hitEffect: titanSmokeLarge
-          ARCreeperDamageMultiplier: 10
+          creeperDamageMultiplier: 10
         }
         reload: 600
       }
@@ -949,7 +949,7 @@ unit: {
           splashDamageRadius: 48
           hitEffect: blastExplosion
           splashDamage: 160
-          creeperReleaseOnRemove: 50
+          creeperOnRemove: 50
         }
       }
     }
@@ -1485,7 +1485,7 @@ unit: {
         reload: 24
         bullet: {
           killShooter: "true"
-          creeperReleaseOnRemove: 25000
+          creeperOnRemove: 50000
         }
         minShootVelocity: 0
       }
@@ -1499,14 +1499,14 @@ unit: {
       0: {
         bullet: {
           killShooter: "true"
-          creeperReleaseOnRemove: 125
+          creeperOnRemove: 125
         }
         minShootVelocity: 0
       }
       1: {
         bullet: {
           killShooter: "true"
-          creeperReleaseOnRemove: 125
+          creeperOnRemove: 125
         }
         minShootVelocity: 0
       }
@@ -2266,12 +2266,12 @@ block: {
       }
     ]
     shootType: {
-      ARCreeperDamageMultiplier: 0.5
       fragBullet: {
-        ARCreeperDamageMultiplier: 0.5
         pierceCap: -1
         damage: 15
+        creeperDamageMultiplier: 0.5
       }
+      creeperDamageMultiplier: 0.5
     }
   }
   neoplasia-reactor: {
@@ -2280,41 +2280,41 @@ block: {
   }
   titan: {
     ammoTypes: {
-      thorium: {
-        ARCreeperDamageMultiplier: 0.4
-      }
       oxide: {
-        ARCreeperDamageMultiplier: 0.5
         fragBullet: {
-          ARCreeperDamageMultiplier: 0.8
+          creeperDamageMultiplier: 0.5
         }
+        creeperDamageMultiplier: 0.5
       }
       carbide: {
-        ARCreeperDamageMultiplier: 0.8
         fragBullet: {
-          ARCreeperDamageMultiplier: 0.5
+          creeperDamageMultiplier: 0.8
         }
+        creeperDamageMultiplier: 0.8
+      }
+      thorium: {
+        creeperDamageMultiplier: 0.4
       }
     }
   }
   afflict: {
     shootType: {
-      ARCreeperDamageMultiplier: 0.5
       intervalBullet: {
-        ARCreeperDamageMultiplier: 0.5
+        creeperDamageMultiplier: 0.5
       }
+      creeperDamageMultiplier: 0.5
       fragBullet: {
-        ARCreeperDamageMultiplier: 0.5
+        creeperDamageMultiplier: 0.5
       }
     }
   }
   smite: {
     ammoTypes: {
       surge-alloy: {
-        ARCreeperDamageMultiplier: 0.3
         intervalBullet: {
-          ARCreeperDamageMultiplier: 0.3
+          creeperDamageMultiplier: 0.3
         }
+        creeperDamageMultiplier: 0.3
       }
     }
   }
