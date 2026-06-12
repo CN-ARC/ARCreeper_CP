@@ -48,14 +48,14 @@ unit: {
             backRegion: large-bomb-back
             frontRegion: large-bomb
             splashDamage: 35
-            ARCreeperDamageMultiplier: 4
+            creeperDamageMultiplier: 4
           }
           lightningDelay: 4
           lightningAngleRand: 0
           lightningLengthRand: 0
           lightningCone: 360
           lightningLength: 3
-          ARCreeperDamageMultiplier: 2
+          creeperDamageMultiplier: 2
         }
       }
     }
@@ -290,7 +290,7 @@ unit: {
           hitSize: 8
           drawSize: 120
           creeperAmount: 100
-          creeperReleaseOnRemove: 250
+          creeperOnRemove: 250
         }
         xRand: 10
         yRand: 10
@@ -326,7 +326,7 @@ unit: {
           hitSize: 8
           drawSize: 120
           creeperAmount: 100
-          creeperReleaseOnRemove: 250
+          creeperOnRemove: 250
           bullet: {
             type: BasicBulletType
             speed: 5
@@ -353,7 +353,7 @@ unit: {
             hitSize: 8
             drawSize: 120
             creeperAmount: 100
-            creeperReleaseOnRemove: 250
+            creeperOnRemove: 250
           }
           xRand: 10
           yRand: 10
@@ -429,7 +429,7 @@ unit: {
           fragBullets: 0
           splashDamage: 200
           range: 800
-          ARCreeperDamageMultiplier: 25
+          creeperDamageMultiplier: 25
         }
         reload: 900
       }
@@ -614,10 +614,10 @@ unit: {
           hitEffect: greenBomb
           despawnEffect: greenBomb
           damage: 0
-          splashDamageRadius: 60
+          splashDamageRadius: 40
           type: ArtilleryBulletType
           keepVelocity: "false"
-          ARCreeperAppliedMultiplier: -0.5
+          creeperAppliedMultiplier: -0.5
         }
         y: 0
         x: 0
@@ -625,7 +625,6 @@ unit: {
         rotate: "true"
         ejectEffect: greenBomb
         name: 反转炮
-        autoTargetHighestCreeper: "true"
       }
     ]
     targetHighestCreeper: "true"
@@ -2313,9 +2312,9 @@ block: {
       }
     ]
     shootType: {
-      ARCreeperDamageMultiplier: 0.5
+      creeperDamageMultiplier: 0.5
       fragBullet: {
-        ARCreeperDamageMultiplier: 0.5
+        creeperDamageMultiplier: 0.5
         pierceCap: -1
         damage: 15
       }
@@ -2328,39 +2327,39 @@ block: {
   titan: {
     ammoTypes: {
       thorium: {
-        ARCreeperDamageMultiplier: 0.4
+        creeperDamageMultiplier: 0.4
       }
       oxide: {
-        ARCreeperDamageMultiplier: 0.5
+        creeperDamageMultiplier: 0.5
         fragBullet: {
-          ARCreeperDamageMultiplier: 0.8
+          creeperDamageMultiplier: 0.8
         }
       }
       carbide: {
-        ARCreeperDamageMultiplier: 0.8
+        creeperDamageMultiplier: 0.8
         fragBullet: {
-          ARCreeperDamageMultiplier: 0.5
+          creeperDamageMultiplier: 0.5
         }
       }
     }
   }
   afflict: {
     shootType: {
-      ARCreeperDamageMultiplier: 0.5
+      creeperDamageMultiplier: 0.5
       intervalBullet: {
-        ARCreeperDamageMultiplier: 0.5
+        creeperDamageMultiplier: 0.5
       }
       fragBullet: {
-        ARCreeperDamageMultiplier: 0.5
+        creeperDamageMultiplier: 0.5
       }
     }
   }
   smite: {
     ammoTypes: {
       surge-alloy: {
-        ARCreeperDamageMultiplier: 0.3
+        creeperDamageMultiplier: 0.3
         intervalBullet: {
-          ARCreeperDamageMultiplier: 0.3
+          creeperDamageMultiplier: 0.3
         }
       }
     }
