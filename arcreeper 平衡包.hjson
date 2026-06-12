@@ -48,14 +48,14 @@ unit: {
             backRegion: large-bomb-back
             frontRegion: large-bomb
             splashDamage: 35
-            ARCreeperDamageMultiplier: 4
+            creeperDamageMultiplier: 4
           }
           lightningDelay: 4
           lightningAngleRand: 0
           lightningLengthRand: 0
           lightningCone: 360
           lightningLength: 3
-          ARCreeperDamageMultiplier: 2
+          creeperDamageMultiplier: 2
         }
       }
     }
@@ -932,7 +932,7 @@ unit: {
     mineSpeed: 2
     defaultCommand: mine
     creeperEvade: 1
-    description: 发射激光弹攻击敌人并修复己方建筑。能够助推。\n[gold]能够自动开采铜和铅。
+    description: "发射激光弹攻击敌人并修复己方建筑。能够助推。\n[gold]能够自动开采铜和铅"
     commands.+: [
       mine
     ]
@@ -959,7 +959,7 @@ unit: {
     commands.+: [
       move
     ]
-    description: 发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。/n[gold]能够挖掘钍。
+    description: "发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。/n[gold]能够挖掘钍。"
     mineRange: 160
     itemCapacity: 300
   }
@@ -2239,9 +2239,9 @@ block: {
       }
     ]
     shootType: {
-      ARCreeperDamageMultiplier: 0.5
+      creeperDamageMultiplier: 0.5
       fragBullet: {
-        ARCreeperDamageMultiplier: 0.5
+        creeperDamageMultiplier: 0.5
         pierceCap: -1
         damage: 15
       }
@@ -2254,39 +2254,39 @@ block: {
   titan: {
     ammoTypes: {
       thorium: {
-        ARCreeperDamageMultiplier: 0.4
+        creeperDamageMultiplier: 0.4
       }
       oxide: {
-        ARCreeperDamageMultiplier: 0.5
+        creeperDamageMultiplier: 0.5
         fragBullet: {
-          ARCreeperDamageMultiplier: 0.8
+          creeperDamageMultiplier: 0.8
         }
       }
       carbide: {
-        ARCreeperDamageMultiplier: 0.8
+        creeperDamageMultiplier: 0.8
         fragBullet: {
-          ARCreeperDamageMultiplier: 0.5
+          creeperDamageMultiplier: 0.5
         }
       }
     }
   }
   afflict: {
     shootType: {
-      ARCreeperDamageMultiplier: 0.5
+      creeperDamageMultiplier: 0.5
       intervalBullet: {
-        ARCreeperDamageMultiplier: 0.5
+        creeperDamageMultiplier: 0.5
       }
       fragBullet: {
-        ARCreeperDamageMultiplier: 0.5
+        creeperDamageMultiplier: 0.5
       }
     }
   }
   smite: {
     ammoTypes: {
       surge-alloy: {
-        ARCreeperDamageMultiplier: 0.3
+        creeperDamageMultiplier: 0.3
         intervalBullet: {
-          ARCreeperDamageMultiplier: 0.3
+          creeperDamageMultiplier: 0.3
         }
       }
     }
