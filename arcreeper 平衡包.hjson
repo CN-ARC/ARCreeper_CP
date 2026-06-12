@@ -2210,7 +2210,7 @@ block: {
         amount: 300
       }
     ]
-    description: 构筑 3x3 至 4x4 大小的方块 /n代表着eT4构造阶段
+    description: 构筑 3x3 至 4x4 大小的方块 \n代表着eT4构造阶段
   }
   tank-assembler: {
     requirements: {
@@ -2344,6 +2344,6 @@ block: {
         amount: 4000
       }
     ]
-    description: 当放置在构造边界旁边时，增加输出等级。需要电力。可以用作载荷输入。/n代表着eT5构造阶段
+    description: 当放置在构造边界旁边时，增加输出等级。需要电力。可以用作载荷输入。\n代表着eT5构造阶段
   }
 }
