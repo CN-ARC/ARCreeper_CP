@@ -161,6 +161,26 @@ block: {
     }
     description: 以相对高额的造价持续产生科技
   }
+  reinforced-liquid-tank: {
+    requirements: {
+      0: {
+        amount: 200
+      }
+      1: {
+        amount: 100
+      }
+    }
+    requirements.+: [
+      {
+        item: oxide
+        amount: 25
+      }
+      {
+        item: carbide
+        amount: 50
+      }
+    ]
+  }
 }
 unit: {
   evoke: {
@@ -199,7 +219,7 @@ status: {
   spore-slowed: {
     reloadMultiplier: 0.75
     buildSpeedMultiplier: 0.5
-    damageMultiplier: 0.75
+    damageMultiplier: 0.5
     healthMultiplier: 0.5
     speedMultiplier: 0.75
   }
