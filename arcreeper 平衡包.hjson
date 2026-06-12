@@ -1359,21 +1359,68 @@ unit: {
     targetHighestCreeper: "true"
   }
   anthicus: {
-    targetHighestCreeper: "true"
-  }
-  anthicus-missile: {
-    targetHighestCreeper: "true"
-    immunities.+: [
-      spore-slowed
-    ]
     weapons: {
       0: {
         bullet: {
+          type: BasicBulletType
+          speed: 5
+          shootEffect: sparkShoot
+          smokeEffect: shootSmokeTitan
+          hitColor: 8ba8e8a1
+          lightningType: damageLightningGround
+          lightRadius: 20
+          lifetime: 65
+          backRegion: missile-large-back
+          frontRegion: missile-large
+          sprite: missile-large
+          backColor: 5784e8ff
+          frontColor: dde8ffff
+          width: 12
+          height: 22
+          splashDamage: 140
+          splashDamageRadius: 32
+          trailColor: 8ba8e8ff
+          trailWidth: 3
+          trailLength: 12
+          hitEffect: titanExplosionFrag
+          randomAngleOffset: 5
+          spawnBulletRandomSpread: 5
+          hitSize: 8
+          drawSize: 120
+          creeperOnRemove: 1
+        }
+      }
+      1: {
+        bullet: {
+          type: BasicBulletType
+          speed: 5
+          shootEffect: sparkShoot
+          smokeEffect: shootSmokeTitan
+          hitColor: 8ba8e8a1
+          lightningType: damageLightningGround
+          lightRadius: 20
+          lifetime: 65
+          backRegion: missile-large-back
+          frontRegion: missile-large
+          sprite: missile-large
+          backColor: 5784e8ff
+          frontColor: dde8ffff
+          width: 12
+          height: 22
+          splashDamage: 140
+          splashDamageRadius: 32
+          trailColor: 8ba8e8ff
+          trailWidth: 3
+          trailLength: 12
+          hitEffect: titanExplosionFrag
+          randomAngleOffset: 5
+          spawnBulletRandomSpread: 5
+          hitSize: 8
+          drawSize: 120
           creeperOnRemove: 1
         }
       }
     }
-    health: 10
   }
   arkyid: {
     targetHighestCreeper: "true"
