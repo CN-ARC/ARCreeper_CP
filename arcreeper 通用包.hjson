@@ -195,3 +195,12 @@ liquid: {
     hidden: "false"
   }
 }
+status: {
+  spore-slowed: {
+    reloadMultiplier: 0.75
+    buildSpeedMultiplier: 0.5
+    damageMultiplier: 0.75
+    healthMultiplier: 0.5
+    speedMultiplier: 0.75
+  }
+}
