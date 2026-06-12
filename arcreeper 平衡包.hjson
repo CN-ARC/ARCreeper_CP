@@ -71,23 +71,22 @@ unit: {
     weapons: {
       0: {
         bullet: {
-          splashDamageRadius: 32
-          creeperDamageMultiplier: 2
           range: 240
           lifetime: 20
         }
-        targetInterval: 0
       }
       1: {
         bullet: {
-          splashDamageRadius: 32
-          creeperDamageMultiplier: 2
           range: 240
           lifetime: 20
         }
-        targetInterval: 0
       }
     }
+    description:
+      '''
+      发向敌人快速发射大型穿透子弹。
+      [gold]略增加转头速度和射程
+      '''
   }
   disrupt: {
     creeperEvade: 0.75
@@ -484,144 +483,6 @@ unit: {
   }
   eclipse: {
     creeperEvade: 0.75
-    weapons: {
-      0: {
-        bullet: {
-          type: FlakBulletType
-          speed: 8
-          damage: 70
-          hitSize: 7
-          drawSize: 192
-          hitEffect: hitSquaresColor
-          despawnEffect: hitBulletColor
-          shootEffect: shootSmokeSquareBig
-          smokeEffect: shootSmokeDisperse
-          ammoMultiplier: 1
-          buildingDamageMultiplier: 0.30000001192092896
-          splashDamage: 0
-          collidesGround: "true"
-          range: 320
-          despawnHit: "true"
-          despawnShake: 3
-          fragBullet: {
-            type: LaserBulletType
-            lifetime: 22
-            damage: 15
-            drawSize: 400
-            optimalLifeFract: 1
-            hitEffect: hitLancer
-            buildingDamageMultiplier: 0.25
-            range: 120
-            lightRadius: 20
-            colors: [
-              d3c67066
-              d3c870ff
-              "#ffffffff"
-            ]
-            length: 120
-            width: 19
-            sideLength: 40
-            sideWidth: 1
-            sideAngle: 175
-          }
-          fragRandomSpread: 0
-          intervalRandomSpread: 0
-          hitColor: fffc87ff
-          trailColor: d3a670ff
-          trailInterval: 3
-          trailEffect: colorSpark
-          trailRotation: "true"
-          trailLength: 12
-          trailWidth: 3
-          homingPower: 0.17000000178813934
-          homingRange: 160
-          homingDelay: 19
-          lightningColor: d3c870ff
-          lightRadius: 35
-          backColor: d3bd70ff
-          frontColor: "#ffffffff"
-          width: 12
-          height: 22
-          sprite: missile-large
-          backRegion: missile-large-back
-          frontRegion: missile-large
-          explodeRange: 100
-          explodeDelay: 0
-          flakInterval: 20
-        }
-        reload: 15
-        inaccuracy: 15
-        rotateSpeed: 6
-      }
-      1: {
-        bullet: {
-          type: FlakBulletType
-          speed: 8
-          damage: 70
-          hitSize: 7
-          drawSize: 192
-          hitEffect: hitSquaresColor
-          despawnEffect: hitBulletColor
-          shootEffect: shootSmokeSquareBig
-          smokeEffect: shootSmokeDisperse
-          ammoMultiplier: 1
-          buildingDamageMultiplier: 0.30000001192092896
-          splashDamage: 0
-          collidesGround: "true"
-          range: 320
-          despawnHit: "true"
-          despawnShake: 3
-          fragBullet: {
-            type: LaserBulletType
-            lifetime: 22
-            damage: 15
-            drawSize: 400
-            optimalLifeFract: 1
-            hitEffect: hitLancer
-            buildingDamageMultiplier: 0.25
-            range: 120
-            lightRadius: 20
-            colors: [
-              d3c67066
-              d3c870ff
-              "#ffffffff"
-            ]
-            length: 120
-            width: 19
-            sideLength: 40
-            sideWidth: 1
-            sideAngle: 175
-          }
-          fragRandomSpread: 0
-          intervalRandomSpread: 0
-          hitColor: fffc87ff
-          trailColor: d3a670ff
-          trailInterval: 3
-          trailEffect: colorSpark
-          trailRotation: "true"
-          trailLength: 12
-          trailWidth: 3
-          homingPower: 0.17000000178813934
-          homingRange: 160
-          homingDelay: 19
-          lightningColor: d3c870ff
-          lightRadius: 35
-          backColor: d3bd70ff
-          frontColor: "#ffffffff"
-          width: 12
-          height: 22
-          sprite: missile-large
-          backRegion: missile-large-back
-          frontRegion: missile-large
-          explodeRange: 100
-          explodeDelay: 0
-          flakInterval: 20
-        }
-        reload: 15
-        inaccuracy: 15
-        rotateSpeed: 6
-      }
-    }
     range: 240
     maxRange: 320
   }
@@ -797,9 +658,13 @@ unit: {
     }
   }
   crawler: {
-    weapons.0.bullet: {
-      hitEffect: blastExplosion
-      creeperOnRemove: 25
+    weapons: {
+      0: {
+        bullet: {
+          hitEffect: blastExplosion
+          creeperOnRemove: 25
+        }
+      }
     }
     description: "[gold]自爆，造成伤害，并产生少量水"
   }
@@ -812,7 +677,11 @@ unit: {
     mineSpeed: 2
     defaultCommand: mine
     creeperEvade: 1
-    description: "发射激光弹攻击敌人并修复己方建筑。能够助推。\n[gold]能够自动开采铜和铅"
+    description:
+      '''
+      发射激光弹攻击敌人并修复己方建筑。能够助推。
+      [gold]能够自动开采铜和铅
+      '''
     commands.+: [
       mine
     ]
@@ -839,7 +708,11 @@ unit: {
     commands.+: [
       move
     ]
-    description: "发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。\n[gold]能够挖掘钍。"
+    description:
+      '''
+      发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。
+      [gold]能够挖掘钍。
+      '''
     mineRange: 160
     itemCapacity: 300
   }
@@ -1406,14 +1279,38 @@ unit: {
       [blue]四倍火力，四倍快乐。
       '''
   }
-  scathe-missile-surge-split.weapons.0.bullet.creeperOnRemove: 100
-  scathe-missile-surge: {
+  scathe-missile-surge-split: {
     weapons: {
-      0.bullet.creeperOnRemove: 300
-      1.bullet.creeperOnRemove: 300
+      0: {
+        bullet: {
+          creeperOnRemove: 100
+        }
+      }
     }
   }
-  scathe-missile.weapons.0.bullet.creeperOnRemove: 500
+  scathe-missile-surge: {
+    weapons: {
+      0: {
+        bullet: {
+          creeperOnRemove: 300
+        }
+      }
+      1: {
+        bullet: {
+          creeperOnRemove: 300
+        }
+      }
+    }
+  }
+  scathe-missile: {
+    weapons: {
+      0: {
+        bullet: {
+          creeperOnRemove: 500
+        }
+      }
+    }
+  }
 }
 block: {
   tetrative-reconstructor: {
