@@ -124,6 +124,13 @@ unit: {
           creeperOnRemove: 150
           splashDamage: 140
           splashDamageRadius: 64
+          followAimSpeed: 6
+          xRand: 10
+          yRand: 10
+          shoot: {
+            shotDelay: 5
+          }
+          reload: 600
         }
         xRand: 10
         yRand: 10
@@ -151,38 +158,10 @@ unit: {
           hitEffect: scatheExplosionSmall
           hitColor: a88eff41
           randomAngleOffset: 5
-          spawnBulletRandomSpread: 5
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
           creeperOnRemove: 150
-          bullet: {
-            type: BasicBulletType
-            speed: 5
-            lifetime: 96
-            backRegion: missile-large-back
-            frontRegion: missile-large
-            sprite: missile-large
-            backColor: 6d55beff
-            frontColor: f5ecffff
-            width: 12
-            height: 22
-            damage: 300
-            splashDamage: 300
-            splashDamageRadius: 64
-            followAimSpeed: 6
-            trailColor: 6d55beff
-            trailWidth: 3
-            trailLength: 12
-            hitEffect: scatheExplosionSmall
-            hitColor: a88eff41
-            randomAngleOffset: 5
-            spawnBulletRandomSpread: 5
-            collidesAir: "false"
-            hitSize: 8
-            drawSize: 120
-            creeperOnRemove: 250
-          }
           xRand: 10
           yRand: 10
           shoot: {
@@ -213,7 +192,7 @@ unit: {
       '''
       [gold]火炮支援单位，以超长射程打击后方深水
       [gray]design by LC
-      effect by blac
+      effect by lemonfox
       '''
     weapons: {
       0: {
@@ -322,6 +301,7 @@ unit: {
       发射大型电磁爆弹，对敌方电网造成重大破坏，同时可修复友军建筑，压制敌方修复建筑。 搭载4台自动激光炮台，能熔化靠近的敌人。
       [gold]装载一门反转炮，击中目标后以一定比例将C转换为AC
       [gray]design by LC
+      effect by blac
       '''
   }
   collaris: {
