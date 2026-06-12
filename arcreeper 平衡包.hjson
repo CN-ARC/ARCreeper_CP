@@ -63,207 +63,31 @@ unit: {
     targetHighestCreeper: "true"
   }
   reign: {
-    weapons: {
-      0: {
-        bullet: {
-          damage: 262.5
-          splashDamage: 350
-          splashDamageRadius: 65
-          fragBullet: {
-            splashDamage: 50
-            damage: 50
-            splashDamageRadius: 40
-            speed: 1.2
-            lifetime: 70
-            type: ArtilleryBulletType
-            range: 350
-            drawSize: 160
-            despawnEffect: none
-            shootEffect: shootTitan
-            smokeEffect: shootSmokeTitan
-            hitSound: explosionTitan
-            ammoMultiplier: 1
-            scaledSplashDamage: "true"
-            knockback: 2
-            status: blasted
-            despawnShake: 7
-            hitColor: "#f49d7cff"
-            spawnBullets: []
-            parts: []
-            trailColor: "#f49d7cff"
-            trailEffect: none
-            trailLength: 32
-            trailWidth: 3.3499999046325684
-            trailSinMag: 0.5
-            trailSinScl: 2.5
-            lightningType: damageLightningGround
-            lightRadius: 20
-            backColor: "#f49d7cff"
-            frontColor: "#ffffffff"
-            width: 7
-            height: 9
-            shrinkX: 0.20000000298023224
-            shrinkY: 0.10000000149011612
-            backRegion: shell-back
-            frontRegion: shell
-            hitEffect: titanExplosionSmall
-            despawnHit: "true"
-          }
-          fragBullets: 8
-          range: 250
-          type: ArtilleryBulletType
-          lifetime: 125
-          speed: 2
-          drawSize: 160
-          hitEffect: {
-            type: MultiEffect
-            effects: [
-              titanExplosion
-              titanSmoke
-            ]
-          }
-          shootEffect: shootTitan
-          smokeEffect: shootSmokeTitan
-          hitSound: explosionTitan
-          ammoMultiplier: 1
-          scaledSplashDamage: "true"
-          knockback: 2
-          status: blasted
-          despawnHit: "true"
-          despawnShake: 7
-          hitColor: "#f49d7cff"
-          spawnBullets: []
-          parts: []
-          trailColor: "#f49d7cff"
-          trailEffect: none
-          trailLength: 32
-          trailWidth: 3.3499999046325684
-          trailSinMag: 0.5
-          trailSinScl: 2.5
-          lightningType: damageLightningGround
-          lightRadius: 20
-          backColor: "#f49d7cff"
-          frontColor: "#ffffffff"
-          width: 17
-          height: 19
-          shrinkX: 0.20000000298023224
-          shrinkY: 0.10000000149011612
-          backRegion: shell-back
-          frontRegion: shell
-          fragVelocityMin: 0.6
-          fragLifeMax: 1.2
-          fragOffsetMin: 1.5
-          despawnEffect: none
-          fragVelocityMax: 1.2
-          fragLifeMin: 0.8
-        }
-        reload: 120
-        rotateSpeed: 40
-        targetSwitchInterval: 40
-      }
-      1: {
-        bullet: {
-          damage: 262.5
-          splashDamage: 350
-          splashDamageRadius: 65
-          fragBullets: 8
-          range: 250
-          type: ArtilleryBulletType
-          lifetime: 125
-          speed: 2
-          drawSize: 160
-          hitEffect: {
-            type: MultiEffect
-            effects: [
-              titanExplosion
-              titanSmoke
-            ]
-          }
-          despawnEffect: none
-          shootEffect: shootTitan
-          smokeEffect: shootSmokeTitan
-          hitSound: explosionTitan
-          ammoMultiplier: 1
-          scaledSplashDamage: "true"
-          knockback: 2
-          status: blasted
-          despawnHit: "true"
-          despawnShake: 7
-          hitColor: "#f49d7cff"
-          spawnBullets: []
-          parts: []
-          trailColor: "#f49d7cff"
-          trailEffect: none
-          trailLength: 32
-          trailWidth: 3.3499999046325684
-          trailSinMag: 0.5
-          trailSinScl: 2.5
-          lightningType: damageLightningGround
-          lightRadius: 20
-          backColor: "#f49d7cff"
-          frontColor: "#ffffffff"
-          width: 17
-          height: 19
-          shrinkX: 0.20000000298023224
-          shrinkY: 0.10000000149011612
-          backRegion: shell-back
-          frontRegion: shell
-          fragVelocityMin: 0.6
-          fragLifeMax: 1.2
-          fragBullet: {
-            damage: 50
-            splashDamage: 50
-            splashDamageRadius: 40
-            range: 350
-            type: ArtilleryBulletType
-            lifetime: 70
-            speed: 1.2
-            drawSize: 160
-            hitEffect: titanExplosionSmall
-            despawnEffect: none
-            shootEffect: shootTitan
-            smokeEffect: shootSmokeTitan
-            hitSound: explosionTitan
-            ammoMultiplier: 1
-            scaledSplashDamage: "true"
-            knockback: 2
-            status: blasted
-            despawnHit: "true"
-            despawnShake: 7
-            hitColor: "#f49d7cff"
-            spawnBullets: []
-            parts: []
-            trailColor: "#f49d7cff"
-            trailEffect: none
-            trailLength: 32
-            trailWidth: 3.3499999046325684
-            trailSinMag: 0.5
-            trailSinScl: 2.5
-            lightningType: damageLightningGround
-            lightRadius: 20
-            backColor: "#f49d7cff"
-            frontColor: "#ffffffff"
-            width: 7
-            height: 9
-            shrinkX: 0.20000000298023224
-            shrinkY: 0.10000000149011612
-            backRegion: shell-back
-            frontRegion: shell
-          }
-          fragVelocityMax: 1.2
-          fragLifeMin: 0.8
-        }
-        reload: 120
-        rotateSpeed: 40
-        targetSwitchInterval: 40
-      }
-    }
     range: 250
     maxRange: 250
     creeperEvade: 0.75
-    description: 向地面敌人发射重型爆炸炮弹，并伴随多轮爆炸。
-    targetHighestCreeper: "true"
-    targetAir: "false"
+    rotateSpeed: 3.5
+    baseRotateSpeed: 15
+    weapons: {
+      0: {
+        bullet: {
+          splashDamageRadius: 32
+          creeperDamageMultiplier: 2
+          range: 240
+          lifetime: 20
+        }
+        targetInterval: 0
+      }
+      1: {
+        bullet: {
+          splashDamageRadius: 32
+          creeperDamageMultiplier: 2
+          range: 240
+          lifetime: 20
+        }
+        targetInterval: 0
+      }
+    }
   }
   disrupt: {
     creeperEvade: 0.75
