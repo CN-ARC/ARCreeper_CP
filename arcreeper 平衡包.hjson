@@ -1,4 +1,4 @@
-name: creeper balanceLC v1.3.3
+name: creeper 平衡包
 unit: {
   quell-missile: {
     weapons: {
@@ -812,7 +812,7 @@ unit: {
     mineSpeed: 2
     defaultCommand: mine
     creeperEvade: 1
-    description: "发射激光弹攻击敌人并修复己方建筑。能够助推。\n[gold]能够自动开采铜和铅"
+    description: "发射激光弹攻击敌人并修复己方建筑。能够助推。/n[gold]能够自动开采铜和铅"
     commands.+: [
       mine
     ]
