@@ -108,7 +108,6 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
-          creeperAmount: 100
           creeperOnRemove: 150
         }
         xRand: 10
@@ -144,7 +143,6 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
-          creeperAmount: 100
           creeperOnRemove: 150
           bullet: {
             type: BasicBulletType
@@ -171,7 +169,6 @@ unit: {
             collidesAir: "false"
             hitSize: 8
             drawSize: 120
-            creeperAmount: 100
             creeperOnRemove: 250
           }
           xRand: 10
@@ -473,25 +470,16 @@ unit: {
           healEffect: none
           trailEffect: none
         }
-        alwaysShooting: "true"
         mirror: "false"
+        predictTarget: "false"
+        controllable: "false"
+        aiControllable: "false"
+        targetInterval: 1.0e10
+        display: "false"
+        top: "false"
+        alwaysShooting: "true"
       }
     ]
-  }
-  disrupt-missile: {
-    weapons: {
-      0: {
-        bullet: {
-          splashDamageRadius: 80
-          hitEffect: titanSmoke
-          despawnEffect: titanExplosion
-          hitColor: 7b2cc2ff
-          splashDamage: 150
-        }
-      }
-    }
-    health: 0.5
-    targetHighestCreeper: "true"
   }
   merui: {
     weapons: {
