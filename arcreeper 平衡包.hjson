@@ -63,29 +63,25 @@ unit: {
     targetHighestCreeper: "true"
   }
   reign: {
-    range: 250
-    maxRange: 250
     creeperEvade: 0.75
     rotateSpeed: 3.5
     baseRotateSpeed: 15
     weapons: {
       0: {
-        bullet: {
-          range: 240
-          lifetime: 20
-        }
+        shootCone: 1000
+        targetSwitchInterval: 0
+        targetInterval: 0
       }
       1: {
-        bullet: {
-          range: 240
-          lifetime: 20
-        }
+        shootCone: 1000
+        targetInterval: 0
+        targetSwitchInterval: 0
       }
     }
     description:
       '''
-      发向敌人快速发射大型穿透子弹。
-      [gold]略增加转头速度和射程
+      [gold]主力推进型单位
+      略增加转头速度和射程，需要配合AC
       '''
   }
   disrupt: {
@@ -113,7 +109,7 @@ unit: {
           hitSize: 8
           drawSize: 120
           creeperAmount: 100
-          creeperOnRemove: 250
+          creeperOnRemove: 150
         }
         xRand: 10
         yRand: 10
@@ -149,7 +145,7 @@ unit: {
           hitSize: 8
           drawSize: 120
           creeperAmount: 100
-          creeperOnRemove: 250
+          creeperOnRemove: 150
           bullet: {
             type: BasicBulletType
             speed: 5
@@ -193,11 +189,15 @@ unit: {
         reload: 600
       }
     }
-    description: 发射带少量伤害和AC的导弹，支援型单位。
+    description:
+      '''
+      [gold]支援型单位
+      发射AC导弹
+      '''
   }
   conquer: {
-    creeperEvade: 0.75
     targetHighestCreeper: "true"
+    description: "[gold]火炮支援单位，以超长射程打击后方深水 "
     weapons: {
       0: {
         bullet: {
@@ -261,167 +261,20 @@ unit: {
     maxRange: 800
   }
   toxopid: {
-    creeperEvade: 0.9
-    speed: 0.8
-    weapons: {
-      0: {
-        shoot: {
-          shots: 3
-        }
-        targetInterval: 0
-        bullet: {
-          damage: 130
-          length: 110
-        }
-      }
-      1: {
-        shoot: {
-          shots: 3
-        }
-        targetInterval: 0
-      }
-      2: {
-        targetInterval: 0
-        bullet: {
-          type: ArtilleryBulletType
-          lifetime: 30
-          speed: 4
-          damage: 525
-          drawSize: 208
-          hitEffect: {
-            type: MultiEffect
-            effects: [
-              titanExplosionSmall
-              titanSmokeSmall
-            ]
-          }
-          despawnEffect: none
-          shootEffect: shootTitan
-          smokeEffect: shootSmokeTitan
-          hitSound: explosionTitan
-          splashDamage: 750
-          scaledSplashDamage: "true"
-          knockback: 3
-          status: blasted
-          range: 120
-          despawnHit: "true"
-          despawnShake: 7
-          fragBullets: 4
-          hitColor: "#ab8ec5ff"
-          trailColor: "#ab8ec5ff"
-          trailInterval: 2
-          trailEffect: disperseTrail
-          trailRotation: "true"
-          trailWidth: 3.3499999046325684
-          trailSinMag: 0.5
-          trailSinScl: 2.5
-          splashDamageRadius: 36
-          lightningType: damageLightningGround
-          backColor: "#ab8ec5ff"
-          frontColor: "#ffffffff"
-          width: 15
-          height: 28
-          shrinkX: 0.20000000298023224
-          shrinkY: 0.10000000149011612
-          backRegion: shell-back
-          frontRegion: shell
-          trailLength: 32
-          fragBullet: {
-            type: ArtilleryBulletType
-            lifetime: 20
-            speed: 0.5
-            damage: 300
-            drawSize: 104
-            hitEffect: {
-              type: MultiEffect
-              effects: [
-                titanExplosionSmall
-                titanSmokeSmall
-              ]
-            }
-            despawnEffect: none
-            shootEffect: shootTitan
-            smokeEffect: shootSmokeTitan
-            hitSound: explosionTitan
-            splashDamage: 420
-            scaledSplashDamage: "true"
-            knockback: 3
-            status: blasted
-            rangeChange: 80
-            despawnHit: "true"
-            fragBullet: {
-              type: ArtilleryBulletType
-              lifetime: 50
-              speed: 0.3
-              damage: 50
-              hitEffect: {
-                type: MultiEffect
-                effects: [
-                  titanExplosionFrag
-                  titanLightSmall
-                ]
-              }
-              despawnEffect: hitBulletColor
-              buildingDamageMultiplier: 0.25
-              splashDamage: 50
-              scaledSplashDamage: "true"
-              knockback: 0.5
-              keepVelocity: "false"
-              range: 25
-              despawnHit: "true"
-              pierceArmor: "true"
-              hitColor: "#ab8ec5ff"
-              splashDamageRadius: 22
-              lightningType: damageLightningGround
-              lightRadius: 20
-              backColor: "#ab8ec5ff"
-              frontColor: "#ffffffff"
-              width: 8
-              height: 12
-              shrinkY: 0.30000001192092896
-              backRegion: shell-back
-              frontRegion: shell
-            }
-            fragBullets: 12
-            fragLifeMin: 1.5
-            hitColor: "#ab8ec5ff"
-            trailColor: "#ab8ec5ff"
-            trailInterval: 2
-            trailEffect: disperseTrail
-            trailRotation: "true"
-            trailWidth: 1.5
-            trailSinMag: 0.5
-            trailSinScl: 2.5
-            splashDamageRadius: 36
-            lightningType: damageLightningGround
-            backColor: "#ab8ec5ff"
-            frontColor: "#ffffffff"
-            width: 15
-            height: 14
-            shrinkX: 0.20000000298023224
-            shrinkY: 0.10000000149011612
-            backRegion: shell-back
-            frontRegion: shell
-            trailLength: 32
-            fragRandomSpread: 5
-            fragSpread: 5
-          }
-          fragSpread: 10
-          fragRandomSpread: 10
-          fragVelocityMin: 0.8
-          keepVelocity: "false"
-        }
-      }
-    }
-    maxRange: 120
-    description: 向敌人发射大型集束炮弹和穿透性激光。可以跨越大多数地形。
-    targetAir: "false"
+    creeperEvade: 0.95
+    description:
+      '''
+      向敌人发射大型集束炮弹和穿透性激光。
+      [gold]登陆型单位，高额水免和buff免
+      '''
+    immunities.+: [
+      spore-slowed
+    ]
   }
   navanax: {
     creeperEvade: 0.92
     weapons.+: [
       {
-        reload: 900
         bullet: {
           lifetime: 300
           sprite: large-bomb
@@ -431,16 +284,16 @@ unit: {
           frontColor: 97ffa8ff
           shrinkY: 0
           spin: 10
-          shootEffect: teleportOut
-          trailEffect: squareWaveEffect
           trailColor: 97ffa8ff
-          hitEffect: greenBomb
-          despawnEffect: greenBomb
-          damage: 0
-          splashDamageRadius: 40
           type: ArtilleryBulletType
           keepVelocity: "false"
           creeperAppliedMultiplier: -0.5
+          splashDamageRadius: 40
+          splashDamage: 1
+          trailEffect: squareWaveEffect
+          hitEffect: greenBomb
+          shootEffect: teleportOut
+          despawnEffect: greenBomb
         }
         y: 0
         x: 0
@@ -448,9 +301,16 @@ unit: {
         rotate: "true"
         ejectEffect: greenBomb
         name: 反转炮
+        reload: 900
+        mirror: "false"
       }
     ]
     targetHighestCreeper: "true"
+    description:
+      '''
+      发射大型电磁爆弹，对敌方电网造成重大破坏，同时可修复友军建筑，压制敌方修复建筑。 搭载4台自动激光炮台，能熔化靠近的敌人。
+      [gold]装载一门反转炮，击中目标后以一定比例将C转换为AC
+      '''
   }
   collaris: {
     creeperEvade: 0.75
@@ -587,6 +447,36 @@ unit: {
   oct: {
     creeperEvade: 0.9
     payloadCapacity: 6400
+    description:
+      '''
+      用它的再生护盾保护附近的友方单位。能够携带大多数单位。
+      [gold]全能辅助单位
+      更高的装载容量，自带持续AC，回血，高额高度盾，我们还需要什么
+      '''
+    weapons.+: [
+      {
+        name: 持续出水
+        reload: 30
+        bullet: {
+          creeperOnRemove: 50
+          range: 0
+          homingRange: 0
+          lifetime: 0
+          fragOnDespawn: "false"
+          displayAmmoMultiplier: "false"
+          speed: 0
+          suppressionEffectChance: 0
+          despawnEffect: none
+          hitEffect: none
+          shootEffect: none
+          smokeEffect: none
+          healEffect: none
+          trailEffect: none
+        }
+        alwaysShooting: "true"
+        mirror: "false"
+      }
+    ]
   }
   disrupt-missile: {
     weapons: {
