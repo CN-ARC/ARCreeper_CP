@@ -301,7 +301,7 @@ unit: {
         shoot: {
           shotDelay: 5
         }
-        reload: 300
+        reload: 200
       }
       1: {
         bullet: {
@@ -336,7 +336,7 @@ unit: {
         }
         xRand: 10
         yRand: 10
-        reload: 300
+        reload: 200
       }
     }
     targetHighestCreeper: "true"
@@ -605,7 +605,7 @@ unit: {
     weapons: {
       0: {
         inaccuracy: 5
-        reload: 360
+        reload: 300
         shoot: {
           shots: 3
           shotDelay: 8
@@ -613,11 +613,15 @@ unit: {
         bullet: {
           velocityScaleRandMin: 1.1
           velocityScaleRandMax: 1.1
+          collidesAir: "true"
+          fragBullet: {
+            collidesAir: "true"
+          }
         }
       }
       1: {
         inaccuracy: 5
-        reload: 360
+        reload: 300
         shoot: {
           shots: 3
           shotDelay: 8
@@ -625,9 +629,14 @@ unit: {
         bullet: {
           velocityScaleRandMin: 1.1
           velocityScaleRandMax: 1.1
+          collidesAir: "true"
+          fragBullet: {
+            collidesAir: "true"
+          }
         }
       }
     }
+    targetAir: "true"
   }
   eclipse: {
     creeperEvade: 0.75
@@ -963,7 +972,11 @@ unit: {
     mineSpeed: 2
     defaultCommand: mine
     creeperEvade: 1
-    description: "发射激光弹攻击敌人并修复己方建筑。能够助推。\n[gold]能够自动开采铜和铅"
+    description:
+      '''
+      发射激光弹攻击敌人并修复己方建筑。能够助推。
+      [gold]能够自动开采铜和铅。
+      '''
     commands.+: [
       mine
     ]
@@ -990,7 +1003,11 @@ unit: {
     commands.+: [
       move
     ]
-    description: "发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。\n[gold]能够挖掘钍。"
+    description:
+      '''
+      发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。
+      [gold]能够挖掘钍。
+      '''
     mineRange: 160
     itemCapacity: 300
   }
