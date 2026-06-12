@@ -22,16 +22,10 @@
         "arc": {
             "targetInterval": 0.0
         },
-        "parallax": {
-            "targetInterval": 0.0
-        },
         "swarmer": {
             "targetInterval": 0.0
         },
         "salvo": {
-            "targetInterval": 0.0
-        },
-        "segment": {
             "targetInterval": 0.0
         },
         "tsunami": {

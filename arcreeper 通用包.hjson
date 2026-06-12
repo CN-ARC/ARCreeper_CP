@@ -1,0 +1,197 @@
+name: ARCreeper 通用包
+block: {
+  parallax: {
+    description:
+      '''
+      攻击孢子，但是要消耗巨大电力
+      配合电池使用
+      '''
+    targetSpore: "true"
+    damage: 0.1
+    consumes: {
+      power: {
+        usage: 100
+      }
+    }
+  }
+  force-projector: {
+    requirements: {
+      2: {
+        amount: 250
+      }
+      0: {
+        amount: 500
+      }
+      1: {
+        amount: 250
+      }
+    }
+    requirements.+: [
+      {
+        amount: 500
+      }
+    ]
+    heightEnhanceBoost: 6
+    heightEnhance: 4
+  }
+  tsunami: {
+    description:
+      '''
+      向敌人喷射强力的液体流。使用水作弹药时能够自动灭火。 
+
+      [gold]输入镓液可发射AC子弹
+      '''
+    requirements: {
+      1: {
+        amount: 500
+      }
+      0: {
+        amount: 1000
+      }
+    }
+    requirements.+: [
+      {
+        item: surge-alloy
+        amount: 100
+      }
+    ]
+    ammoTypes: {
+      gallium: {
+        type: LiquidBulletType
+        liquid: gallium
+        creeperOnRemove: 5
+      }
+    }
+  }
+  core-acropolis: {
+    incinerateNonBuildable: "false"
+  }
+  core-bastion: {
+    incinerateNonBuildable: "false"
+  }
+  core-citadel: {
+    incinerateNonBuildable: "false"
+  }
+  interplanetary-accelerator: {
+    requirements: [
+      {
+        amount: 50000
+      }
+      {
+        item: lead
+        amount: 50000
+      }
+      {
+        item: titanium
+        amount: 20000
+      }
+      {
+        item: thorium
+        amount: 20000
+      }
+      {
+        item: beryllium
+        amount: 20000
+      }
+      {
+        item: tungsten
+        amount: 20000
+      }
+      {
+        item: silicon
+        amount: 20000
+      }
+      {
+        item: graphite
+        amount: 20000
+      }
+      {
+        item: plastanium
+        amount: 10000
+      }
+      {
+        item: phase-fabric
+        amount: 10000
+      }
+      {
+        item: surge-alloy
+        amount: 10000
+      }
+      {
+        item: oxide
+        amount: 5000
+      }
+      {
+        item: carbide
+        amount: 10000
+      }
+      {
+        item: fissile-matter
+        amount: 500
+      }
+    ]
+    description: 基于科技插件给单位提供各种buff，极为昂贵
+    alwaysUnlocked: "true"
+    launchBlock: core-citadel
+    buildVisibility: shown
+  }
+  slag-centrifuge: {
+    alwaysUnlocked: "true"
+    buildVisibility: shown
+  }
+  advanced-launch-pad: {
+    alwaysUnlocked: "true"
+    buildVisibility: shown
+  }
+  heat-reactor: {
+    buildVisibility: shown
+    requirements: {
+      2: {
+        amount: 250
+      }
+      3: {
+        amount: 50
+      }
+      0: {
+        amount: 100
+      }
+      1: {
+        amount: 250
+      }
+    }
+    description: 以相对高额的造价持续产生科技
+  }
+}
+unit: {
+  evoke: {
+    creeperEvade: 1
+  }
+  incite: {
+    creeperEvade: 1
+  }
+  emanate: {
+    creeperEvade: 1
+  }
+  alpha: {
+    creeperEvade: 1
+  }
+  beta: {
+    creeperEvade: 1
+  }
+  gamma: {
+    creeperEvade: 1
+  }
+}
+item: {
+  fissile-matter: {
+    description: "[orange]用于提升队伍属性，或是建造重要建筑"
+    localizedName: "[#5e988dff]古代科技[]"
+    hidden: "false"
+  }
+}
+liquid: {
+  gallium: {
+    description: "[orange]可用于构造并转换为AntiCreeper"
+    hidden: "false"
+  }
+}

@@ -1,0 +1,33 @@
+name: 单人模式
+unit: {
+  evoke: {
+    buildRange: 5000
+    buildSpeed: 6
+    mineSpeed: 30
+  }
+  incite: {
+    buildRange: 5000
+    buildSpeed: 7
+    mineSpeed: 40
+  }
+  emanate: {
+    buildRange: 5000
+    buildSpeed: 8
+    mineSpeed: 45
+  }
+  alpha: {
+    buildRange: 5000
+    buildSpeed: 5
+    mineSpeed: 33
+  }
+  beta: {
+    buildRange: 5000
+    buildSpeed: 6.5
+    mineSpeed: 35
+  }
+  gamma: {
+    buildRange: 5000
+    buildSpeed: 7.5
+    mineSpeed: 40
+  }
+}
