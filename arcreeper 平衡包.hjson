@@ -109,6 +109,8 @@ unit: {
           hitSize: 8
           drawSize: 120
           creeperOnRemove: 150
+          splashDamage: 140
+          splashDamageRadius: 64
         }
         xRand: 10
         yRand: 10
@@ -129,9 +131,6 @@ unit: {
           frontColor: f5ecffff
           width: 12
           height: 22
-          damage: 140
-          splashDamage: 140
-          splashDamageRadius: 64
           followAimSpeed: 6
           trailColor: 6d55beff
           trailWidth: 3
@@ -177,6 +176,8 @@ unit: {
             shotDelay: 5
           }
           reload: 600
+          splashDamageRadius: 64
+          splashDamage: 140
         }
         shoot: {
           shotDelay: 5
@@ -996,18 +997,15 @@ unit: {
     creeperEvade: 0.85
   }
   quell: {
-    targetHighestCreeper: "true"
     weapons: {
       0: {
         bullet: {
           fragOnHit: "false"
           fragOnAbsorb: "false"
           fragOnDespawn: "false"
-          damage: 110
+          damage: 1
           lifetime: 90
           speed: 4
-          splashDamage: 110
-          splashDamageRadius: 56
           hitColor: a88eff41
           hitEffect: scatheExplosionSmall
           type: BasicBulletType
@@ -1027,6 +1025,8 @@ unit: {
           collidesAir: "false"
           hitSize: 7
           drawSize: 102
+          splashDamageRadius: 56
+          splashDamage: 110
         }
       }
       1: {
@@ -1034,7 +1034,7 @@ unit: {
           fragOnHit: "false"
           fragOnAbsorb: "false"
           fragOnDespawn: "false"
-          damage: 110
+          damage: 1
           lifetime: 90
           speed: 4
           splashDamage: 110
