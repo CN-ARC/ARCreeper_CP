@@ -792,7 +792,7 @@ unit: {
           type: BasicBulletType
           lifetime: 60
           speed: 8
-          damage: 120
+          damage: 1200
           drawSize: 120
           pierce: "true"
           shootEffect: instBomb
@@ -823,7 +823,7 @@ unit: {
             height: 18
             backRegion: bullet-back
             frontRegion: bullet
-            splashDamage: 25
+            splashDamage: 100
             splashDamageRadius: 24
             despawnEffect: launchPod
           }
