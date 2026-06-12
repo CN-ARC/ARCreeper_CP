@@ -963,11 +963,7 @@ unit: {
     mineSpeed: 2
     defaultCommand: mine
     creeperEvade: 1
-    description:
-      '''
-      发射激光弹攻击敌人并修复己方建筑。能够助推。
-      [gold]能够自动开采铜和铅。
-      '''
+    description: "发射激光弹攻击敌人并修复己方建筑。能够助推。\n[gold]能够自动开采铜和铅"
     commands.+: [
       mine
     ]
@@ -994,11 +990,7 @@ unit: {
     commands.+: [
       move
     ]
-    description: 
-	  '''
-	  发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。
-	  [gold]能够挖掘钍。
-	  '''
+    description: "发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。\n[gold]能够挖掘钍。"
     mineRange: 160
     itemCapacity: 300
   }
