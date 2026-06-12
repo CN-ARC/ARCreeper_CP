@@ -60,6 +60,8 @@ block: {
         type: LiquidBulletType
         liquid: gallium
         creeperOnRemove: 5
+        speed: 4
+        lifetime: 49
       }
     }
   }
