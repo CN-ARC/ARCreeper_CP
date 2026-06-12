@@ -973,18 +973,11 @@ unit: {
     }
   }
   crawler: {
-    weapons: {
-      0: {
-        bullet: {
-          splashDamageRadius: 48
-          hitEffect: blastExplosion
-          splashDamage: 160
-          creeperAmount: 25
-        }
-      }
+    weapons.0.bullet: {
+      hitEffect: blastExplosion
+      creeperOnRemove: 25
     }
-    range: 12
-    maxRange: 12
+    description: "[gold]自爆，造成伤害，并产生少量水"
   }
   nova: {
     mineItems: [
@@ -995,7 +988,7 @@ unit: {
     mineSpeed: 2
     defaultCommand: mine
     creeperEvade: 1
-    description: 发射激光弹攻击敌人并修复己方建筑。能够助推。且能够自动开采铜和铅。
+    description: "发射激光弹攻击敌人并修复己方建筑。能够助推。\n[gold]能够自动开采铜和铅"
     commands.+: [
       mine
     ]
@@ -1022,7 +1015,7 @@ unit: {
     commands.+: [
       move
     ]
-    description: 发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。能够挖掘钍与钨。
+    description: "发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。/n[gold]能够挖掘钍。"
     mineRange: 160
     itemCapacity: 300
   }
@@ -1515,7 +1508,7 @@ unit: {
         reload: 24
         bullet: {
           killShooter: "true"
-          creeperAmount: 25000
+          creeperOnRemove: 50000
         }
         minShootVelocity: 0
       }
@@ -1523,27 +1516,25 @@ unit: {
     autoFindTarget: "false"
     range: 18
     maxRange: 18
+    description: "[gold]自杀，产生大量水"
   }
   horizon: {
+    autoFindTarget: "false"
     weapons: {
       0: {
         bullet: {
           killShooter: "true"
-          creeperAmount: 125
+          creeperOnRemove: 250
         }
-        minShootVelocity: 0
       }
       1: {
         bullet: {
           killShooter: "true"
-          creeperAmount: 125
+          creeperOnRemove: 250
         }
-        minShootVelocity: 0
       }
     }
-    autoFindTarget: "false"
-    range: 12
-    maxRange: 12
+    description: "[gold]自杀，产生少量水"
   }
   obviate: {
     weapons: {
@@ -1587,10 +1578,18 @@ unit: {
     maxRange: 200
     description:
       '''
-      向敌人交替发射子弹。 
+      向敌人交替发射子弹。
       [blue]四倍火力，四倍快乐。
       '''
   }
+  scathe-missile-surge-split.weapons.0.bullet.creeperOnRemove: 100
+  scathe-missile-surge: {
+    weapons: {
+      0.bullet.creeperOnRemove: 300
+      1.bullet.creeperOnRemove: 300
+    }
+  }
+  scathe-missile.weapons.0.bullet.creeperOnRemove: 500
 }
 block: {
   tetrative-reconstructor: {
@@ -1765,35 +1764,9 @@ block: {
     }
     description:
       '''
-      向空中和地面目标发射大型穿甲子弹。 
+      向空中和地面目标发射大型穿甲子弹。
       [cyan]石墨幽灵打单体带分裂弹，钍幽灵打群体，硫化物幽灵在没钍时打群体
       '''
-  }
-  slag-centrifuge: {
-    requirements: [
-      {
-        item: silicon
-        amount: 50
-      }
-      {
-        item: graphite
-        amount: 100
-      }
-      {
-        item: thorium
-        amount: 100
-      }
-    ]
-    consumes: {
-      remove: [
-        items
-        liquid
-      ]
-      liquid: {
-        liquid: slag
-        amount: 0.2
-      }
-    }
   }
   thorium-reactor: {
     powerProduction: 20
