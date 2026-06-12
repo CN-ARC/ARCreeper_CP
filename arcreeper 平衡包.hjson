@@ -653,7 +653,6 @@ unit: {
           shootEffect: shootSmokeSquareBig
           smokeEffect: shootSmokeDisperse
           ammoMultiplier: 1
-          buildingDamageMultiplier: 0.30000001192092896
           splashDamage: 0
           collidesGround: "true"
           range: 320
@@ -666,7 +665,6 @@ unit: {
             drawSize: 400
             optimalLifeFract: 1
             hitEffect: hitLancer
-            buildingDamageMultiplier: 0.25
             range: 120
             lightRadius: 20
             colors: [
@@ -721,7 +719,6 @@ unit: {
           shootEffect: shootSmokeSquareBig
           smokeEffect: shootSmokeDisperse
           ammoMultiplier: 1
-          buildingDamageMultiplier: 0.30000001192092896
           splashDamage: 0
           collidesGround: "true"
           range: 320
@@ -734,7 +731,7 @@ unit: {
             drawSize: 400
             optimalLifeFract: 1
             hitEffect: hitLancer
-            buildingDamageMultiplier: 0.25
+            buildingDamageMultiplier: 1
             range: 120
             lightRadius: 20
             colors: [
