@@ -193,7 +193,7 @@ unit: {
     description:
       '''
       [gold]战斗支援单位
-      发射AC导弹，给予敌方单位麻痹
+      发射AC导弹，给予敌方单位静止
       拥有较大范围的孢子瓦解场
       [gray]design by LC
       '''
@@ -374,13 +374,191 @@ unit: {
   }
   eclipse: {
     creeperEvade: 0.75
-    range: 240
-    maxRange: 320
+    weapons: {
+      0: {
+        bullet: {
+          type: FlakBulletType
+          speed: 8
+          hitSize: 7
+          drawSize: 192
+          hitEffect: hitSquaresColor
+          despawnEffect: hitBulletColor
+          shootEffect: shootSmokeSquareBig
+          smokeEffect: shootSmokeDisperse
+          ammoMultiplier: 1
+          splashDamage: 0
+          collidesGround: "true"
+          range: 400
+          despawnHit: "true"
+          despawnShake: 3
+          fragBullet: {
+            type: LaserBulletType
+            lifetime: 22
+            damage: 65
+            drawSize: 400
+            optimalLifeFract: 1
+            hitEffect: hitLancer
+            range: 120
+            lightRadius: 20
+            colors: [
+              d3c67066
+              d3c870ff
+              "#ffffffff"
+            ]
+            length: 120
+            width: 19
+            sideLength: 40
+            sideWidth: 1
+            sideAngle: 175
+            knockback: 5
+          }
+          fragRandomSpread: 0
+          intervalRandomSpread: 0
+          hitColor: fffc87ff
+          trailColor: d3a670ff
+          trailInterval: 3
+          trailEffect: colorSpark
+          trailRotation: "true"
+          trailLength: 12
+          trailWidth: 3
+          homingPower: 0.17000000178813934
+          homingRange: 160
+          homingDelay: 19
+          lightningColor: d3c870ff
+          lightRadius: 35
+          backColor: d3bd70ff
+          frontColor: "#ffffffff"
+          width: 12
+          height: 22
+          sprite: missile-large
+          backRegion: missile-large-back
+          frontRegion: missile-large
+          explodeRange: 100
+          explodeDelay: 0
+          flakInterval: 20
+          followAimSpeed: 4
+          lifetime: 50
+          fragBullets: 3
+          knockback: 5
+          damage: 70
+        }
+        inaccuracy: 15
+        rotateSpeed: 6
+        reload: 30
+      }
+      1: {
+        bullet: {
+          type: FlakBulletType
+          speed: 8
+          damage: 70
+          hitSize: 7
+          drawSize: 192
+          hitEffect: hitSquaresColor
+          despawnEffect: hitBulletColor
+          shootEffect: shootSmokeSquareBig
+          smokeEffect: shootSmokeDisperse
+          ammoMultiplier: 1
+          splashDamage: 0
+          collidesGround: "true"
+          range: 400
+          despawnHit: "true"
+          despawnShake: 3
+          fragBullet: {
+            type: LaserBulletType
+            lifetime: 22
+            damage: 65
+            drawSize: 400
+            optimalLifeFract: 1
+            hitEffect: hitLancer
+            buildingDamageMultiplier: 1
+            range: 120
+            lightRadius: 20
+            colors: [
+              d3c67066
+              d3c870ff
+              "#ffffffff"
+            ]
+            length: 120
+            width: 19
+            sideLength: 40
+            sideWidth: 1
+            sideAngle: 175
+            knockback: 5
+          }
+          fragRandomSpread: 0
+          intervalRandomSpread: 0
+          hitColor: fffc87ff
+          trailColor: d3a670ff
+          trailInterval: 3
+          trailEffect: colorSpark
+          trailRotation: "true"
+          trailLength: 12
+          trailWidth: 3
+          homingPower: 0.17000000178813934
+          homingRange: 160
+          homingDelay: 19
+          lightningColor: d3c870ff
+          lightRadius: 35
+          backColor: d3bd70ff
+          frontColor: "#ffffffff"
+          width: 12
+          height: 22
+          sprite: missile-large
+          backRegion: missile-large-back
+          frontRegion: missile-large
+          explodeRange: 100
+          explodeDelay: 0
+          flakInterval: 20
+          followAimSpeed: 4
+          lifetime: 50
+          fragBullets: 3
+          knockback: 5
+        }
+        inaccuracy: 15
+        rotateSpeed: 6
+        reload: 30
+      }
+      2: {
+        bullet: {
+          width: 4
+          height: 32
+          frontColor: ffdb8aff
+          trailColor: e5dc83ff
+          trailLength: 2
+          trailWidth: 2
+          speed: 8.5
+          knockback: 1
+        }
+      }
+      3: {
+        bullet: {
+          speed: 8.5
+          knockback: 1
+        }
+      }
+      4: {
+        bullet: {
+          speed: 8.5
+          knockback: 1
+        }
+      }
+      5: {
+        bullet: {
+          knockback: 1
+          speed: 8.5
+        }
+      }
+    }
+    range: 400
+    maxRange: 400
     description:
       '''
       向敌人发射穿透性激光和爆炸性炮弹。
+      [gold]具有较低的DPS和高击退
+      可用于有效阻止对方高T冲家
 
-      [gray]balance by LC
+      [gray]design by lemonfox
+      balance by lc
       '''
   }
   omura: {
@@ -2254,7 +2432,6 @@ block: {
       [gold]构建eT4与T5坦
       造价极为便宜以方便切换兵种
       T4需求氮，T5需求镓
-
       '''
   }
   ship-assembler: {
@@ -2317,7 +2494,6 @@ block: {
       [gold]构建eT4与T5坦
       造价极为便宜以方便切换兵种
       T4需求氮，T5需求镓
-
       '''
   }
   mech-assembler: {
@@ -2375,7 +2551,6 @@ block: {
       [gold]构建eT4与T5爬
       造价极为便宜以方便切换兵种
       T4需求氮，T5需求镓
-
       '''
     consumes: {
       remove: [
