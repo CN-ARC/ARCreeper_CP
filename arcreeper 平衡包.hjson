@@ -55,12 +55,20 @@ unit: {
           lightningLengthRand: 0
           lightningCone: 360
           lightningLength: 3
+          range: 560
           creeperDamageMultiplier: 2
         }
+        shootStatus: none
       }
     }
     creeperEvade: 0.75
     targetHighestCreeper: "true"
+    description:
+      '''
+      发射巨大的爆发激光束，摧毁敌人并修复己方建筑。可以跨越大多数地形。
+      [gold]攻击不再减速
+      [gray]design by lemonfox
+      '''
   }
   reign: {
     creeperEvade: 0.75
@@ -82,6 +90,8 @@ unit: {
       '''
       [gold]主力推进型单位
       略增加转头速度和射程，需要配合AC
+
+      [gray]balance by LC
       '''
   }
   disrupt: {
@@ -191,11 +201,17 @@ unit: {
       '''
       [gold]支援型单位
       发射AC导弹
+      [gray]design by LC
       '''
   }
   conquer: {
     targetHighestCreeper: "true"
-    description: "[gold]火炮支援单位，以超长射程打击后方深水 "
+    description:
+      '''
+      [gold]火炮支援单位，以超长射程打击后方深水
+      [gray]design by LC
+      effect by blac
+      '''
     weapons: {
       0: {
         bullet: {
@@ -258,6 +274,7 @@ unit: {
       '''
       向敌人发射大型集束炮弹和穿透性激光。
       [gold]登陆型单位，高额水免和buff免
+      [gray]balance by LC
       '''
     immunities.+: [
       spore-slowed
@@ -302,6 +319,7 @@ unit: {
       '''
       发射大型电磁爆弹，对敌方电网造成重大破坏，同时可修复友军建筑，压制敌方修复建筑。 搭载4台自动激光炮台，能熔化靠近的敌人。
       [gold]装载一门反转炮，击中目标后以一定比例将C转换为AC
+      [gray]design by LC
       '''
   }
   collaris: {
@@ -337,6 +355,12 @@ unit: {
     creeperEvade: 0.75
     range: 240
     maxRange: 320
+    description:
+      '''
+      向敌人发射穿透性激光和爆炸性炮弹。
+
+      [gray]balance by LC
+      '''
   }
   omura: {
     creeperEvade: 0.92
@@ -421,6 +445,8 @@ unit: {
       [gold]火炮支援单位
       装载超长攻击与超大范围的主炮
       [gray]附带产轰炸机（孩子们想我了吗）
+      [gray]balance by LC
+      effect by blac
       '''
     range: 1000
     speed: 0.9
