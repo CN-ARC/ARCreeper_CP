@@ -1,5 +1,5 @@
 {
-    "name": "炮塔瞬间索敌+打深水",
+    "name": "ARCreeper 索敌修正",
     "block": {
         "duo": {
             "targetInterval": 0.0
