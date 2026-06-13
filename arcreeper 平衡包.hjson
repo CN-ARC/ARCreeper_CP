@@ -11,6 +11,9 @@ unit: {
     }
     health: 0.5
     targetHighestCreeper: "true"
+    immunities.+: [
+      spore-slowed
+    ]
   }
   corvus: {
     weapons: {
@@ -1098,6 +1101,9 @@ unit: {
   }
   anthicus-missile: {
     targetHighestCreeper: "true"
+    immunities.+: [
+      spore-slowed
+    ]
   }
   arkyid: {
     targetHighestCreeper: "true"
@@ -1129,12 +1135,14 @@ unit: {
           killShooter: "true"
           creeperOnRemove: 250
         }
+        minShootVelocity: 0
       }
       1: {
         bullet: {
           killShooter: "true"
           creeperOnRemove: 250
         }
+        minShootVelocity: 0
       }
     }
     description: "[gold]自杀，产生少量水"
@@ -1193,6 +1201,9 @@ unit: {
         }
       }
     }
+    immunities.+: [
+      spore-slowed
+    ]
   }
   scathe-missile-surge: {
     weapons: {
@@ -1207,6 +1218,9 @@ unit: {
         }
       }
     }
+    immunities.+: [
+      spore-slowed
+    ]
   }
   scathe-missile: {
     weapons: {
@@ -1216,6 +1230,9 @@ unit: {
         }
       }
     }
+    immunities.+: [
+      spore-slowed
+    ]
   }
 }
 block: {
