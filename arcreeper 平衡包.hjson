@@ -217,55 +217,54 @@ unit: {
       '''
     weapons: {
       0: {
-        bullet: {
-          pierceCap: -1
-          hitEffect: reactorExplosion
-          damage: 2000
-          bulletInterval: -1
-          intervalBullets: -1
-          splashDamageRadius: 120
-          type: ArtilleryBulletType
-          lifetime: 400
-          speed: 2
-          drawSize: 160
-          shootEffect: coreExplosion
-          smokeEffect: shootSmokeTitan
-          hitSound: explosionTitan
-          ammoMultiplier: 1
-          scaledSplashDamage: "true"
-          knockback: 2
-          status: blasted
-          despawnHit: "true"
-          despawnShake: 7
-          hitColor: 942ff4ff
-          trailColor: 9f40f4ff
-          trailEffect: missileTrailSmoke
-          trailLength: 32
-          trailWidth: 3.3499999046325684
-          trailSinMag: 0.5
-          trailSinScl: 2.5
-          lightningType: damageLightningGround
-          lightRadius: 20
-          backColor: cf48f4ff
-          frontColor: "#ffffffff"
-          width: 40
-          height: 40
-          fragVelocityMin: 0.6
-          fragLifeMax: 1.2
-          fragOffsetMin: 1.5
-          despawnEffect: none
-          fragVelocityMax: 1.2
-          fragLifeMin: 0.8
-          fragBullets: 0
-          splashDamage: 200
-          range: 800
-          creeperDamageMultiplier: 15
-          backSprite: block-thorium-reactor-ui
-          shrinkY: 0
-          shrinkX: 0
-          spin: 3
-        }
         reload: 900
+        bullet: {
+          bullet: {
+            pierceCap: -1
+            damage: 200
+            type: ArtilleryBulletType
+            speed: 5
+            lifetime: 140
+            backRegion: missile-large-back
+            frontRegion: missile-large-back
+            sprite: missile-large-back
+            backColor: ff894bff
+            width: 20
+            height: 30
+            frontColor: ff894aff
+            shootEffect: scatheExplosionSmall
+            hitColor: ff7335ff
+            trailLength: 20
+            trailWidth: 7
+            despawnEffect: titanExplosionLarge
+            despawnHit: "true"
+            splashDamageRadius: 120
+            splashDamage: 200
+            hitEffect: titanSmokeLarge
+            creeperDamageMultiplier: 10
+          }
+          damage: 200
+          type: ArtilleryBulletType
+          speed: 5
+          lifetime: 140
+          backRegion: missile-large-back
+          frontRegion: missile-large-back
+          sprite: missile-large-back
+          backColor: ff894bff
+          width: 20
+          height: 30
+          frontColor: ff894aff
+          shootEffect: scatheExplosionSmall
+          hitColor: ff7335ff
+          trailLength: 20
+          trailWidth: 7
+          despawnEffect: titanExplosionLarge
+          despawnHit: "true"
+          splashDamageRadius: 120
+          splashDamage: 200
+          hitEffect: titanSmokeLarge
+          creeperDamageMultiplier: 15
+        }
       }
     }
     range: 800
