@@ -2273,6 +2273,11 @@ block: {
       T4需求氮，T5需求镓
 
       '''
+    consumes: {
+      remove: [
+        liquid
+      ]
+    }
   }
   basic-assembler-module: {
     requirements: {
