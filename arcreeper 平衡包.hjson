@@ -200,13 +200,7 @@ unit: {
       0: {
         bullet: {
           pierceCap: -1
-          hitEffect: {
-            type: MultiEffect
-            effects: [
-              titanExplosion
-              titanSmoke
-            ]
-          }
+          hitEffect: reactorExplosion
           damage: 2000
           bulletInterval: -1
           intervalBullets: -1
@@ -215,7 +209,7 @@ unit: {
           lifetime: 400
           speed: 2
           drawSize: 160
-          shootEffect: shootTitan
+          shootEffect: coreExplosion
           smokeEffect: shootSmokeTitan
           hitSound: explosionTitan
           ammoMultiplier: 1
@@ -224,23 +218,19 @@ unit: {
           status: blasted
           despawnHit: "true"
           despawnShake: 7
-          hitColor: "#f49d7cff"
-          trailColor: "#f49d7cff"
-          trailEffect: steam
+          hitColor: 942ff4ff
+          trailColor: 9f40f4ff
+          trailEffect: missileTrailSmoke
           trailLength: 32
           trailWidth: 3.3499999046325684
           trailSinMag: 0.5
           trailSinScl: 2.5
           lightningType: damageLightningGround
           lightRadius: 20
-          backColor: "#f49d7cff"
+          backColor: cf48f4ff
           frontColor: "#ffffffff"
-          width: 17
-          height: 19
-          shrinkX: 0.20000000298023224
-          shrinkY: 0.10000000149011612
-          backRegion: shell-back
-          frontRegion: shell
+          width: 40
+          height: 40
           fragVelocityMin: 0.6
           fragLifeMax: 1.2
           fragOffsetMin: 1.5
@@ -250,7 +240,11 @@ unit: {
           fragBullets: 0
           splashDamage: 200
           range: 800
-          creeperDamageMultiplier: 25
+          creeperDamageMultiplier: 15
+          backSprite: block-thorium-reactor-ui
+          shrinkY: 0
+          shrinkX: 0
+          spin: 3
         }
         reload: 900
       }
@@ -348,99 +342,106 @@ unit: {
     creeperEvade: 0.92
     weapons: {
       0: {
+        reload: 900
         bullet: {
-          type: BasicBulletType
-          lifetime: 60
-          speed: 8
-          damage: 120
-          drawSize: 120
-          pierce: "true"
-          shootEffect: instBomb
-          despawnSound: explosionAfflict
-          range: 480
-          despawnHit: "true"
-          fragOnHit: "false"
-          fragBullet: {
-            type: BasicBulletType
-            lifetime: 28
-            speed: 3
-            damage: 25
-            hitSize: 5
-            pierce: "true"
-            pierceBuilding: "true"
-            keepVelocity: "false"
-            range: 84
-            hitColor: aca555ff
-            trailColor: "#f3e979ff"
-            trailLength: 5
-            trailWidth: 2.0999999046325684
-            homingPower: 0.10000000149011612
-            lightningType: damageLightning
-            lightRadius: 25
-            backColor: "#f3e979ff"
-            frontColor: "#ffffffff"
-            width: 12
-            height: 18
-            backRegion: bullet-back
-            frontRegion: bullet
-            splashDamage: 25
-            splashDamageRadius: 24
-            despawnEffect: launchPod
+          weapons: {
+            0: {
+              bullet: {
+                type: ArtilleryBulletType
+                height: 70
+                width: 70
+                shrinkY: 0
+                sprite: block-impact-reactor-full
+                spin: 5
+                backSprite: block-impact-reactor-full
+                frontColor: ffffffff
+                hitEffect: impactReactorExplosion
+                splashDamage: 1250
+                splashDamageRadius: 220
+                speed: 6
+                lifetime: 120
+                shootEffect: coreExplosion
+                chargeEffect: teleport
+                hitSound: explosionReactor2
+                damage: 1250
+                trailEffect: missileTrailSmoke
+                despawnHit: "true"
+              }
+              reload: 840
+              shoot: {
+                firstShotDelay: 60
+              }
+              shootSound: acceleratorLaunch
+              chargeSound: chargeVela
+              heatColor: ff4d00ff
+              recoilTime: 780
+              recoilPow: 1.2
+              cooldownTime: 720
+              shootStatus: unmoving
+              shootStatusDuration: 60
+            }
           }
-          fragBullets: 20
-          fragVelocityMin: 0.5
-          fragVelocityMax: 1.2000000476837158
-          fragLifeMin: 0.5
-          intervalBullet: {
-            type: BasicBulletType
-            lifetime: 28
-            speed: 3
-            damage: 25
-            hitSize: 5
-            pierce: "true"
-            pierceBuilding: "true"
-            keepVelocity: "false"
-            range: 84
-            hitColor: "#f3e979ff"
-            trailColor: "#f3e979ff"
-            trailLength: 5
-            trailWidth: 2.0999999046325684
-            homingPower: 0.10000000149011612
-            lightningType: damageLightning
-            lightRadius: 25
-            backColor: "#f3e979ff"
-            frontColor: "#ffffffff"
-            width: 9
-            height: 15
-            backRegion: bullet-back
-            frontRegion: bullet
-            splashDamage: 25
-            splashDamageRadius: 16
-            hitEffect: disperseTrail
-            despawnEffect: flakExplosion
-          }
-          bulletInterval: 6
-          hitColor: b8b15cff
-          trailColor: b0a957ff
-          trailInterval: 3
-          trailParam: 4
-          trailLength: 12
-          trailWidth: 2.200000047683716
-          lightRadius: 20
-          backColor: b3ac59ff
-          frontColor: "#ffffffff"
-          width: 16
-          height: 32
+          range: 1000
+          speed: 2
+          type: ArtilleryBulletType
+          height: 70
+          width: 70
           shrinkY: 0
-          backRegion: missile-large-back
-          frontRegion: missile-back
-          intervalAngle: 0
-          intervalRandomSpread: 0
+          sprite: block-impact-reactor-full
+          spin: 5
+          backSprite: block-impact-reactor-full
+          frontColor: ffffffff
+          hitEffect: impactReactorExplosion
+          splashDamage: 200
+          splashDamageRadius: 220
+          lifetime: 500
+          shootEffect: coreExplosion
+          chargeEffect: teleport
+          hitSound: explosionReactor2
+          damage: 1250
+          trailEffect: missileTrailSmoke
+          despawnHit: "true"
+          creeperDamageMultiplier: 15
         }
-        reload: 220
+        shoot: {
+          firstShotDelay: 60
+        }
+        shootSound: acceleratorLaunch
+        chargeSound: chargeVela
+        heatColor: ff4d00ff
+        recoilTime: 780
+        recoilPow: 1.2
+        cooldownTime: 720
+        shootStatus: unmoving
+        shootStatusDuration: 60
       }
     }
-    description: 使用远程穿透轨道炮，将一切阻挡的敌人撕裂。
+    description:
+      '''
+      [gold]火炮支援单位
+      装载超长攻击与超大范围的主炮
+      [gray]附带产轰炸机（孩子们想我了吗）
+      '''
+    range: 1000
+    speed: 0.9
+    rotateSpeed: 1.6
+    abilities.+: [
+      {
+        type: UnitSpawnAbility
+        unit: horizon
+        spawnTime: 900
+        spawnX: 19.25
+        spawnY: -31.75
+      }
+      {
+        type: UnitSpawnAbility
+        unit: horizon
+        spawnTime: 900
+        spawnX: -19.25
+        spawnY: -31.75
+      }
+    ]
+    maxRange: 1000
   }
   oct: {
     creeperEvade: 0.9
@@ -1883,14 +1884,12 @@ block: {
         amount: 500
       }
     ]
-    shootType: {
-      creeperDamageMultiplier: 0.5
-      fragBullet: {
-        creeperDamageMultiplier: 0.5
-        pierceCap: -1
-        damage: 15
-      }
-    }
+    canOverdrive: "false"
+    description:
+      '''
+      向敌方发射一连串的追踪子弹并放出激光。需要大量热量。
+      [gold]不可超速
+      '''
   }
   neoplasia-reactor: {
     canOverdrive: "true"
@@ -1912,17 +1911,6 @@ block: {
         fragBullet: {
           creeperDamageMultiplier: 0.5
         }
-      }
-    }
-  }
-  afflict: {
-    shootType: {
-      creeperDamageMultiplier: 0.5
-      intervalBullet: {
-        creeperDamageMultiplier: 0.5
-      }
-      fragBullet: {
-        creeperDamageMultiplier: 0.5
       }
     }
   }
@@ -2120,5 +2108,13 @@ block: {
       }
     ]
     description: 当放置在构造边界旁边时，增加输出等级。需要电力。可以用作载荷输入。\n代表着eT5构造阶段
+  }
+  afflict: {
+    canOverdrive: "false"
+    description:
+      '''
+      向敌人发射巨大的带电碎片弹。 需要热量。
+      [gold]不可超速
+      '''
   }
 }
