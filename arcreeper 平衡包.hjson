@@ -1222,17 +1222,18 @@ block: {
     consumes: {
       remove: [
         items
+        liquid
       ]
       items: {
         type: ConsumeItems
         items: [
           {
             item: silicon
-            amount: 2000
+            amount: 3000
           }
           {
             item: plastanium
-            amount: 1200
+            amount: 2000
           }
           {
             item: surge-alloy
@@ -1242,9 +1243,74 @@ block: {
             item: phase-fabric
             amount: 700
           }
+          {
+            item: titanium
+            amount: 1000
+          }
         ]
       }
+      liquid: {
+        liquid: gallium
+        amount: 0.5
+      }
     }
+    upgrades.0: {
+      0: flare
+    }
+    upgrades.1: {
+      0: crawler
+    }
+    upgrades.2: {
+      0: dagger
+    }
+    upgrades.3: {
+      0: risso
+    }
+    upgrades.4: {
+      0: mono
+    }
+    upgrades.5: {
+      0: nova
+    }
+    upgrades.6: {
+      0: retusa
+    }
+    description:
+      '''
+      [gold]输入T1直接构造T5级单位
+      需要镓液
+      '''
+    requirements: [
+      {
+        item: lead
+        amount: 10000
+      }
+      {
+        item: titanium
+        amount: 2500
+      }
+      {
+        item: thorium
+        amount: 5000
+      }
+      {
+        item: silicon
+        amount: 6000
+      }
+      {
+        item: plastanium
+        amount: 2000
+      }
+      {
+        item: phase-fabric
+        amount: 2000
+      }
+      {
+        item: surge-alloy
+        amount: 1200
+      }
+    ]
+    liquidCapacity: 120
   }
   scorch: {
     ammoTypes: {
@@ -1954,28 +2020,53 @@ block: {
     consumes: {
       remove: [
         items
-        liquid
       ]
       items: {
         items: [
           {
             item: silicon
-            amount: 425
+            amount: 1200
           }
           {
             item: titanium
-            amount: 375
+            amount: 1000
           }
           {
             item: plastanium
-            amount: 325
+            amount: 650
+          }
+          {
+            item: graphite
+            amount: 50
+          }
+          {
+            item: metaglass
+            amount: 50
           }
         ]
       }
-      liquid: {
-        liquid: cryofluid
-        amount: 1
-      }
+    }
+    description: "[gold]输入T1直接构造T4级单位"
+    upgrades.0: {
+      0: flare
+    }
+    upgrades.1: {
+      0: crawler
+    }
+    upgrades.2: {
+      0: dagger
+    }
+    upgrades.3: {
+      0: risso
+    }
+    upgrades.4: {
+      0: mono
+    }
+    upgrades.5: {
+      0: nova
+    }
+    upgrades.6: {
+      0: retusa
     }
   }
   large-constructor: {
@@ -2025,6 +2116,13 @@ block: {
             amount: 5
           }
         ]
+        liquidReq: [
+          {
+            liquid: gallium
+            amount: 0.5
+          }
+        ]
+        time: 14400
       }
       0: {
         requirements: [
@@ -2033,8 +2131,27 @@ block: {
             amount: 3
           }
         ]
+        liquidReq: [
+          {
+            liquid: nitrogen
+            amount: 0.25
+          }
+        ]
       }
     }
+    consumes: {
+      remove: [
+        liquid
+      ]
+    }
+    liquidCapacity: 120
+    description:
+      '''
+      [gold]构建eT4与T5坦
+      造价极为便宜以方便切换兵种
+      T4需求氮，T5需求镓
+
+      '''
   }
   ship-assembler: {
     health: 360
@@ -2063,6 +2180,13 @@ block: {
             amount: 5
           }
         ]
+        time: 14400
+        liquidReq: [
+          {
+            liquid: gallium
+            amount: 0.5
+          }
+        ]
       }
       0: {
         requirements: [
@@ -2071,8 +2195,26 @@ block: {
             amount: 3
           }
         ]
+        liquidReq: [
+          {
+            liquid: nitrogen
+            amount: 0.25
+          }
+        ]
       }
     }
+    consumes: {
+      remove: [
+        liquid
+      ]
+    }
+    description:
+      '''
+      [gold]构建eT4与T5坦
+      造价极为便宜以方便切换兵种
+      T4需求氮，T5需求镓
+
+      '''
   }
   mech-assembler: {
     health: 360
@@ -2101,6 +2243,13 @@ block: {
             amount: 5
           }
         ]
+        liquidReq: [
+          {
+            liquid: gallium
+            amount: 0.5
+          }
+        ]
+        time: 14400
       }
       0: {
         requirements: [
@@ -2109,8 +2258,21 @@ block: {
             amount: 3
           }
         ]
+        liquidReq: [
+          {
+            liquid: nitrogen
+            amount: 0.25
+          }
+        ]
       }
     }
+    description:
+      '''
+      [gold]构建eT4与T5爬
+      造价极为便宜以方便切换兵种
+      T4需求氮，T5需求镓
+
+      '''
   }
   basic-assembler-module: {
     requirements: {
