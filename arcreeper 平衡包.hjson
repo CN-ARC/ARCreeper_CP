@@ -468,6 +468,7 @@ unit: {
       }
     ]
     maxRange: 1000
+    targetHighestCreeper: "true"
   }
   oct: {
     creeperEvade: 0.9
