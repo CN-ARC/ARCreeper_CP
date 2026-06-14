@@ -613,7 +613,7 @@ unit: {
     mineRange: 130
   }
   vela: {
-    mineTier: 4
+    mineTier: 5
     mineSpeed: 20
     mineWalls: "true"
     mineItems: [
@@ -629,7 +629,7 @@ unit: {
     description:
       '''
       发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。
-      [gold]能够挖掘钍。
+      [gold]能够挖掘钍和钨。
       '''
     mineRange: 160
     itemCapacity: 300
