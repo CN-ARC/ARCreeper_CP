@@ -979,33 +979,41 @@ unit: {
             pierce: "true"
           }
           damage: 200
+          lifetime: 40
         }
+        reload: 60
       }
       1: {
         bullet: {
           pierceCap: 3
           pierce: "true"
+          lifetime: 30
         }
       }
       2: {
         bullet: {
           pierceCap: 3
           pierce: "true"
+          lifetime: 30
         }
       }
       3: {
         bullet: {
           pierceCap: 3
           pierce: "true"
+          lifetime: 30
         }
       }
       4: {
         bullet: {
           pierceCap: 3
           pierce: "true"
+          lifetime: 30
         }
       }
     }
+    range: 320
+    maxRange: 360
   }
   tecta: {
     weapons: {
