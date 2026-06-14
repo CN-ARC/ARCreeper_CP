@@ -294,7 +294,6 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
-          creeperOnRemove: 100
           creeperDamageMultiplier: 1.5
         }
         xRand: 10
@@ -330,7 +329,6 @@ unit: {
           collidesAir: "false"
           hitSize: 8
           drawSize: 120
-          creeperOnRemove: 100
           creeperDamageMultiplier: 1.5
         }
         shoot: {
@@ -619,8 +617,16 @@ unit: {
           fragBullet: {
             collidesAir: "true"
             creeperDamageMultiplier: 1.5
+            sprite: missile-large
+            followAimSpeed: 2
+            backRegion: missile-large-back
+            frontRegion: missile-large
           }
           creeperDamageMultiplier: 1.5
+          sprite: missile-large
+          followAimSpeed: 3
+          backRegion: missile-large-back
+          frontRegion: missile-large
         }
       }
       1: {
@@ -637,8 +643,16 @@ unit: {
           fragBullet: {
             collidesAir: "true"
             creeperDamageMultiplier: 1.5
+            sprite: missile-large
+            backRegion: missile-large-back
+            frontRegion: missile-large
+            followAimSpeed: 2
           }
           creeperDamageMultiplier: 1.5
+          sprite: missile-large
+          backRegion: missile-large-back
+          frontRegion: missile-large
+          followAimSpeed: 3
         }
       }
     }
