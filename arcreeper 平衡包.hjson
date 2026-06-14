@@ -129,7 +129,7 @@ unit: {
             shotDelay: 5
           }
           reload: 600
-          status: spore-slowed
+          status: electrified
           splashDamageRadius: 80
         }
         xRand: 10
@@ -169,7 +169,7 @@ unit: {
           reload: 600
           splashDamageRadius: 80
           splashDamage: 1
-          status: spore-slowed
+          status: electrified
         }
         shoot: {
           shotDelay: 5
@@ -182,7 +182,7 @@ unit: {
     description:
       '''
       [gold]战斗支援单位
-      发射AC导弹，给予敌方单位孢子污染
+      发射AC导弹，给予敌方单位麻痹
       拥有较大范围的孢子瓦解场
       [gray]design by LC
       '''
@@ -257,6 +257,7 @@ unit: {
     }
     range: 600
     maxRange: 600
+    targetAir: "false"
   }
   toxopid: {
     creeperEvade: 0.95
@@ -335,6 +336,7 @@ unit: {
         bullet: {
           velocityScaleRandMin: 1.1
           velocityScaleRandMax: 1.1
+          collidesAir: "true"
         }
       }
       1: {
@@ -347,9 +349,17 @@ unit: {
         bullet: {
           velocityScaleRandMin: 1.1
           velocityScaleRandMax: 1.1
+          collidesAir: "true"
         }
       }
     }
+    targetAir: "true"
+    description:
+      '''
+      向敌人发射远程分裂火炮。可以跨越大多数地形。
+      [gold]添加了对空功能
+      孩子们想我了吗
+      '''
   }
   eclipse: {
     creeperEvade: 0.75
@@ -469,6 +479,7 @@ unit: {
     ]
     maxRange: 1000
     targetHighestCreeper: "true"
+    targetAir: "false"
   }
   oct: {
     creeperEvade: 0.9
