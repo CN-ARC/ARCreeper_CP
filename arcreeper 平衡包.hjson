@@ -351,43 +351,7 @@ unit: {
         reload: 900
         bullet: {
           weapons: {
-            0: {
-              bullet: {
-                type: ArtilleryBulletType
-                height: 70
-                width: 70
-                shrinkY: 0
-                sprite: block-impact-reactor-full
-                spin: 5
-                backSprite: block-impact-reactor-full
-                frontColor: ffffffff
-                hitEffect: impactReactorExplosion
-                splashDamage: 1250
-                splashDamageRadius: 220
-                speed: 6
-                lifetime: 120
-                shootEffect: coreExplosion
-                chargeEffect: teleport
-                hitSound: explosionReactor2
-                damage: 1250
-                trailEffect: missileTrailSmoke
-                despawnHit: "true"
-              }
-              reload: 840
-              shoot: {
-                firstShotDelay: 60
-              }
-              shootSound: acceleratorLaunch
-              chargeSound: chargeVela
-              heatColor: ff4d00ff
-              recoilTime: 780
-              recoilPow: 1.2
-              cooldownTime: 720
-              shootStatus: unmoving
-              shootStatusDuration: 60
-            }
-          }
-          range: 1000
+          range: 800
           speed: 2
           type: ArtilleryBulletType
           height: 70
@@ -400,7 +364,7 @@ unit: {
           hitEffect: impactReactorExplosion
           splashDamage: 200
           splashDamageRadius: 220
-          lifetime: 500
+          lifetime: 400
           shootEffect: coreExplosion
           chargeEffect: teleport
           hitSound: explosionReactor2
@@ -430,7 +394,7 @@ unit: {
       [gray]balance by LC
       effect by blac
       '''
-    range: 1000
+    range: 800
     speed: 0.9
     rotateSpeed: 1.6
     abilities.+: [
@@ -1096,7 +1060,7 @@ unit: {
         reload: 24
         bullet: {
           killShooter: "true"
-          creeperOnRemove: 50000
+          creeperOnRemove: 25000
         }
         minShootVelocity: 0
       }
