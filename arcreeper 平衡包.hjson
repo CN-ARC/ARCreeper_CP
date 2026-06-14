@@ -202,8 +202,8 @@ unit: {
             pierceCap: -1
             damage: 200
             type: ArtilleryBulletType
-            speed: 5
-            lifetime: 140
+            speed: 2
+            lifetime: 300
             backRegion: missile-large-back
             frontRegion: missile-large-back
             sprite: missile-large-back
@@ -224,8 +224,8 @@ unit: {
           }
           damage: 200
           type: ArtilleryBulletType
-          speed: 5
-          lifetime: 140
+          speed: 2
+          lifetime: 300
           backRegion: missile-large-back
           frontRegion: missile-large-back
           sprite: missile-large-back
@@ -246,8 +246,8 @@ unit: {
         }
       }
     }
-    range: 800
-    maxRange: 800
+    range: 600
+    maxRange: 600
   }
   toxopid: {
     creeperEvade: 0.95
@@ -351,6 +351,42 @@ unit: {
         reload: 900
         bullet: {
           weapons: {
+            0: {
+              bullet: {
+                type: ArtilleryBulletType
+                height: 70
+                width: 70
+                shrinkY: 0
+                sprite: block-impact-reactor-full
+                spin: 5
+                backSprite: block-impact-reactor-full
+                frontColor: ffffffff
+                hitEffect: impactReactorExplosion
+                splashDamage: 1250
+                splashDamageRadius: 220
+                speed: 6
+                lifetime: 120
+                shootEffect: coreExplosion
+                chargeEffect: teleport
+                hitSound: explosionReactor2
+                damage: 1250
+                trailEffect: missileTrailSmoke
+                despawnHit: "true"
+              }
+              reload: 840
+              shoot: {
+                firstShotDelay: 60
+              }
+              shootSound: acceleratorLaunch
+              chargeSound: chargeVela
+              heatColor: ff4d00ff
+              recoilTime: 780
+              recoilPow: 1.2
+              cooldownTime: 720
+              shootStatus: unmoving
+              shootStatusDuration: 60
+            }
+          }
           range: 800
           speed: 2
           type: ArtilleryBulletType
