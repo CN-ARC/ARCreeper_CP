@@ -37,7 +37,7 @@ block: {
   tsunami: {
     description:
       '''
-      向敌人喷射强力的液体流。使用水作弹药时能够自动灭火。 
+      向敌人喷射强力的液体流。使用水作弹药时能够自动灭火。
 
       [gold]输入镓液可发射AC子弹
       '''
@@ -224,6 +224,8 @@ status: {
     buildSpeedMultiplier: 0.5
     damageMultiplier: 0.5
     healthMultiplier: 0.5
-    speedMultiplier: 0.75
+    speedMultiplier: 0.5
+    localizedName: "[#7457ceff]孢子污染[]"
+    description: "[gold]在敌方水上获得的buff，各项指标会被受到极大削弱"
   }
 }
