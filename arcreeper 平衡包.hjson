@@ -82,11 +82,19 @@ unit: {
         shootCone: 1000
         targetSwitchInterval: 0
         targetInterval: 0
+        bullet: {
+          speed: 16
+          range: 240
+        }
       }
       1: {
         shootCone: 1000
         targetInterval: 0
         targetSwitchInterval: 0
+        bullet: {
+          speed: 16
+          range: 240
+        }
       }
     }
     description:
@@ -96,6 +104,7 @@ unit: {
 
       [gray]balance by LC
       '''
+    range: 240
   }
   disrupt: {
     creeperEvade: 0.75
