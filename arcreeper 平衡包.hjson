@@ -340,6 +340,18 @@ unit: {
       }
     }
     targetHighestCreeper: "true"
+    abilities.+: [
+      {
+        type: SporeDisruptFieldAbility
+        range: 160
+        damage: 0.1
+      }
+    ]
+    description:
+      '''
+      向敌人发射远程压制性追踪导弹。且能够裂解范围内的孢子。
+      [gold]不能对空。
+      '''
   }
   conquer: {
     creeperEvade: 0.75
@@ -657,6 +669,11 @@ unit: {
       }
     }
     targetAir: "true"
+    description:
+      '''
+      向敌人发射远程分裂对空火炮。可以跨越大多数地形。 
+      [gold]不用小心obv，这种粘鞋底最难清理了。
+      '''
   }
   eclipse: {
     creeperEvade: 0.75
@@ -681,7 +698,7 @@ unit: {
           fragBullet: {
             type: LaserBulletType
             lifetime: 22
-            damage: 15
+            damage: 65
             drawSize: 400
             optimalLifeFract: 1
             hitEffect: hitLancer
@@ -722,6 +739,9 @@ unit: {
           explodeRange: 100
           explodeDelay: 0
           flakInterval: 20
+          followAimSpeed: 4
+          lifetime: 70
+          fragBullets: 3
         }
         reload: 15
         inaccuracy: 15
@@ -747,7 +767,7 @@ unit: {
           fragBullet: {
             type: LaserBulletType
             lifetime: 22
-            damage: 15
+            damage: 65
             drawSize: 400
             optimalLifeFract: 1
             hitEffect: hitLancer
@@ -789,14 +809,41 @@ unit: {
           explodeRange: 100
           explodeDelay: 0
           flakInterval: 20
+          followAimSpeed: 4
+          lifetime: 70
+          fragBullets: 3
         }
         reload: 15
         inaccuracy: 15
         rotateSpeed: 6
       }
+      2: {
+        bullet: {
+          speed: 12
+        }
+        reload: 12
+      }
+      3: {
+        bullet: {
+          speed: 12
+        }
+        reload: 12
+      }
+      4: {
+        bullet: {
+          speed: 12
+        }
+        reload: 12
+      }
+      5: {
+        bullet: {
+          speed: 12
+        }
+        reload: 12
+      }
     }
-    range: 240
-    maxRange: 320
+    range: 520
+    maxRange: 560
   }
   omura: {
     creeperEvade: 0.92
@@ -1007,12 +1054,15 @@ unit: {
     mineRange: 130
   }
   vela: {
-    mineTier: 4
+    mineTier: 5
     mineSpeed: 20
     mineWalls: "true"
     mineItems: [
       tungsten
       thorium
+      titanium
+      graphite
+      beryllium
     ]
     commands: {
       3: mine
@@ -1023,7 +1073,7 @@ unit: {
     description:
       '''
       发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。
-      [gold]能够挖掘钍。
+      [gold]能够挖掘钍与钨。
       '''
     mineRange: 160
     itemCapacity: 300
@@ -1147,7 +1197,11 @@ unit: {
         region: large-purple-mount
       }
     ]
-    description: 向敌人发射穿透型激光。
+    description:
+      '''
+      向敌人发射穿透型激光。
+      [gold]吸血攻击方式打不了水（悲伤）
+      '''
     maxRange: 120
     targetAir: "false"
     range: 60
@@ -1596,7 +1650,7 @@ unit: {
     description:
       '''
       向敌人交替发射子弹。
-      [blue]四倍火力，四倍快乐。
+      [gold]四倍火力，四倍快乐。
       '''
   }
   scathe-missile-surge-split: {
