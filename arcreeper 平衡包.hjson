@@ -1284,19 +1284,19 @@ block: {
         items: [
           {
             item: silicon
-            amount: 3000
+            amount: 2500
           }
           {
             item: plastanium
-            amount: 2000
+            amount: 1800
           }
           {
             item: surge-alloy
-            amount: 1000
+            amount: 800
           }
           {
             item: phase-fabric
-            amount: 700
+            amount: 600
           }
           {
             item: titanium
@@ -2173,7 +2173,7 @@ block: {
         requirements: [
           {
             item: scathe
-            amount: 5
+            amount: 6
           }
         ]
         liquidReq: [
@@ -2237,7 +2237,7 @@ block: {
         requirements: [
           {
             item: scathe
-            amount: 5
+            amount: 6
           }
         ]
         time: 14400
@@ -2300,7 +2300,7 @@ block: {
         requirements: [
           {
             item: scathe
-            amount: 5
+            amount: 6
           }
         ]
         liquidReq: [
