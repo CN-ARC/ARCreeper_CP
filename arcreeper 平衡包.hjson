@@ -820,6 +820,12 @@ unit: {
       2: {
         bullet: {
           speed: 12
+          width: 4
+          height: 32
+          frontColor: ffdb8aff
+          trailColor: e5dc83ff
+          trailLength: 2
+          trailWidth: 2
         }
         reload: 12
       }
