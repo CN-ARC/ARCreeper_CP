@@ -200,7 +200,7 @@ unit: {
         type: SporeDisruptFieldAbility
         range: 480
         reload: 300
-        damage: 5
+        damage: 3
       }
     ]
   }
@@ -328,7 +328,7 @@ unit: {
         type: SporeDisruptFieldAbility
         range: 400
         reload: 300
-        damage: 3
+        damage: 10
       }
     }
   }
