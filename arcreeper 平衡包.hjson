@@ -775,6 +775,7 @@ unit: {
     immunities.+: [
       spore-slowed
     ]
+    creeperEvade: 0.5
   }
   fortress: {
     weapons: {
@@ -1111,6 +1112,7 @@ unit: {
           drawSize: 102
           splashDamageRadius: 56
           splashDamage: 110
+          creeperOnRemove: 2
         }
       }
       1: {
@@ -1142,6 +1144,7 @@ unit: {
           collidesAir: "false"
           hitSize: 7
           drawSize: 102
+          creeperOnRemove: 2
         }
       }
     }
@@ -1169,12 +1172,21 @@ unit: {
     immunities.+: [
       spore-slowed
     ]
+    weapons: {
+      0: {
+        bullet: {
+          creeperOnRemove: 1
+        }
+      }
+    }
+    health: 10
   }
   arkyid: {
     targetHighestCreeper: "true"
     immunities.+: [
       spore-slowed
     ]
+    creeperEvade: 0.95
   }
   retusa: {
     creeperEvade: 0.8
