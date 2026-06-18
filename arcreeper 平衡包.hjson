@@ -594,6 +594,9 @@ unit: {
       }
     }
     description: "[gold]自爆，造成伤害，并产生少量水"
+    immunities.+: [
+      spore-slowed
+    ]
   }
   nova: {
     mineItems: [
@@ -671,6 +674,9 @@ unit: {
         }
       }
     }
+    immunities.+: [
+      spore-slowed
+    ]
   }
   spiroct: {
     weapons: [
@@ -766,6 +772,9 @@ unit: {
     maxRange: 120
     targetAir: "false"
     range: 60
+    immunities.+: [
+      spore-slowed
+    ]
   }
   fortress: {
     weapons: {
@@ -1163,6 +1172,9 @@ unit: {
   }
   arkyid: {
     targetHighestCreeper: "true"
+    immunities.+: [
+      spore-slowed
+    ]
   }
   retusa: {
     creeperEvade: 0.8
