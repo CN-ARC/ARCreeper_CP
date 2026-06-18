@@ -1,0 +1,259 @@
+name: creeper upgraded bullet
+block: {
+  swarmer: {
+    ammoTypes: {
+      dormant-cyst: {
+        type: MissileBulletType
+        lifetime: 68.91891479492188
+        speed: 5
+        damage: 12
+        hitEffect: blastExplosion
+        ammoMultiplier: 30
+        splashDamage: 90
+        range: 255
+        makeFire: "true"
+        despawnHit: "true"
+        spawnBullets: []
+        parts: []
+        splashDamageRadius: 28
+        lightningType: damageLightning
+        lightRadius: 20
+        backColor: 9c5b1bff
+        frontColor: ffbd1dda
+        width: 7
+        backRegion: missile-back
+        frontRegion: missile
+        rangeChange: 100
+        trailColor: e5713a97
+        shootPattern: {
+          type: ShootBarrel
+          barrels: [
+            -4
+            -1.25
+            0
+            0
+            0
+            0
+            4
+            -1.25
+            0
+          ]
+          shots: 10
+          shotDelay: 1
+        }
+        creeperDamageMultiplier: 3
+        trailLength: 4
+      }
+    }
+  }
+  ripple: {
+    ammoTypes: {
+      dormant-cyst: {
+        type: ArtilleryBulletType
+        lifetime: 80
+        lifeScaleRandMin: 0.949999988079071
+        lifeScaleRandMax: 1.0800000429153442
+        speed: 3.4000000953674316
+        damage: 40
+        hitEffect: {
+          type: MultiEffect
+          effects: [
+            plasticExplosion
+            shockwave
+          ]
+        }
+        splashDamage: 90
+        knockback: 1
+        range: 272
+        despawnHit: "true"
+        fragBullet: {
+          type: ArtilleryBulletType
+          lifetime: 20
+          speed: 3.4
+          damage: 40
+          despawnEffect: none
+          collidesAir: "false"
+          keepVelocity: "false"
+          range: 272
+          lightningType: damageLightningGround
+          lightRadius: 20
+          backColor: d99834ff
+          frontColor: ffcb78ff
+          width: 13
+          height: 15
+          shrinkY: 1
+          backRegion: shell-back
+          frontRegion: shell
+          lifeScaleRandMin: 0.949999988079071
+          lifeScaleRandMax: 1.0800000429153442
+          hitEffect: {
+            type: MultiEffect
+            effects: [
+              plasticExplosion
+              shockwave
+            ]
+          }
+          splashDamage: 90
+          knockback: 1
+          despawnHit: "true"
+          fragBullet: {
+            type: ArtilleryBulletType
+            lifetime: 10
+            speed: 3.4
+            damage: 40
+            despawnEffect: none
+            keepVelocity: "false"
+            range: 272
+            lightningType: damageLightningGround
+            lightRadius: 20
+            backColor: d99834ff
+            frontColor: ffcb78ff
+            width: 13
+            height: 15
+            shrinkY: 1
+            backRegion: shell-back
+            frontRegion: shell
+            lifeScaleRandMin: 0.949999988079071
+            lifeScaleRandMax: 1.0800000429153442
+            hitEffect: {
+              type: MultiEffect
+              effects: [
+                plasticExplosion
+                shockwave
+              ]
+            }
+            splashDamage: 90
+            knockback: 1
+            despawnHit: "true"
+            splashDamageRadius: 30
+            fragOnHit: "false"
+            fragOnDespawn: "false"
+            fragOnAbsorb: "false"
+            fragLifeMax: 0
+            fragOffsetMin: 0
+            creeperDamageMultiplier: 3
+            trailLength: 12
+            trailWidth: 5
+          }
+          fragBullets: 1
+          splashDamageRadius: 30
+          fragRandomSpread: 10
+          fragOffsetMin: 0
+          fragOffsetMax: 0
+          fragVelocityMin: 0.8
+          creeperDamageMultiplier: 3
+          trailLength: 12
+          trailWidth: 5
+        }
+        fragBullets: 1
+        splashDamageRadius: 30
+        lightningType: damageLightningGround
+        lightRadius: 20
+        backColor: d99834ff
+        frontColor: ffcb78ff
+        width: 13
+        height: 15
+        backRegion: shell-back
+        frontRegion: shell
+        fragRandomSpread: 10
+        rangeChange: 100
+        fragVelocityMin: 0.8
+        fragOffsetMin: 0
+        fragOffsetMax: 0
+        ammoMultiplier: 30
+        creeperDamageMultiplier: 3
+        trailLength: 12
+        trailWidth: 5
+      }
+    }
+  }
+  foreshadow: {
+    ammoTypes: {
+      dormant-cyst: {
+        damage: 1850
+        buildingDamageMultiplier: 0.1
+        type: PointBulletType
+        speed: 128
+        lifetime: 4
+        hitEffect: instHit
+        lightningDamage: 38
+        splashDamageRadius: 24
+        splashDamage: 1350
+        trailInterp: sine
+        despawnEffect: instBomb
+        shootEffect: instShoot
+        trailSpacing: 19
+        smokeEffect: smokeCloud
+        trailEffect: instTrail
+        status: electrified
+        statusDuration: 240
+        hitShake: 6
+        ammoMultiplier: 1
+        lightningColor: f9c27a
+        lightning: 11
+        lightningLength: 13
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragOffsetMax: 0
+        fragOffsetMin: 0
+        fragBullet: {
+          type: BulletType
+          damage: 0
+          splashDamageRadius: 64
+          splashDamage: 1500
+          buildingDamageMultiplier: 0.1
+          collides: "false"
+          hittable: "false"
+          absorbable: "false"
+          speed: 0
+          lifetime: 0
+          hitShake: 12
+          hitEffect: scatheExplosion
+          hitColor: ff723aff
+        }
+        creeperAppliedMultiplier: 0.5
+      }
+    }
+  }
+  scathe: {
+    ammoTypes: {
+      dormant-cyst: {
+        type: BasicBulletType
+        speed: 8
+        lifetime: 120
+        backRegion: missile-large-back
+        frontRegion: missile-large
+        sprite: missile-large
+        backColor: be5841ff
+        frontColor: ffbc96ff
+        width: 24
+        height: 44
+        damage: 2500
+        splashDamage: 1000
+        splashDamageRadius: 160
+        followAimSpeed: 24
+        trailColor: fe8100cf
+        trailWidth: 6
+        trailLength: 24
+        hitEffect: coreExplosion
+        hitColor: ff5e0d9b
+        hitSize: 8
+        drawSize: 120
+        creeperDamageMultiplier: 2
+        reloadMultiplier: 4
+        homingPower: 0.5
+        homingRange: 100
+        homingDelay: 30
+        accel: 0.1
+        buildingDamageMultiplier: 0.1
+        status: slow
+        mixColorFrom: ffe83474
+        mixColorTo: ffcc0de0
+        trailInterp: fade
+        trailEffect: shootSmokeSquareBig
+        trailChance: 1
+        trailInterval: 16
+      }
+    }
+  }
+}
