@@ -983,39 +983,35 @@ unit: {
       0: {
         bullet: {
           pierceCap: 8
-          fragBullet: {
-            pierceCap: 5
-            pierce: "true"
-          }
-          damage: 200
           lifetime: 40
+          creeperDamageMultiplier: 2
         }
         reload: 60
       }
       1: {
         bullet: {
-          pierceCap: 3
+          pierceCap: 2
           pierce: "true"
           lifetime: 30
         }
       }
       2: {
         bullet: {
-          pierceCap: 3
+          pierceCap: 2
           pierce: "true"
           lifetime: 30
         }
       }
       3: {
         bullet: {
-          pierceCap: 3
+          pierceCap: 2
           pierce: "true"
           lifetime: 30
         }
       }
       4: {
         bullet: {
-          pierceCap: 3
+          pierceCap: 2
           pierce: "true"
           lifetime: 30
         }
@@ -1023,22 +1019,45 @@ unit: {
     }
     range: 320
     maxRange: 360
+    description:
+      '''
+      向敌人发射大型穿透性分裂子弹。
+      [cyan]能够碾压建筑(对墙5倍伤害)
+      [gold]更大的攻击范围，清水用
+      '''
   }
   tecta: {
     weapons: {
-      0: {
-        bullet: {
-          pierceCap: 2
-          pierce: "true"
-        }
-      }
       1: {
         bullet: {
           pierceCap: 2
           pierce: "true"
+          damage: 120
+          pierceBuilding: "true"
+        }
+      }
+      0: {
+        bullet: {
+          pierce: "true"
+          pierceCap: 2
+          damage: 120
+          pierceBuilding: "true"
         }
       }
     }
+    abilities: {
+      0: {
+        type: ForceFieldAbility
+        radius: 90
+        heightEnhance: 5
+      }
+    }
+    description:
+      '''
+      向敌人发射等离子追踪导弹。用它前方的护盾保护自己。可以跨越大多数地形。
+
+      [gold]附带高度立场，拆建筑效率很高
+      '''
   }
   risso: {
     targetHighestCreeper: "true"
@@ -2188,7 +2207,7 @@ block: {
         requirements: [
           {
             item: lustre
-            amount: 3
+            amount: 4
           }
         ]
         liquidReq: [
@@ -2252,7 +2271,7 @@ block: {
         requirements: [
           {
             item: lustre
-            amount: 3
+            amount: 4
           }
         ]
         liquidReq: [
@@ -2315,7 +2334,7 @@ block: {
         requirements: [
           {
             item: lustre
-            amount: 3
+            amount: 4
           }
         ]
         liquidReq: [
