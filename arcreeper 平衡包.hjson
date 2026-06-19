@@ -140,7 +140,7 @@ unit: {
           reload: 600
           status: unmoving
           splashDamageRadius: 80
-          statusDuration: 60
+          statusDuration: 30
         }
         xRand: 10
         yRand: 10
@@ -180,7 +180,7 @@ unit: {
           splashDamageRadius: 80
           splashDamage: 1
           status: unmoving
-          statusDuration: 60
+          statusDuration: 30
         }
         shoot: {
           shotDelay: 5
