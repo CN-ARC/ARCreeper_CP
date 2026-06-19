@@ -670,6 +670,18 @@ unit: {
     targetAir: "false"
   }
   oct: {
+    mineTier: 8
+    mineSpeed: 75
+    mineWalls: "true"
+    mineItems: [
+      tungsten
+      thorium
+    ]
+    commands.+: [
+      mine
+    ]
+    mineRange: 240
+    itemCapacity: 500
     creeperEvade: 0.9
     payloadCapacity: 6400
     description:
@@ -820,16 +832,13 @@ unit: {
     commands: {
       3: mine
     }
-    commands.+: [
-      move
-    ]
+    mineRange: 160
+    itemCapacity: 300
     description:
       '''
       发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。
       [gold]能够挖掘钍和钨。
       '''
-    mineRange: 160
-    itemCapacity: 300
   }
   oxynoe: {
     weapons: {
@@ -1377,6 +1386,18 @@ unit: {
     creeperEvade: 0.8
   }
   quad: {
+    mineTier: 5
+    mineSpeed: 15
+    mineWalls: "true"
+    mineItems: [
+      tungsten
+      thorium
+    ]
+    commands.+: [
+      mine
+    ]
+    mineRange: 240
+    itemCapacity: 300
     weapons: {
       0: {
         reload: 24
