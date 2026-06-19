@@ -1,4 +1,4 @@
-name: creeper upgraded bullet
+name: creeper upgraded bullet v1.0
 block: {
   swarmer: {
     ammoTypes: {
@@ -55,13 +55,6 @@ block: {
         lifeScaleRandMax: 1.0800000429153442
         speed: 3.4000000953674316
         damage: 40
-        hitEffect: {
-          type: MultiEffect
-          effects: [
-            plasticExplosion
-            shockwave
-          ]
-        }
         splashDamage: 90
         knockback: 1
         range: 272
@@ -164,6 +157,7 @@ block: {
         creeperDamageMultiplier: 3
         trailLength: 12
         trailWidth: 5
+        hitEffect: blastExplosion
       }
     }
   }
@@ -236,7 +230,7 @@ block: {
         trailWidth: 6
         trailLength: 24
         hitEffect: coreExplosion
-        hitColor: ff5e0d9b
+        hitColor: ffc98cff
         hitSize: 8
         drawSize: 120
         creeperDamageMultiplier: 2
@@ -256,5 +250,65 @@ block: {
         trailRotation: "true"
       }
     }
+  }
+  disperse: {
+    ammoTypes: {
+      dormant-cyst: {
+        type: BasicBulletType
+        lifetime: 100
+        speed: 9
+        damage: 180
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        shootEffect: shootBig2
+        smokeEffect: shootSmokeDisperse
+        reloadMultiplier: 1.5
+        status: unmoving
+        collidesTiles: "false"
+        collidesGround: "false"
+        rangeChange: 540
+        range: 360
+        despawnHit: "true"
+        bulletInterval: 4
+        hitColor: f39979ff
+        trailColor: f3b667ff
+        trailChance: 0.4399999976158142
+        trailEffect: disperseTrail
+        trailRotation: "true"
+        lightRadius: 20
+        backColor: f36700ff
+        frontColor: ffab4dff
+        width: 16
+        height: 16
+        shrinkY: 0.30000001192092896
+        rotationOffset: 90
+        sprite: mine-bullet
+        backSprite: large-bomb-back
+        backRegion: large-bomb-back
+        frontRegion: mine-bullet
+        homingDelay: 10
+        homingPower: 0.1
+        homingRange: 12
+        shootPattern: {
+          type: ShootAlternate
+          barrels: 8
+          spread: 2
+          shots: 2
+        }
+        trailLength: 4
+        trailWidth: 2
+        pierce: "true"
+        pierceCap: 3
+        pierceArmor: "true"
+        pierceDamageFactor: 0.8
+        ammoMultiplier: 30
+      }
+    }
+  }
+}
+item: {
+  dormant-cyst: {
+    hidden: "false"
+    hideDetails: "false"
   }
 }
