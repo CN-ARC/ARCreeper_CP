@@ -253,6 +253,7 @@ block: {
         trailEffect: shootSmokeSquareBig
         trailChance: 1
         trailInterval: 16
+        trailRotation: "true"
       }
     }
   }
