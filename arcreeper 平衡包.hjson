@@ -708,6 +708,12 @@ unit: {
         alwaysShooting: "true"
       }
     ]
+    abilities: {
+      0: {
+        radius: 210
+        heightEnhance: 100
+      }
+    }
   }
   merui: {
     weapons: {
