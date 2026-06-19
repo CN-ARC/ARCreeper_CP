@@ -138,8 +138,9 @@ unit: {
             shotDelay: 5
           }
           reload: 600
-          status: electrified
+          status: unmoving
           splashDamageRadius: 80
+          statusDuration: 60
         }
         xRand: 10
         yRand: 10
@@ -178,7 +179,8 @@ unit: {
           reload: 600
           splashDamageRadius: 80
           splashDamage: 1
-          status: electrified
+          status: unmoving
+          statusDuration: 60
         }
         shoot: {
           shotDelay: 5
@@ -444,7 +446,7 @@ unit: {
           damage: 1250
           trailEffect: missileTrailSmoke
           despawnHit: "true"
-          creeperDamageMultiplier: 15
+          creeperDamageMultiplier: 10
         }
         shoot: {
           firstShotDelay: 60
@@ -468,7 +470,6 @@ unit: {
       effect by blac
       '''
     range: 800
-    speed: 0.9
     rotateSpeed: 1.6
     abilities.+: [
       {
@@ -486,7 +487,7 @@ unit: {
         spawnY: -31.75
       }
     ]
-    maxRange: 1000
+    maxRange: 800
     targetHighestCreeper: "true"
     targetAir: "false"
   }
