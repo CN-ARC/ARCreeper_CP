@@ -1,55 +1,63 @@
 name: creeper balance v1.3.6
 unit: {
   quell-missile: {
-    weapons.0.bullet: {
-      splashDamageRadius: 48
-      splashDamage: 140
+    weapons: {
+      0: {
+        bullet: {
+          splashDamageRadius: 48
+          splashDamage: 140
+        }
+      }
     }
     health: 0.5
     targetHighestCreeper: "true"
   }
   corvus: {
-    weapons.0.bullet: {
-      lightningSpacing: 40
-      lightningType: {
-        type: BasicBulletType
-        lifetime: 5
-        speed: 0
-        hitEffect: massiveExplosion
-        despawnEffect: greenBomb
-        hitSound: explosionQuad
-        hitSoundVolume: 0
-        collidesAir: "false"
-        collides: "false"
-        keepVelocity: "false"
-        maxRange: 30
-        range: 30
-        healPercent: 15
-        despawnHit: "true"
-        hitShake: 4
-        splashDamageRadius: 80
-        lightningType: damageLightningGround
-        lightRadius: 20
-        backColor: "#98ffa9ff"
-        frontColor: "#ffffffff"
-        mixColorTo: "#ffffffff"
-        width: 30
-        height: 30
-        shrinkX: 0.699999988079071
-        shrinkY: 0.699999988079071
-        spin: 2
-        sprite: large-bomb
-        backRegion: large-bomb-back
-        frontRegion: large-bomb
-        splashDamage: 35
-        creeperDamageMultiplier: 4
+    weapons: {
+      0: {
+        bullet: {
+          lightningSpacing: 40
+          lightningType: {
+            type: BasicBulletType
+            lifetime: 5
+            speed: 0
+            hitEffect: massiveExplosion
+            despawnEffect: greenBomb
+            hitSound: explosionQuad
+            hitSoundVolume: 0
+            collidesAir: "false"
+            collides: "false"
+            keepVelocity: "false"
+            maxRange: 30
+            range: 30
+            healPercent: 15
+            despawnHit: "true"
+            hitShake: 4
+            splashDamageRadius: 80
+            lightningType: damageLightningGround
+            lightRadius: 20
+            backColor: "#98ffa9ff"
+            frontColor: "#ffffffff"
+            mixColorTo: "#ffffffff"
+            width: 30
+            height: 30
+            shrinkX: 0.699999988079071
+            shrinkY: 0.699999988079071
+            spin: 2
+            sprite: large-bomb
+            backRegion: large-bomb-back
+            frontRegion: large-bomb
+            splashDamage: 35
+            creeperDamageMultiplier: 4
+          }
+          lightningDelay: 4
+          lightningAngleRand: 0
+          lightningLengthRand: 0
+          lightningCone: 360
+          lightningLength: 3
+          creeperDamageMultiplier: 2
+        }
       }
-      lightningDelay: 4
-      lightningAngleRand: 0
-      lightningLengthRand: 0
-      lightningCone: 360
-      lightningLength: 3
-      creeperDamageMultiplier: 2
     }
     creeperEvade: 0.75
     targetHighestCreeper: "true"
@@ -1019,12 +1027,16 @@ unit: {
     payloadCapacity: 6400
   }
   disrupt-missile: {
-    weapons.0.bullet: {
-      splashDamageRadius: 80
-      hitEffect: titanSmoke
-      despawnEffect: titanExplosion
-      hitColor: 7b2cc2ff
-      splashDamage: 150
+    weapons: {
+      0: {
+        bullet: {
+          splashDamageRadius: 80
+          hitEffect: titanSmoke
+          despawnEffect: titanExplosion
+          hitColor: 7b2cc2ff
+          splashDamage: 150
+        }
+      }
     }
     health: 0.5
     targetHighestCreeper: "true"
@@ -1041,7 +1053,13 @@ unit: {
     }
     targetHighestCreeper: "true"
   }
-  stell.weapons.0.reload: 24
+  stell: {
+    weapons: {
+      0: {
+        reload: 24
+      }
+    }
+  }
   mono: {
     creeperEvade: 1
   }
@@ -1070,11 +1088,21 @@ unit: {
       }
     }
   }
-  avert.weapons.0.reload: 30
+  avert: {
+    weapons: {
+      0: {
+        reload: 30
+      }
+    }
+  }
   crawler: {
-    weapons.0.bullet: {
-      hitEffect: blastExplosion
-      creeperOnRemove: 25
+    weapons: {
+      0: {
+        bullet: {
+          hitEffect: blastExplosion
+          creeperOnRemove: 25
+        }
+      }
     }
     description: "[gold]自爆，造成伤害，并产生少量水"
   }
@@ -1131,15 +1159,31 @@ unit: {
   }
   oxynoe: {
     weapons: {
-      0.bullet.pierceCap: 3
-      1.bullet.pierceCap: 3
+      0: {
+        bullet: {
+          pierceCap: 3
+        }
+      }
+      1: {
+        bullet: {
+          pierceCap: 3
+        }
+      }
     }
     creeperEvade: 0.85
   }
   atrax: {
     weapons: {
-      0.bullet.damage: 35
-      1.bullet.damage: 35
+      0: {
+        bullet: {
+          damage: 35
+        }
+      }
+      1: {
+        bullet: {
+          damage: 35
+        }
+      }
     }
   }
   spiroct: {
@@ -1277,11 +1321,17 @@ unit: {
   }
   zenith: {
     weapons: {
-      0.shoot.shots: 3
+      0: {
+        shoot: {
+          shots: 1
+        }
+        reload: 25
+      }
       1: {
         shoot: {
-          shots: 3
+          shots: 1
         }
+        reload: 25
         bullet: {
           splashDamage: 25
         }
@@ -1295,21 +1345,15 @@ unit: {
           splashDamage: 60
           splashDamageRadius: 28
         }
-        shoot: {
-          shots: 4
-        }
-        reload: 80
         inaccuracy: 10
+        reload: 20
       }
       1: {
         bullet: {
           splashDamage: 60
           splashDamageRadius: 28
         }
-        shoot: {
-          shots: 4
-        }
-        reload: 80
+        reload: 20
         inaccuracy: 10
       }
       2: {
@@ -1317,10 +1361,7 @@ unit: {
           splashDamage: 60
           splashDamageRadius: 28
         }
-        shoot: {
-          shots: 4
-        }
-        reload: 80
+        reload: 20
         inaccuracy: 10
       }
       3: {
@@ -1328,25 +1369,34 @@ unit: {
           splashDamage: 60
           splashDamageRadius: 28
         }
-        shoot: {
-          shots: 4
-        }
-        reload: 80
+        reload: 20
         inaccuracy: 10
       }
     }
   }
   cyerce: {
     weapons: {
-      2.bullet.splashDamageRadius: 50
-      3.bullet.splashDamageRadius: 50
+      2: {
+        bullet: {
+          splashDamageRadius: 50
+        }
+      }
+      3: {
+        bullet: {
+          splashDamageRadius: 50
+        }
+      }
     }
     creeperEvade: 0.85
   }
   sei: {
-    weapons.0.shoot: {
-      mirror: "true"
-      shots: 15
+    weapons: {
+      0: {
+        shoot: {
+          mirror: "true"
+          shots: 15
+        }
+      }
     }
     creeperEvade: 0.9
   }
@@ -1720,11 +1770,17 @@ unit: {
     }
     description: "[gold]自杀，产生少量水"
   }
-  obviate.weapons.0.bullet: {
-    splashDamageRadius: 24
-    splashDamage: 20
-    pierceCap: 3
-    pierce: "true"
+  obviate: {
+    weapons: {
+      0: {
+        bullet: {
+          splashDamageRadius: 24
+          splashDamage: 20
+          pierceCap: 3
+          pierce: "true"
+        }
+      }
+    }
   }
   locus: {
     weapons: {
@@ -1760,14 +1816,38 @@ unit: {
       [gold]四倍火力，四倍快乐。
       '''
   }
-  scathe-missile-surge-split.weapons.0.bullet.creeperOnRemove: 100
-  scathe-missile-surge: {
+  scathe-missile-surge-split: {
     weapons: {
-      0.bullet.creeperOnRemove: 300
-      1.bullet.creeperOnRemove: 300
+      0: {
+        bullet: {
+          creeperOnRemove: 100
+        }
+      }
     }
   }
-  scathe-missile.weapons.0.bullet.creeperOnRemove: 500
+  scathe-missile-surge: {
+    weapons: {
+      0: {
+        bullet: {
+          creeperOnRemove: 300
+        }
+      }
+      1: {
+        bullet: {
+          creeperOnRemove: 300
+        }
+      }
+    }
+  }
+  scathe-missile: {
+    weapons: {
+      0: {
+        bullet: {
+          creeperOnRemove: 500
+        }
+      }
+    }
+  }
 }
 block: {
   tetrative-reconstructor: {
@@ -1778,10 +1858,22 @@ block: {
       items: {
         type: ConsumeItems
         items: [
-          silicon/2000
-          plastanium/1200
-          surge-alloy/1000
-          phase-fabric/700
+          {
+            item: silicon
+            amount: 2000
+          }
+          {
+            item: plastanium
+            amount: 1200
+          }
+          {
+            item: surge-alloy
+            amount: 1000
+          }
+          {
+            item: phase-fabric
+            amount: 700
+          }
         ]
       }
     }
@@ -1796,7 +1888,13 @@ block: {
       }
     }
   }
-  tank-fabricator.requirements.0.amount: 80
+  tank-fabricator: {
+    requirements: {
+      0: {
+        amount: 80
+      }
+    }
+  }
   ship-fabricator: {
     requirements: {
       0: {
@@ -1809,8 +1907,14 @@ block: {
   }
   mech-fabricator: {
     requirements: [
-      silicon/120
-      beryllium/200
+      {
+        item: silicon
+        amount: 120
+      }
+      {
+        item: beryllium
+        amount: 200
+      }
     ]
   }
   fuse: {
@@ -1938,219 +2042,170 @@ block: {
   chemical-combustion-chamber: {
     powerProduction: 10
     requirements: [
-      graphite/100
-      silicon/100
-      tungsten/50
+      {
+        item: graphite
+        amount: 100
+      }
+      {
+        item: silicon
+        amount: 100
+      }
+      {
+        item: tungsten
+        amount: 50
+      }
     ]
   }
   pyrolysis-generator: {
     powerProduction: 30
     requirements: [
-      beryllium/100
-      tungsten/100
-      silicon/200
-      oxide/50
+      {
+        item: beryllium
+        amount: 100
+      }
+      {
+        item: tungsten
+        amount: 100
+      }
+      {
+        item: silicon
+        amount: 200
+      }
+      {
+        item: oxide
+        amount: 50
+      }
     ]
   }
-  foreshadow.ammoTypes.surge-alloy: {
-    damage: 1850
-    buildingDamageMultiplier: 0.1
-    pierceBuilding: "false"
-    type: PointBulletType
-    speed: 128
-    lifetime: 4
-    hitEffect: instHit
-    lightningDamage: 38
-    splashDamageRadius: 24
-    splashDamage: 1350
-    trailInterp: sine
-    despawnEffect: instBomb
-    shootEffect: instShoot
-    trailSpacing: 19
-    smokeEffect: smokeCloud
-    trailEffect: instTrail
-    status: electrified
-    statusDuration: 240
-    hitShake: 6
-    ammoMultiplier: 1
-    lightningColor: f9c27a
-    lightning: 11
-    lightningLength: 13
-    fragBullets: 1
-    fragRandomSpread: 0
-    fragOffsetMax: 0
-    fragOffsetMin: 0
-    fragBullet: {
-      type: BulletType
-      damage: 0
-      splashDamageRadius: 64
-      splashDamage: 150
-      buildingDamageMultiplier: 0.1
-      collides: "false"
-      hittable: "false"
-      absorbable: "false"
-      speed: 0
-      lifetime: 0
-      hitShake: 12
-      hitEffect: {
-        type: MultiEffect
-        effects: [
-          {
-            type: WaveEffect
-            interp: pow5Out
-            lifetime: 21.5
-            sizeTo: 96
-            strokeFrom: 12
-            colorFrom: f9c27a
-            colorTo: f9c27a
-          }
-          {
-            type: WaveEffect
-            interp: pow2In
-            lifetime: 16.5
-            sizeFrom: 80
-            sizeTo: 10
-            strokeFrom: 3
-            strokeTo: 3
-            colorFrom: f9c27a
-            colorTo: f9c27a
-            startDelay: 5
-          }
-          {
-            type: WaveEffect
-            lifetime: 16.5
-            sizeFrom: 60
-            sizeTo: 0
-            strokeFrom: 5
-            colorFrom: f9c27a
-            colorTo: f9c27a
-            startDelay: 5
-          }
-          {
-            type: ParticleEffect
-            particles: 24
-            length: 96
-            baseLength: 4
-            sizeFrom: 0
-            colorTo: f9c27a80
-            interp: pow10Out
-            sizeInterp: circleOut
-            lifetime: 21.5
-          }
-        ]
-      }
-      spawnBullets: [
-        {
-          type: BulletType
-          speed: 0
-          lifetime: 0
-          collides: "false"
-          absorbable: "false"
-          hittable: "false"
-          hitEffect: none
-          despawnEffect: none
-          fragBullets: 3
-          fragRandomSpread: 38
-          fragBullet: {
-            type: ShrapnelBulletType
-            length: 88
-            layer: -10
-            buildingDamageMultiplier: 0.05
-            damage: 88
-            armorMultiplier: 0.5
-            lifetime: 15
-            laserAbsorb: "false"
-            hitSize: 25
-          }
-        }
-      ]
-      fragBullets: 1
-      fragOffsetMax: 0
-      fragOffsetMin: 0
-      fragBullet: {
-        collides: "false"
-        absorbable: "false"
-        hittable: "false"
-        speed: 0
-        lifetime: 0
+  foreshadow: {
+    ammoTypes: {
+      surge-alloy: {
+        damage: 1850
+        buildingDamageMultiplier: 0.1
+        pierceBuilding: "false"
+        type: PointBulletType
+        speed: 128
+        lifetime: 4
         hitEffect: instHit
-        trailEffect: instTrail
+        lightningDamage: 38
+        splashDamageRadius: 24
+        splashDamage: 1350
+        trailInterp: sine
         despawnEffect: instBomb
         shootEffect: instShoot
-        spawnBullets: [
-          {
-            type: BulletType
-            speed: 0
-            lifetime: 1.5
-            collides: "false"
-            absorbable: "false"
-            hittable: "false"
-            hitEffect: instBomb
-            despawnEffect: instHit
-            spawnBullets: [
+        trailSpacing: 19
+        smokeEffect: smokeCloud
+        trailEffect: instTrail
+        status: electrified
+        statusDuration: 240
+        hitShake: 6
+        ammoMultiplier: 1
+        lightningColor: f9c27a
+        lightning: 11
+        lightningLength: 13
+        fragBullets: 1
+        fragRandomSpread: 0
+        fragOffsetMax: 0
+        fragOffsetMin: 0
+        fragBullet: {
+          type: BulletType
+          damage: 0
+          splashDamageRadius: 64
+          splashDamage: 150
+          buildingDamageMultiplier: 0.1
+          collides: "false"
+          hittable: "false"
+          absorbable: "false"
+          speed: 0
+          lifetime: 0
+          hitShake: 12
+          hitEffect: {
+            type: MultiEffect
+            effects: [
               {
-                type: BulletType
-                speed: 0
-                lifetime: 0
-                collides: "false"
-                absorbable: "false"
-                hittable: "false"
-                hitEffect: none
-                despawnEffect: none
-                fragBullets: 3
-                fragRandomSpread: 38
-                fragBullet: {
-                  type: ShrapnelBulletType
-                  length: 88
-                  layer: -10
-                  buildingDamageMultiplier: 0.05
-                  damage: 144
-                  armorMultiplier: 0.5
-                  lifetime: 15
-                  laserAbsorb: "false"
-                  hitSize: 25
-                }
+                type: WaveEffect
+                interp: pow5Out
+                lifetime: 21.5
+                sizeTo: 96
+                strokeFrom: 12
+                colorFrom: f9c27a
+                colorTo: f9c27a
+              }
+              {
+                type: WaveEffect
+                interp: pow2In
+                lifetime: 16.5
+                sizeFrom: 80
+                sizeTo: 10
+                strokeFrom: 3
+                strokeTo: 3
+                colorFrom: f9c27a
+                colorTo: f9c27a
+                startDelay: 5
+              }
+              {
+                type: WaveEffect
+                lifetime: 16.5
+                sizeFrom: 60
+                sizeTo: 0
+                strokeFrom: 5
+                colorFrom: f9c27a
+                colorTo: f9c27a
+                startDelay: 5
+              }
+              {
+                type: ParticleEffect
+                particles: 24
+                length: 96
+                baseLength: 4
+                sizeFrom: 0
+                colorTo: f9c27a80
+                interp: pow10Out
+                sizeInterp: circleOut
+                lifetime: 21.5
               }
             ]
-            fragBullets: 1
-            fragOffsetMax: 0
-            fragBullet: {
+          }
+          spawnBullets: [
+            {
               type: BulletType
               speed: 0
-              lifetime: 1.5
+              lifetime: 0
               collides: "false"
               absorbable: "false"
               hittable: "false"
-              hitEffect: instBomb
-              despawnEffect: instHit
-              spawnBullets: [
-                {
-                  type: BulletType
-                  speed: 0
-                  lifetime: 0
-                  collides: "false"
-                  absorbable: "false"
-                  hittable: "false"
-                  hitEffect: none
-                  despawnEffect: none
-                  fragBullets: 3
-                  fragRandomSpread: 38
-                  fragBullet: {
-                    type: ShrapnelBulletType
-                    length: 88
-                    layer: -10
-                    buildingDamageMultiplier: 0.05
-                    damage: 144
-                    lifetime: 15
-                    armorMultiplier: 0.5
-                    laserAbsorb: "false"
-                    hitSize: 25
-                  }
-                }
-              ]
-              fragBullets: 1
-              fragOffsetMax: 0
+              hitEffect: none
+              despawnEffect: none
+              fragBullets: 3
+              fragRandomSpread: 38
               fragBullet: {
+                type: ShrapnelBulletType
+                length: 88
+                layer: -10
+                buildingDamageMultiplier: 0.05
+                damage: 88
+                armorMultiplier: 0.5
+                lifetime: 15
+                laserAbsorb: "false"
+                hitSize: 25
+              }
+            }
+          ]
+          fragBullets: 1
+          fragOffsetMax: 0
+          fragOffsetMin: 0
+          fragBullet: {
+            collides: "false"
+            absorbable: "false"
+            hittable: "false"
+            speed: 0
+            lifetime: 0
+            hitEffect: instHit
+            trailEffect: instTrail
+            despawnEffect: instBomb
+            shootEffect: instShoot
+            spawnBullets: [
+              {
                 type: BulletType
                 speed: 0
                 lifetime: 1.5
@@ -2175,7 +2230,7 @@ block: {
                       type: ShrapnelBulletType
                       length: 88
                       layer: -10
-                      buildingDamageMultiplier: 0.5
+                      buildingDamageMultiplier: 0.05
                       damage: 144
                       armorMultiplier: 0.5
                       lifetime: 15
@@ -2189,113 +2244,187 @@ block: {
                 fragBullet: {
                   type: BulletType
                   speed: 0
-                  lifetime: 0
+                  lifetime: 1.5
                   collides: "false"
                   absorbable: "false"
                   hittable: "false"
-                  hitEffect: none
-                  despawnEffect: none
+                  hitEffect: instBomb
+                  despawnEffect: instHit
+                  spawnBullets: [
+                    {
+                      type: BulletType
+                      speed: 0
+                      lifetime: 0
+                      collides: "false"
+                      absorbable: "false"
+                      hittable: "false"
+                      hitEffect: none
+                      despawnEffect: none
+                      fragBullets: 3
+                      fragRandomSpread: 38
+                      fragBullet: {
+                        type: ShrapnelBulletType
+                        length: 88
+                        layer: -10
+                        buildingDamageMultiplier: 0.05
+                        damage: 144
+                        lifetime: 15
+                        armorMultiplier: 0.5
+                        laserAbsorb: "false"
+                        hitSize: 25
+                      }
+                    }
+                  ]
+                  fragBullets: 1
+                  fragOffsetMax: 0
+                  fragBullet: {
+                    type: BulletType
+                    speed: 0
+                    lifetime: 1.5
+                    collides: "false"
+                    absorbable: "false"
+                    hittable: "false"
+                    hitEffect: instBomb
+                    despawnEffect: instHit
+                    spawnBullets: [
+                      {
+                        type: BulletType
+                        speed: 0
+                        lifetime: 0
+                        collides: "false"
+                        absorbable: "false"
+                        hittable: "false"
+                        hitEffect: none
+                        despawnEffect: none
+                        fragBullets: 3
+                        fragRandomSpread: 38
+                        fragBullet: {
+                          type: ShrapnelBulletType
+                          length: 88
+                          layer: -10
+                          buildingDamageMultiplier: 0.5
+                          damage: 144
+                          armorMultiplier: 0.5
+                          lifetime: 15
+                          laserAbsorb: "false"
+                          hitSize: 25
+                        }
+                      }
+                    ]
+                    fragBullets: 1
+                    fragOffsetMax: 0
+                    fragBullet: {
+                      type: BulletType
+                      speed: 0
+                      lifetime: 0
+                      collides: "false"
+                      absorbable: "false"
+                      hittable: "false"
+                      hitEffect: none
+                      despawnEffect: none
+                    }
+                  }
                 }
               }
-            }
+              {
+                type: BulletType
+                speed: 0
+                lifetime: 22.5
+                absorbable: "false"
+                collides: "false"
+                hittable: "false"
+                splashDamage: 1.0e-11
+                splashDamageRadius: 96
+                status: electrified
+                statusDuration: 15
+                lightningColor: f9c27a
+                lightningDamage: 55
+                lightning: 2
+                lightningLength: 16
+                lightningLengthRand: 6
+                fragBullets: 6
+                hitSound: shootBeamPlasma
+                hitSoundVolume: 2
+                hitSoundPitch: 1.275
+                hitShake: 18
+                fragLifeMax: 12
+                fragOffsetMax: 0
+                fragOffsetMin: 0
+                fragBullet: {
+                  type: PointBulletType
+                  damage: 520
+                  buildingDamageMultiplier: 0.1
+                  pierceArmor: "true"
+                  hittable: "false"
+                  absorbable: "false"
+                  speed: 8
+                  lifetime: 1
+                  hitEffect: instShoot
+                  trailEffect: instTrail
+                  despawnEffect: instBomb
+                  hitSound: explosionArtilleryShockBig
+                  shootEffect: instShoot
+                }
+              }
+              {
+                type: BulletType
+                speed: 0
+                lifetime: 21.5
+                absorbable: "false"
+                collides: "false"
+                hittable: "false"
+                hitEffect: none
+                despawnEffect: {
+                  type: MultiEffect
+                  effects: [
+                    {
+                      type: ParticleEffect
+                      particles: 10
+                      sizeFrom: 13
+                      interp: pow10Out
+                      sizeInterp: pow5In
+                      length: 92
+                      lifetime: 30
+                      colorFrom: f9c27a
+                      colorTo: f9c27aA8
+                    }
+                    {
+                      type: ParticleEffect
+                      particles: 1
+                      sizeFrom: 88
+                      sizeTo: 88
+                      interp: pow5Out
+                      sizeInterp: circleIn
+                      length: 0
+                      lifetime: 15
+                      colorFrom: f9c27a
+                      colorTo: f9c27a00
+                    }
+                    {
+                      type: WaveEffect
+                      interp: pow10Out
+                      lifetime: 15
+                      sizeFrom: 88
+                      sizeTo: 88
+                      strokeFrom: 3
+                      colorFrom: f9c27a
+                      colorTo: f9c27a
+                    }
+                    {
+                      type: WaveEffect
+                      interp: pow5Out
+                      lifetime: 30
+                      sizeTo: 88
+                      strokeFrom: 20
+                      colorFrom: f9c27a
+                      colorTo: f9c27a
+                    }
+                  ]
+                }
+              }
+            ]
           }
-          {
-            type: BulletType
-            speed: 0
-            lifetime: 22.5
-            absorbable: "false"
-            collides: "false"
-            hittable: "false"
-            splashDamage: 1.0e-11
-            splashDamageRadius: 96
-            status: electrified
-            statusDuration: 15
-            lightningColor: f9c27a
-            lightningDamage: 55
-            lightning: 2
-            lightningLength: 16
-            lightningLengthRand: 6
-            fragBullets: 6
-            hitSound: shootBeamPlasma
-            hitSoundVolume: 2
-            hitSoundPitch: 1.275
-            hitShake: 18
-            fragLifeMax: 12
-            fragOffsetMax: 0
-            fragOffsetMin: 0
-            fragBullet: {
-              type: PointBulletType
-              damage: 520
-              buildingDamageMultiplier: 0.1
-              pierceArmor: "true"
-              hittable: "false"
-              absorbable: "false"
-              speed: 8
-              lifetime: 1
-              hitEffect: instShoot
-              trailEffect: instTrail
-              despawnEffect: instBomb
-              hitSound: explosionArtilleryShockBig
-              shootEffect: instShoot
-            }
-          }
-          {
-            type: BulletType
-            speed: 0
-            lifetime: 21.5
-            absorbable: "false"
-            collides: "false"
-            hittable: "false"
-            hitEffect: none
-            despawnEffect: {
-              type: MultiEffect
-              effects: [
-                {
-                  type: ParticleEffect
-                  particles: 10
-                  sizeFrom: 13
-                  interp: pow10Out
-                  sizeInterp: pow5In
-                  length: 92
-                  lifetime: 30
-                  colorFrom: f9c27a
-                  colorTo: f9c27aA8
-                }
-                {
-                  type: ParticleEffect
-                  particles: 1
-                  sizeFrom: 88
-                  sizeTo: 88
-                  interp: pow5Out
-                  sizeInterp: circleIn
-                  length: 0
-                  lifetime: 15
-                  colorFrom: f9c27a
-                  colorTo: f9c27a00
-                }
-                {
-                  type: WaveEffect
-                  interp: pow10Out
-                  lifetime: 15
-                  sizeFrom: 88
-                  sizeTo: 88
-                  strokeFrom: 3
-                  colorFrom: f9c27a
-                  colorTo: f9c27a
-                }
-                {
-                  type: WaveEffect
-                  interp: pow5Out
-                  lifetime: 30
-                  sizeTo: 88
-                  strokeFrom: 20
-                  colorFrom: f9c27a
-                  colorTo: f9c27a
-                }
-              ]
-            }
-          }
-        ]
+        }
       }
     }
   }
@@ -2312,7 +2441,10 @@ block: {
       }
       items: {
         items: [
-          silicon/4
+          {
+            item: silicon
+            amount: 4
+          }
         ]
       }
       liquid: {
@@ -2328,11 +2460,26 @@ block: {
     description: 用矿渣和硅在高温下合成巨浪合金。需要热量。使用高温熔炼技术能使用更少的材料合成更多的巨浪合金。
     liquidCapacity: 400
     requirements: [
-      graphite/120
-      silicon/120
-      tungsten/120
-      oxide/60
-      carbide/60
+      {
+        item: graphite
+        amount: 120
+      }
+      {
+        item: silicon
+        amount: 120
+      }
+      {
+        item: tungsten
+        amount: 120
+      }
+      {
+        item: oxide
+        amount: 60
+      }
+      {
+        item: carbide
+        amount: 60
+      }
     ]
   }
   slag-heater: {
@@ -2381,13 +2528,34 @@ block: {
   }
   malign: {
     requirements: [
-      graphite/1500
-      silicon/1500
-      phase-fabric/500
-      surge-alloy/500
-      beryllium/3000
-      tungsten/1000
-      carbide/500
+      {
+        item: graphite
+        amount: 1500
+      }
+      {
+        item: silicon
+        amount: 1500
+      }
+      {
+        item: phase-fabric
+        amount: 500
+      }
+      {
+        item: surge-alloy
+        amount: 500
+      }
+      {
+        item: beryllium
+        amount: 3000
+      }
+      {
+        item: tungsten
+        amount: 1000
+      }
+      {
+        item: carbide
+        amount: 500
+      }
     ]
     shootType: {
       fragBullet: {
@@ -2432,19 +2600,38 @@ block: {
       }
     }
   }
-  smite.ammoTypes.surge-alloy: {
-    intervalBullet: {
-      creeperDamageMultiplier: 0.3
+  smite: {
+    ammoTypes: {
+      surge-alloy: {
+        intervalBullet: {
+          creeperDamageMultiplier: 0.3
+        }
+        creeperDamageMultiplier: 0.3
+      }
     }
-    creeperDamageMultiplier: 0.3
   }
   exponential-reconstructor: {
     requirements: [
-      lead/2000
-      titanium/2000
-      thorium/750
-      silicon/1000
-      plastanium/450
+      {
+        item: lead
+        amount: 2000
+      }
+      {
+        item: titanium
+        amount: 2000
+      }
+      {
+        item: thorium
+        amount: 750
+      }
+      {
+        item: silicon
+        amount: 1000
+      }
+      {
+        item: plastanium
+        amount: 450
+      }
     ]
     consumes: {
       remove: [
@@ -2453,9 +2640,18 @@ block: {
       ]
       items: {
         items: [
-          silicon/425
-          titanium/375
-          plastanium/325
+          {
+            item: silicon
+            amount: 425
+          }
+          {
+            item: titanium
+            amount: 375
+          }
+          {
+            item: plastanium
+            amount: 325
+          }
         ]
       }
       liquid: {
@@ -2466,20 +2662,50 @@ block: {
   }
   basic-assembler-module: {
     requirements: [
-      silicon/3000
-      phase-fabric/1000
-      surge-alloy/1000
-      oxide/500
-      carbide/1500
+      {
+        item: silicon
+        amount: 3000
+      }
+      {
+        item: phase-fabric
+        amount: 1000
+      }
+      {
+        item: surge-alloy
+        amount: 1000
+      }
+      {
+        item: oxide
+        amount: 500
+      }
+      {
+        item: carbide
+        amount: 1500
+      }
     ]
   }
   carbide-wall-large: {
     requirements: [
-      thorium/48
-      phase-fabric/24
-      surge-alloy/24
-      oxide/12
-      carbide/24
+      {
+        item: thorium
+        amount: 48
+      }
+      {
+        item: phase-fabric
+        amount: 24
+      }
+      {
+        item: surge-alloy
+        amount: 24
+      }
+      {
+        item: oxide
+        amount: 12
+      }
+      {
+        item: carbide
+        amount: 24
+      }
     ]
   }
 }
