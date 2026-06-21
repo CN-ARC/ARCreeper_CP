@@ -1091,9 +1091,14 @@ unit: {
   avert: {
     weapons: {
       0: {
-        reload: 30
+        reload: 25
+        bullet: {
+          lifetime: 30
+        }
       }
     }
+    range: 150
+    maxRange: 150
   }
   crawler: {
     weapons: {
@@ -1795,7 +1800,6 @@ unit: {
           sprite: missile-large
           damage: 30
           speed: 5
-          pierceCap: 2
           pierce: "true"
           trailLength: 6
           trailParam: 1
@@ -1844,6 +1848,15 @@ unit: {
       0: {
         bullet: {
           creeperOnRemove: 500
+        }
+      }
+    }
+  }
+  precept: {
+    weapons: {
+      0: {
+        bullet: {
+          pierceCap: 4
         }
       }
     }
