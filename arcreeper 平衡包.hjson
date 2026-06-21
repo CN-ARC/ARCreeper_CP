@@ -1641,7 +1641,6 @@ unit: {
     targetHighestCreeper: "true"
   }
   anthicus: {
-    targetHighestCreeper: "true"
     weapons: {
       0: {
         bullet: {
@@ -1663,19 +1662,21 @@ unit: {
           height: 22
           splashDamage: 140
           splashDamageRadius: 32
-          followAimSpeed: 6
           trailColor: 8ba8e8ff
           trailWidth: 3
           trailLength: 12
           hitEffect: titanExplosionFrag
-          randomAngleOffset: 5
-          spawnBulletRandomSpread: 5
           hitSize: 8
           drawSize: 120
-          creeperDamageMultiplier: 1.5
+          homingPower: 0.1
+          homingRange: 10
+          homingDelay: 5
         }
+        rotationLimit: 361
+        rotateSpeed: 4
       }
       1: {
+        rotationLimit: 361
         bullet: {
           type: BasicBulletType
           speed: 5
@@ -1695,19 +1696,22 @@ unit: {
           height: 22
           splashDamage: 140
           splashDamageRadius: 32
-          followAimSpeed: 6
           trailColor: 8ba8e8ff
           trailWidth: 3
           trailLength: 12
           hitEffect: titanExplosionFrag
-          randomAngleOffset: 5
-          spawnBulletRandomSpread: 5
           hitSize: 8
           drawSize: 120
-          creeperDamageMultiplier: 1.5
+          homingPower: 0.1
+          homingRange: 10
+          homingDelay: 5
         }
+        rotateSpeed: 4
       }
     }
+    faceTarget: "false"
+    singleTarget: "false"
+    forceMultiTarget: "true"
   }
   anthicus-missile: {
     targetHighestCreeper: "true"
