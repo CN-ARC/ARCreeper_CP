@@ -1091,7 +1091,7 @@ unit: {
   avert: {
     weapons: {
       0: {
-        reload: 25
+        reload: 24
         bullet: {
           lifetime: 30
         }
@@ -1472,6 +1472,9 @@ unit: {
           lifetime: 25
         }
         reload: 12
+        rotateSpeed: 8
+        controllable: "false"
+        autoTarget: "true"
       }
       3: {
         bullet: {
@@ -1482,6 +1485,9 @@ unit: {
           lifetime: 25
         }
         reload: 12
+        rotateSpeed: 8
+        autoTarget: "true"
+        controllable: "false"
       }
       4: {
         bullet: {
@@ -1492,6 +1498,9 @@ unit: {
           lifetime: 25
         }
         reload: 12
+        rotateSpeed: 8
+        autoTarget: "true"
+        controllable: "false"
       }
       5: {
         bullet: {
@@ -1502,6 +1511,9 @@ unit: {
           lifetime: 25
         }
         reload: 12
+        rotateSpeed: 8
+        autoTarget: "true"
+        controllable: "false"
       }
     }
     range: 300
@@ -1514,6 +1526,8 @@ unit: {
         max: 500
       }
     }
+    singleTarget: "false"
+    forceMultiTarget: "true"
   }
   vanquish: {
     weapons: {
@@ -1800,7 +1814,6 @@ unit: {
           sprite: missile-large
           damage: 30
           speed: 5
-          pierce: "true"
           trailLength: 6
           trailParam: 1
         }
@@ -1848,15 +1861,6 @@ unit: {
       0: {
         bullet: {
           creeperOnRemove: 500
-        }
-      }
-    }
-  }
-  precept: {
-    weapons: {
-      0: {
-        bullet: {
-          pierceCap: 4
         }
       }
     }
