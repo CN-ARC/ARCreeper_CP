@@ -1,0 +1,15 @@
+name: PVS—单位工厂非实体
+block: {
+  additive-reconstructor: {
+    solid: "false"
+  }
+  multiplicative-reconstructor: {
+    solid: "false"
+  }
+  exponential-reconstructor: {
+    solid: "false"
+  }
+  tetrative-reconstructor: {
+    solid: "false"
+  }
+}

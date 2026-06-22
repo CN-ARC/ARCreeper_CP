@@ -62,6 +62,7 @@ block: {
         creeperOnRemove: 5
         speed: 4
         lifetime: 49
+        scaleLife: "true"
       }
     }
   }

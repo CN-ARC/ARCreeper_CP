@@ -1,4 +1,4 @@
-name: 单人模式
+name: ARCreeper 单人模式
 unit: {
   evoke: {
     buildRange: 5000
