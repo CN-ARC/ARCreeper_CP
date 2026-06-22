@@ -1865,6 +1865,15 @@ unit: {
       }
     }
   }
+  precept: {
+    weapons: {
+      0: {
+        bullet: {
+          pierceCap: 3
+        }
+      }
+    }
+  }
 }
 block: {
   tetrative-reconstructor: {
