@@ -28,8 +28,6 @@ unit: {
             collidesAir: "false"
             collides: "false"
             keepVelocity: "false"
-            maxRange: 30
-            range: 30
             healPercent: 15
             despawnHit: "true"
             hitShake: 4
@@ -396,7 +394,7 @@ unit: {
     description:
       '''
       向敌人发射大型集束炮弹和穿透性激光。可以跨越大多数地形。
-      [gold]多功能集束子母穿甲弹，母弹对建筑造成毁灭伤害，子弹对水进行火力覆盖。
+      [gold]对建筑造成毁灭伤害，并配备自动索敌的等离子火焰炮。
       '''
     targetAir: "false"
     range: 240
@@ -500,7 +498,7 @@ unit: {
       0: {
         bullet: {
           type: ContinuousFlameBulletType
-          damage: 100
+          damage: 25
           buildingDamageMultiplier: 0.30000001192092896
           hitColor: ca89e8ff
           lightningType: damageLightning
@@ -541,6 +539,7 @@ unit: {
             "#ffffffff"
           ]
           collidesTiles: "false"
+          creeperDamageMultiplier: 2
         }
         alternate: "false"
         shootSound: unset
@@ -560,11 +559,10 @@ unit: {
       1: {
         bullet: {
           type: ContinuousFlameBulletType
-          damage: 100
+          damage: 25
           hitColor: ca89e8ff
           lightningType: damageLightning
           lightRadius: 20
-          pierceCap: 3
           knockback: 2
           range: 200
           lightColor: bb89e8ff
@@ -601,6 +599,8 @@ unit: {
           parts: []
           statLiquidConsumed: 0.30000001192092896
           collidesTiles: "false"
+          pierceCap: 3
+          creeperDamageMultiplier: 2
         }
         alternate: "false"
         shootSound: unset
@@ -1099,6 +1099,11 @@ unit: {
     }
     range: 150
     maxRange: 150
+    description:
+      '''
+      向敌人发射螺旋状扭曲子弹。
+      [gold]射速更快，手更长。
+      '''
   }
   crawler: {
     weapons: {
@@ -1342,6 +1347,11 @@ unit: {
         }
       }
     }
+    description:
+      '''
+      向敌人发射多枚导弹。
+      [gold]更快的发射，但是每次只发射一颗威力更强的导弹。
+      '''
   }
   antumbra: {
     weapons: {
@@ -1378,6 +1388,11 @@ unit: {
         inaccuracy: 10
       }
     }
+    description:
+      '''
+      向敌人发射密集的子弹。
+      [gold]发射更加密集的导弹。
+      '''
   }
   cyerce: {
     weapons: {
@@ -1475,6 +1490,8 @@ unit: {
         rotateSpeed: 8
         controllable: "false"
         autoTarget: "true"
+        targetInterval: 6
+        targetSwitchInterval: 6
       }
       3: {
         bullet: {
@@ -1488,6 +1505,8 @@ unit: {
         rotateSpeed: 8
         autoTarget: "true"
         controllable: "false"
+        targetInterval: 6
+        targetSwitchInterval: 6
       }
       4: {
         bullet: {
@@ -1501,6 +1520,8 @@ unit: {
         rotateSpeed: 8
         autoTarget: "true"
         controllable: "false"
+        targetInterval: 6
+        targetSwitchInterval: 6
       }
       5: {
         bullet: {
@@ -1514,6 +1535,8 @@ unit: {
         rotateSpeed: 8
         autoTarget: "true"
         controllable: "false"
+        targetInterval: 6
+        targetSwitchInterval: 6
       }
     }
     range: 300
@@ -1528,6 +1551,11 @@ unit: {
     }
     singleTarget: "false"
     forceMultiTarget: "true"
+    description:
+      '''
+      向敌人快速发射带电子弹。
+      [gold]拥有自主瞄准的防御速射炮阵列，无需惧怕被贴脸。
+      '''
   }
   vanquish: {
     weapons: {
@@ -1800,6 +1828,11 @@ unit: {
         }
       }
     }
+    description:
+      '''
+      向敌人发射螺旋状闪电球。 
+      [gold]在穿透和击中水时会产生少量范围伤害。
+      '''
   }
   locus: {
     weapons: {
