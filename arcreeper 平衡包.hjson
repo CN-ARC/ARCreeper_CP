@@ -1895,7 +1895,7 @@ block: {
     description:
       '''
       向空中和地面目标发射大型穿甲子弹。
-      [cyan]石墨幽灵打单体带分裂弹，钍幽灵打群体，硫化物幽灵在没钍时打群体
+      [gold]石墨子弹dps4k，钍子弹12k(大超无液)
       '''
   }
   thorium-reactor: {
@@ -2384,41 +2384,11 @@ block: {
       '''
   }
   malign: {
-    requirements: [
-      {
-        item: graphite
-        amount: 1500
-      }
-      {
-        item: silicon
-        amount: 1500
-      }
-      {
-        item: phase-fabric
-        amount: 500
-      }
-      {
-        item: surge-alloy
-        amount: 500
-      }
-      {
-        item: beryllium
-        amount: 3000
-      }
-      {
-        item: tungsten
-        amount: 1000
-      }
-      {
-        item: carbide
-        amount: 500
-      }
-    ]
     canOverdrive: "false"
     description:
       '''
       向敌方发射一连串的追踪子弹并放出激光。需要大量热量。
-      [gold]不可超速
+      [gold]不可超速，dps约为2.2w
       '''
   }
   neoplasia-reactor: {
@@ -2440,16 +2410,6 @@ block: {
         creeperDamageMultiplier: 0.8
         fragBullet: {
           creeperDamageMultiplier: 0.5
-        }
-      }
-    }
-  }
-  smite: {
-    ammoTypes: {
-      surge-alloy: {
-        creeperDamageMultiplier: 0.3
-        intervalBullet: {
-          creeperDamageMultiplier: 0.3
         }
       }
     }
@@ -2751,7 +2711,21 @@ block: {
     description:
       '''
       向敌人发射巨大的带电碎片弹。 需要热量。
-      [gold]不可超速
+      [gold]不可超速，dps3-5k，适合打浅水
+      '''
+  }
+  meltdown: {
+    description:
+      '''
+      充能并向附近的敌人发射持续的激光束。需要液体冷冻才能工作。
+      [gold]dps约为1w(大超无液)
+      '''
+  }
+  smite: {
+    description:
+      '''
+      向敌人发射放电穿透子弹。
+      [gold]dps约为1.7w(大超无液)
       '''
   }
 }
