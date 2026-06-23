@@ -1386,9 +1386,9 @@ unit: {
           hitSize: 8
           drawSize: 120
           creeperOnRemove: 1
-          creeperDamageMultiplier: 10
           followAimSpeed: 1
         }
+        targetInterval: 0
       }
       1: {
         bullet: {
@@ -1418,7 +1418,6 @@ unit: {
           hitSize: 8
           drawSize: 120
           creeperOnRemove: 1
-          creeperDamageMultiplier: 10
           followAimSpeed: 1
         }
       }
@@ -1428,7 +1427,7 @@ unit: {
       向敌人发射远程追踪导弹。可以跨越大多数地形。
 
       [gold]火力支援单位，极为方便输出
-      DPS约为550
+      DPS 100-1000(需要堆积数量或者打极深水)
       [gray]balance by lc
       effect by lemonfox
       '''
