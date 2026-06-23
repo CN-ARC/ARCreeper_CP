@@ -70,6 +70,7 @@ unit: {
       '''
       发射巨大的爆发激光束，摧毁敌人并修复己方建筑。可以跨越大多数地形。
       [gold]攻击不再减速
+      完美情形下dps为6.5w
       [gray]design by lemonfox
       '''
   }
@@ -85,6 +86,10 @@ unit: {
         bullet: {
           speed: 16
           range: 240
+          creeperDamageMultiplier: 1.5
+          fragBullet: {
+            creeperDamageMultiplier: 1.5
+          }
         }
       }
       1: {
@@ -94,6 +99,10 @@ unit: {
         bullet: {
           speed: 16
           range: 240
+          creeperDamageMultiplier: 1.5
+          fragBullet: {
+            creeperDamageMultiplier: 1.5
+          }
         }
       }
     }
@@ -101,7 +110,7 @@ unit: {
       '''
       [gold]主力推进型单位
       略增加转头速度和射程，需要配合AC
-
+      DPS为5w
       [gray]balance by LC
       '''
     range: 240
@@ -211,6 +220,7 @@ unit: {
     description:
       '''
       [gold]火炮支援单位，以超长射程打击后方深水
+      DPS为4.5w，但数量较多时难以打满
       [gray]design by LC
       effect by lemonfox
       '''
@@ -275,12 +285,25 @@ unit: {
     description:
       '''
       向敌人发射大型集束炮弹和穿透性激光。
-      [gold]登陆型单位，高额水免和buff免
+      [gold]登陆+反sleeper单位，高额水免和buff免，主炮极高建筑伤害
+      dps为2.5w
       [gray]balance by LC
       '''
     immunities.+: [
       spore-slowed
     ]
+    weapons: {
+      0: {
+        bullet: {
+          buildingDamageMultiplier: 5
+        }
+      }
+      1: {
+        bullet: {
+          buildingDamageMultiplier: 5
+        }
+      }
+    }
   }
   navanax: {
     creeperEvade: 0.92
@@ -319,9 +342,10 @@ unit: {
     targetHighestCreeper: "true"
     description:
       '''
-      发射大型电磁爆弹，对敌方电网造成重大破坏，同时可修复友军建筑，压制敌方修复建筑。 搭载4台自动激光炮台，能熔化靠近的敌人。
+      海军辅助单位
       [gold]装载一门反转炮，击中目标后以一定比例将C转换为AC
       并附带一个中范围的强力孢子瓦解场
+      dps为3w (除反转炮)
       [gray]design by LC
       effect by blac
       '''
@@ -368,8 +392,8 @@ unit: {
     description:
       '''
       向敌人发射远程分裂火炮。可以跨越大多数地形。
-      [gold]添加了对空功能
-      孩子们想我了吗
+      [gold]添加了对空功能，大后期便携输出
+      dps为1.5w
       '''
   }
   eclipse: {
@@ -554,9 +578,9 @@ unit: {
     description:
       '''
       向敌人发射穿透性激光和爆炸性炮弹。
-      [gold]具有较低的DPS和高击退
+      [gold]具有较低的DPS和极高击退
       可用于有效阻止对方高T冲家
-
+      dps为1.5w
       [gray]design by lemonfox
       balance by lc
       '''
@@ -643,6 +667,7 @@ unit: {
       '''
       [gold]火炮支援单位
       装载超长攻击与超大范围的主炮
+      dps为10w
       [gray]附带产轰炸机（孩子们想我了吗）
       [gray]balance by LC
       effect by blac
@@ -728,23 +753,21 @@ unit: {
     }
   }
   merui: {
+    targetHighestCreeper: "true"
     weapons: {
       0: {
         bullet: {
-          splashDamageRadius: 32
-          splashDamage: 12
+          createChance: 0.8
         }
-        reload: 50
       }
     }
-    targetHighestCreeper: "true"
-  }
-  stell: {
-    weapons: {
-      0: {
-        reload: 24
-      }
-    }
+    description:
+      '''
+      向地面敌人发射远程火炮。可以跨越大多数地形。
+
+      [gold] 小型火力支援单位
+      DPS约100
+      '''
   }
   mono: {
     creeperEvade: 1
@@ -962,9 +985,14 @@ unit: {
         region: large-purple-mount
       }
     ]
-    description: 向敌人发射穿透型激光。
+    description:
+      '''
+      [gold]移动雷光
+      具有高额水免和孢子污染免疫
+      dps为1.5k
+      [gray]design by lemonfox
+      '''
     maxRange: 120
-    targetAir: "false"
     range: 60
     immunities.+: [
       spore-slowed
@@ -972,101 +1000,22 @@ unit: {
     creeperEvade: 0.5
   }
   fortress: {
-    weapons: {
-      0: {
-        reload: 240
-        shoot: {
-          shots: 4
-        }
-        inaccuracy: 10
-        bullet: {
-          velocityScaleRandMin: 1.1
-          velocityScaleRandMax: 1.3
-          splashDamage: 40
-        }
-      }
-      1: {
-        reload: 240
-        shoot: {
-          shots: 4
-        }
-        inaccuracy: 10
-        bullet: {
-          velocityScaleRandMin: 1.1
-          velocityScaleRandMax: 1.3
-          splashDamage: 40
-        }
-      }
-    }
     description:
       '''
       使用远程火炮向地面敌人发射弹药。
-      [blue]发射更多更多的弹药
+
+      [gold]dps约为750
       '''
-    targetHighestCreeper: "true"
-  }
-  zenith: {
-    weapons: {
-      0: {
-        shoot: {
-          shots: 3
-        }
-      }
-      1: {
-        shoot: {
-          shots: 3
-        }
-        bullet: {
-          splashDamage: 25
-        }
-      }
-    }
-  }
-  antumbra: {
     weapons: {
       0: {
         bullet: {
-          splashDamage: 60
-          splashDamageRadius: 28
+          creeperDamageMultiplier: 1.7
         }
-        shoot: {
-          shots: 4
-        }
-        reload: 80
-        inaccuracy: 10
       }
       1: {
         bullet: {
-          splashDamage: 60
-          splashDamageRadius: 28
+          creeperDamageMultiplier: 1.7
         }
-        shoot: {
-          shots: 4
-        }
-        reload: 80
-        inaccuracy: 10
-      }
-      2: {
-        bullet: {
-          splashDamage: 60
-          splashDamageRadius: 28
-        }
-        shoot: {
-          shots: 4
-        }
-        reload: 80
-        inaccuracy: 10
-      }
-      3: {
-        bullet: {
-          splashDamage: 60
-          splashDamageRadius: 28
-        }
-        shoot: {
-          shots: 4
-        }
-        reload: 80
-        inaccuracy: 10
       }
     }
   }
@@ -1095,11 +1044,16 @@ unit: {
       }
     }
     creeperEvade: 0.9
+    description:
+      '''
+      向敌人发射一连串的导弹与穿甲弹。
+      [gold]dps为1.2w
+      '''
   }
   aegires: {
     weapons.+: [
       {
-        reload: 200
+        reload: 300
         bullet: {
           speed: 4
           lifetime: 60
@@ -1115,22 +1069,38 @@ unit: {
           trailColor: 97ffa8ff
           hitEffect: greenBomb
           despawnEffect: greenBomb
-          damage: 0
-          splashDamage: 360
-          splashDamageRadius: 80
+          damage: 1
           healPercent: 15
           type: ArtilleryBulletType
           keepVelocity: "false"
+          creeperAppliedMultiplier: 0.5
+          splashDamageRadius: 24
+          splashDamage: 1
         }
         y: 0
         x: 0
         ignoreRotation: "true"
         rotate: "true"
         ejectEffect: greenBomb
+        name: 比例炮
       }
     ]
     targetHighestCreeper: "true"
     creeperEvade: 0.9
+    description:
+      '''
+      [gold]带有一个比例炮，直接将水层高度x0.5
+      附带一个小范围的强力孢子瓦解场
+      dps需要看玩家操作能力
+      '''
+    abilities.+: [
+      {
+        type: SporeDisruptFieldAbility
+        range: 180
+        reload: 300
+        damage: 10
+      }
+    ]
   }
   scepter: {
     weapons: {
@@ -1181,54 +1151,61 @@ unit: {
         }
       }
     }
+    description:
+      '''
+      向敌人快速发射带电子弹。
+
+      [gold]dps为7k
+      [gray]design by lemonfox
+      '''
   }
   vanquish: {
     weapons: {
       0: {
         bullet: {
           pierceCap: 8
-          lifetime: 40
-          creeperDamageMultiplier: 2
+          lifetime: 30
+          creeperDamageMultiplier: 3
         }
-        reload: 60
       }
       1: {
         bullet: {
           pierceCap: 2
           pierce: "true"
-          lifetime: 30
+          lifetime: 20
         }
       }
       2: {
         bullet: {
           pierceCap: 2
           pierce: "true"
-          lifetime: 30
+          lifetime: 20
         }
       }
       3: {
         bullet: {
           pierceCap: 2
           pierce: "true"
-          lifetime: 30
+          lifetime: 20
         }
       }
       4: {
         bullet: {
           pierceCap: 2
           pierce: "true"
-          lifetime: 30
+          lifetime: 20
         }
       }
     }
-    range: 320
-    maxRange: 360
     description:
       '''
       向敌人发射大型穿透性分裂子弹。
-      [cyan]能够碾压建筑(对墙5倍伤害)
+
       [gold]更大的攻击范围，清水用
+      DPS约为8000
       '''
+    range: 240
+    maxRange: 240
   }
   tecta: {
     weapons: {
@@ -1238,14 +1215,16 @@ unit: {
           pierce: "true"
           damage: 120
           pierceBuilding: "true"
+          creeperDamageMultiplier: 0.75
         }
       }
       0: {
         bullet: {
           pierce: "true"
           pierceCap: 2
-          damage: 120
           pierceBuilding: "true"
+          damage: 120
+          creeperDamageMultiplier: 0.75
         }
       }
     }
@@ -1260,7 +1239,8 @@ unit: {
       '''
       向敌人发射等离子追踪导弹。用它前方的护盾保护自己。可以跨越大多数地形。
 
-      [gold]附带高度立场，拆建筑效率很高
+      [gold]附带高度立场，拆建筑效率极高
+      dps约为5500
       '''
   }
   risso: {
@@ -1357,6 +1337,24 @@ unit: {
   }
   cleroi: {
     targetHighestCreeper: "true"
+    weapons: {
+      0: {
+        bullet: {
+          creeperDamageMultiplier: 0.4
+        }
+      }
+      1: {
+        bullet: {
+          creeperDamageMultiplier: 0.4
+        }
+      }
+    }
+    description:
+      '''
+      向敌人发射双发炮弹。搭载一台单点防御炮塔，能够防御来袭的子弹。可以跨越大多数地形。
+
+      [gold] DPS约300
+      '''
   }
   anthicus: {
     weapons: {
@@ -1388,6 +1386,8 @@ unit: {
           hitSize: 8
           drawSize: 120
           creeperOnRemove: 1
+          creeperDamageMultiplier: 10
+          followAimSpeed: 1
         }
       }
       1: {
@@ -1418,9 +1418,20 @@ unit: {
           hitSize: 8
           drawSize: 120
           creeperOnRemove: 1
+          creeperDamageMultiplier: 10
+          followAimSpeed: 1
         }
       }
     }
+    description:
+      '''
+      向敌人发射远程追踪导弹。可以跨越大多数地形。
+
+      [gold]火力支援单位，极为方便输出
+      DPS约为550
+      [gray]balance by lc
+      effect by lemonfox
+      '''
   }
   arkyid: {
     targetHighestCreeper: "true"
@@ -1495,7 +1506,6 @@ unit: {
   locus: {
     weapons: {
       0: {
-        rotateSpeed: 7
         targetInterval: 0
         targetSwitchInterval: 0
         bullet: {
@@ -1505,25 +1515,20 @@ unit: {
           sprite: missile-large
           damage: 30
           speed: 5
-          pierceCap: 2
+          pierceCap: 4
           pierce: "true"
           trailLength: 6
           trailParam: 1
         }
         shootSound: shootDuo
-        shoot: {
-          shots: 4
-          shotDelay: 4
-        }
-        reload: 36
+        rotateSpeed: 7
       }
     }
-    range: 200
-    maxRange: 200
     description:
       '''
       向敌人交替发射子弹。
-      [blue]四倍火力，四倍快乐。
+
+      [gold] DPS约400
       '''
   }
   scathe-missile-surge-split: {
@@ -1566,6 +1571,88 @@ unit: {
     immunities.+: [
       spore-slowed
     ]
+  }
+  precept: {
+    description:
+      '''
+      向敌人发射穿透性集束子弹。
+
+      [gold] DPS约1k
+      '''
+  }
+  stell: {
+    weapons: {
+      0: {
+        bullet: {
+          creeperDamageMultiplier: 5
+        }
+      }
+    }
+    description:
+      '''
+      向敌人发射普通子弹。
+
+      [gold]dps约150
+      '''
+  }
+  zenith: {
+    weapons: {
+      0: {
+        bullet: {
+          creeperDamageMultiplier: 1.5
+        }
+      }
+      1: {
+        bullet: {
+          creeperDamageMultiplier: 1.5
+        }
+      }
+    }
+    description:
+      '''
+      向敌人发射多枚导弹。
+      [gold]dps约为450
+      '''
+  }
+  antumbra: {
+    weapons: {
+      0: {
+        bullet: {
+          creeperDamageMultiplier: 4
+        }
+      }
+      1: {
+        bullet: {
+          creeperDamageMultiplier: 4
+        }
+      }
+      2: {
+        bullet: {
+          creeperDamageMultiplier: 4
+        }
+      }
+      3: {
+        bullet: {
+          creeperDamageMultiplier: 4
+        }
+      }
+      4: {
+        bullet: {
+          creeperDamageMultiplier: 4
+        }
+      }
+      5: {
+        bullet: {
+          creeperDamageMultiplier: 4
+        }
+      }
+    }
+    description:
+      '''
+      向敌人发射密集的子弹。
+
+      [gold]dps约为4k
+      '''
   }
 }
 block: {
