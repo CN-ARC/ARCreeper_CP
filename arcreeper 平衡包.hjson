@@ -1091,7 +1091,7 @@ unit: {
   avert: {
     weapons: {
       0: {
-        reload: 24
+        reload: 30
         bullet: {
           lifetime: 30
         }
@@ -1357,7 +1357,7 @@ unit: {
     weapons: {
       0: {
         bullet: {
-          splashDamage: 60
+          splashDamage: 40
           splashDamageRadius: 28
         }
         inaccuracy: 10
@@ -1365,7 +1365,7 @@ unit: {
       }
       1: {
         bullet: {
-          splashDamage: 60
+          splashDamage: 40
           splashDamageRadius: 28
         }
         reload: 20
@@ -1373,7 +1373,7 @@ unit: {
       }
       2: {
         bullet: {
-          splashDamage: 60
+          splashDamage: 40
           splashDamageRadius: 28
         }
         reload: 20
@@ -1381,7 +1381,7 @@ unit: {
       }
       3: {
         bullet: {
-          splashDamage: 60
+          splashDamage: 40
           splashDamageRadius: 28
         }
         reload: 20
@@ -1484,7 +1484,7 @@ unit: {
           pierceCap: 3
           damage: 40
           hitEffect: disperseTrail
-          lifetime: 25
+          lifetime: 15
         }
         reload: 12
         rotateSpeed: 8
@@ -1499,7 +1499,7 @@ unit: {
           pierceCap: 3
           damage: 40
           hitEffect: disperseTrail
-          lifetime: 25
+          lifetime: 15
         }
         reload: 12
         rotateSpeed: 8
@@ -1514,7 +1514,7 @@ unit: {
           pierceCap: 3
           damage: 40
           hitEffect: disperseTrail
-          lifetime: 25
+          lifetime: 15
         }
         reload: 12
         rotateSpeed: 8
@@ -1529,7 +1529,7 @@ unit: {
           pierceCap: 3
           damage: 40
           hitEffect: disperseTrail
-          lifetime: 25
+          lifetime: 15
         }
         reload: 12
         rotateSpeed: 8
@@ -1541,7 +1541,6 @@ unit: {
     }
     range: 300
     maxRange: 300
-    speed: 0.7
     abilities: {
       0: {
         range: 80
@@ -1698,9 +1697,6 @@ unit: {
       }
     }
   }
-  cleroi: {
-    targetHighestCreeper: "true"
-  }
   anthicus: {
     weapons: {
       0: {
@@ -1823,7 +1819,7 @@ unit: {
         bullet: {
           splashDamageRadius: 24
           splashDamage: 20
-          pierceCap: 3
+          pierceCap: 2
           pierce: "true"
         }
       }
@@ -1903,6 +1899,21 @@ unit: {
       0: {
         bullet: {
           pierceCap: 3
+        }
+      }
+    }
+  }
+  cleroi: {
+    targetHighestCreeper: "true"
+    weapons: {
+      0: {
+        bullet: {
+          splashDamageRadius: 16
+        }
+      }
+      1: {
+        bullet: {
+          splashDamageRadius: 16
         }
       }
     }
