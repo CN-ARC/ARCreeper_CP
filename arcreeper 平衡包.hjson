@@ -214,7 +214,7 @@ unit: {
       '''
     weapons: {
       0: {
-        reload: 900
+        reload: 600
         bullet: {
           bullet: {
             pierceCap: -1
@@ -262,7 +262,6 @@ unit: {
           hitEffect: titanSmokeLarge
           creeperDamageMultiplier: 15
         }
-        reload: 600
       }
     }
     range: 700
@@ -736,36 +735,6 @@ unit: {
         inaccuracy: 15
         rotateSpeed: 6
         reload: 30
-      }
-      2: {
-        bullet: {
-          width: 4
-          height: 32
-          frontColor: ffdb8aff
-          trailColor: e5dc83ff
-          trailLength: 2
-          trailWidth: 2
-          speed: 8.5
-          knockback: 1
-        }
-      }
-      3: {
-        bullet: {
-          speed: 8.5
-          knockback: 1
-        }
-      }
-      4: {
-        bullet: {
-          speed: 8.5
-          knockback: 1
-        }
-      }
-      5: {
-        bullet: {
-          knockback: 1
-          speed: 8.5
-        }
       }
       2: {
         bullet: {
@@ -1894,6 +1863,29 @@ unit: {
     immunities.+: [
       spore-slowed
     ]
+  }
+  precept: {
+    weapons: {
+      0: {
+        bullet: {
+          pierceCap: 3
+        }
+      }
+    }
+  }
+  cleroi: {
+    weapons: {
+      0: {
+        bullet: {
+          splashDamageRadius: 16
+        }
+      }
+      1: {
+        bullet: {
+          splashDamageRadius: 16
+        }
+      }
+    }
   }
 }
 block: {
