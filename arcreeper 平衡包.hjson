@@ -11,6 +11,9 @@ unit: {
     }
     health: 0.5
     targetHighestCreeper: "true"
+    immunities.+: [
+      spore-slowed
+    ]
   }
   corvus: {
     weapons: {
@@ -53,215 +56,53 @@ unit: {
           lightningLengthRand: 0
           lightningCone: 360
           lightningLength: 3
+          range: 560
           creeperDamageMultiplier: 2
         }
+        shootStatus: none
       }
     }
     creeperEvade: 0.75
     targetHighestCreeper: "true"
+    description:
+      '''
+      发射巨大的爆发激光束，摧毁敌人并修复己方建筑。可以跨越大多数地形。
+      [gold]攻击不再减速
+      [gray]design by lemonfox
+      '''
   }
   reign: {
+    creeperEvade: 0.75
+    rotateSpeed: 3.5
+    baseRotateSpeed: 15
     weapons: {
       0: {
+        shootCone: 1000
+        targetSwitchInterval: 0
+        targetInterval: 0
         bullet: {
-          damage: 262.5
-          splashDamage: 350
-          splashDamageRadius: 65
-          fragBullet: {
-            splashDamage: 50
-            damage: 50
-            splashDamageRadius: 40
-            speed: 1.2
-            lifetime: 70
-            type: ArtilleryBulletType
-            range: 350
-            drawSize: 160
-            despawnEffect: none
-            shootEffect: shootTitan
-            smokeEffect: shootSmokeTitan
-            hitSound: explosionTitan
-            ammoMultiplier: 1
-            scaledSplashDamage: "true"
-            knockback: 2
-            status: blasted
-            despawnShake: 7
-            hitColor: "#f49d7cff"
-            spawnBullets: []
-            parts: []
-            trailColor: "#f49d7cff"
-            trailEffect: none
-            trailLength: 32
-            trailWidth: 3.3499999046325684
-            trailSinMag: 0.5
-            trailSinScl: 2.5
-            lightningType: damageLightningGround
-            lightRadius: 20
-            backColor: "#f49d7cff"
-            frontColor: "#ffffffff"
-            width: 7
-            height: 9
-            shrinkX: 0.20000000298023224
-            shrinkY: 0.10000000149011612
-            backRegion: shell-back
-            frontRegion: shell
-            hitEffect: titanExplosionSmall
-            despawnHit: "true"
-          }
-          fragBullets: 8
-          range: 250
-          type: ArtilleryBulletType
-          lifetime: 125
-          speed: 2
-          drawSize: 160
-          hitEffect: {
-            type: MultiEffect
-            effects: [
-              titanExplosion
-              titanSmoke
-            ]
-          }
-          shootEffect: shootTitan
-          smokeEffect: shootSmokeTitan
-          hitSound: explosionTitan
-          ammoMultiplier: 1
-          scaledSplashDamage: "true"
-          knockback: 2
-          status: blasted
-          despawnHit: "true"
-          despawnShake: 7
-          hitColor: "#f49d7cff"
-          spawnBullets: []
-          parts: []
-          trailColor: "#f49d7cff"
-          trailEffect: none
-          trailLength: 32
-          trailWidth: 3.3499999046325684
-          trailSinMag: 0.5
-          trailSinScl: 2.5
-          lightningType: damageLightningGround
-          lightRadius: 20
-          backColor: "#f49d7cff"
-          frontColor: "#ffffffff"
-          width: 17
-          height: 19
-          shrinkX: 0.20000000298023224
-          shrinkY: 0.10000000149011612
-          backRegion: shell-back
-          frontRegion: shell
-          fragVelocityMin: 0.6
-          fragLifeMax: 1.2
-          fragOffsetMin: 1.5
-          despawnEffect: none
-          fragVelocityMax: 1.2
-          fragLifeMin: 0.8
+          speed: 16
+          range: 240
         }
-        reload: 120
-        rotateSpeed: 40
-        targetSwitchInterval: 40
       }
       1: {
+        shootCone: 1000
+        targetInterval: 0
+        targetSwitchInterval: 0
         bullet: {
-          damage: 262.5
-          splashDamage: 350
-          splashDamageRadius: 65
-          fragBullets: 8
-          range: 250
-          type: ArtilleryBulletType
-          lifetime: 125
-          speed: 2
-          drawSize: 160
-          hitEffect: {
-            type: MultiEffect
-            effects: [
-              titanExplosion
-              titanSmoke
-            ]
-          }
-          despawnEffect: none
-          shootEffect: shootTitan
-          smokeEffect: shootSmokeTitan
-          hitSound: explosionTitan
-          ammoMultiplier: 1
-          scaledSplashDamage: "true"
-          knockback: 2
-          status: blasted
-          despawnHit: "true"
-          despawnShake: 7
-          hitColor: "#f49d7cff"
-          spawnBullets: []
-          parts: []
-          trailColor: "#f49d7cff"
-          trailEffect: none
-          trailLength: 32
-          trailWidth: 3.3499999046325684
-          trailSinMag: 0.5
-          trailSinScl: 2.5
-          lightningType: damageLightningGround
-          lightRadius: 20
-          backColor: "#f49d7cff"
-          frontColor: "#ffffffff"
-          width: 17
-          height: 19
-          shrinkX: 0.20000000298023224
-          shrinkY: 0.10000000149011612
-          backRegion: shell-back
-          frontRegion: shell
-          fragVelocityMin: 0.6
-          fragLifeMax: 1.2
-          fragBullet: {
-            damage: 50
-            splashDamage: 50
-            splashDamageRadius: 40
-            range: 350
-            type: ArtilleryBulletType
-            lifetime: 70
-            speed: 1.2
-            drawSize: 160
-            hitEffect: titanExplosionSmall
-            despawnEffect: none
-            shootEffect: shootTitan
-            smokeEffect: shootSmokeTitan
-            hitSound: explosionTitan
-            ammoMultiplier: 1
-            scaledSplashDamage: "true"
-            knockback: 2
-            status: blasted
-            despawnHit: "true"
-            despawnShake: 7
-            hitColor: "#f49d7cff"
-            spawnBullets: []
-            parts: []
-            trailColor: "#f49d7cff"
-            trailEffect: none
-            trailLength: 32
-            trailWidth: 3.3499999046325684
-            trailSinMag: 0.5
-            trailSinScl: 2.5
-            lightningType: damageLightningGround
-            lightRadius: 20
-            backColor: "#f49d7cff"
-            frontColor: "#ffffffff"
-            width: 7
-            height: 9
-            shrinkX: 0.20000000298023224
-            shrinkY: 0.10000000149011612
-            backRegion: shell-back
-            frontRegion: shell
-          }
-          fragVelocityMax: 1.2
-          fragLifeMin: 0.8
+          speed: 16
+          range: 240
         }
-        reload: 120
-        rotateSpeed: 40
-        targetSwitchInterval: 40
       }
     }
-    range: 250
-    maxRange: 250
-    creeperEvade: 0.75
-    description: 向地面敌人发射重型爆炸炮弹，并伴随多轮爆炸。
-    targetHighestCreeper: "true"
-    targetAir: "false"
+    description:
+      '''
+      [gold]主力推进型单位
+      略增加转头速度和射程，需要配合AC
+
+      [gray]balance by LC
+      '''
+    range: 240
   }
   disrupt: {
     creeperEvade: 0.75
@@ -278,28 +119,33 @@ unit: {
           frontColor: f5ecffff
           width: 12
           height: 22
-          damage: 140
-          splashDamage: 140
-          splashDamageRadius: 64
-          followAimSpeed: 6
           trailColor: 6d55beff
           trailWidth: 3
           trailLength: 12
           hitEffect: scatheExplosionSmall
           hitColor: a88eff41
           randomAngleOffset: 5
-          spawnBulletRandomSpread: 5
-          collidesAir: "false"
           hitSize: 8
           drawSize: 120
-          creeperDamageMultiplier: 1.5
+          creeperOnRemove: 200
+          splashDamage: 1
+          followAimSpeed: 6
+          xRand: 10
+          yRand: 10
+          shoot: {
+            shotDelay: 5
+          }
+          reload: 600
+          status: unmoving
+          splashDamageRadius: 80
+          statusDuration: 30
         }
         xRand: 10
         yRand: 10
         shoot: {
           shotDelay: 5
         }
-        reload: 200
+        reload: 600
       }
       1: {
         bullet: {
@@ -313,9 +159,6 @@ unit: {
           frontColor: f5ecffff
           width: 12
           height: 22
-          damage: 140
-          splashDamage: 140
-          splashDamageRadius: 64
           followAimSpeed: 6
           trailColor: 6d55beff
           trailWidth: 3
@@ -323,45 +166,84 @@ unit: {
           hitEffect: scatheExplosionSmall
           hitColor: a88eff41
           randomAngleOffset: 5
-          spawnBulletRandomSpread: 5
-          collidesAir: "false"
           hitSize: 8
           drawSize: 120
-          creeperDamageMultiplier: 1.5
+          creeperOnRemove: 200
+          xRand: 10
+          yRand: 10
+          shoot: {
+            shotDelay: 5
+          }
+          reload: 600
+          splashDamageRadius: 80
+          splashDamage: 1
+          status: unmoving
+          statusDuration: 30
         }
         shoot: {
           shotDelay: 5
         }
         xRand: 10
         yRand: 10
-        reload: 200
+        reload: 600
       }
     }
-    targetHighestCreeper: "true"
+    description:
+      '''
+      [gold]战斗支援单位
+      发射AC导弹，给予敌方单位静止
+      拥有较大范围的孢子瓦解场
+      [gray]design by LC
+      '''
     abilities.+: [
       {
         type: SporeDisruptFieldAbility
-        range: 160
-        damage: 0.1
+        range: 480
+        reload: 300
+        damage: 3
       }
     ]
-    description:
-      '''
-      向敌人发射远程压制性追踪导弹。且能够裂解范围内的孢子。
-      [gold]不能对空。
-      '''
   }
   conquer: {
-    creeperEvade: 0.75
     targetHighestCreeper: "true"
+    description:
+      '''
+      [gold]火炮支援单位，以超长射程打击后方深水
+      [gray]design by LC
+      effect by lemonfox
+      '''
     weapons: {
       0: {
+        reload: 900
         bullet: {
-          pierceCap: -1
+          bullet: {
+            pierceCap: -1
+            damage: 200
+            type: ArtilleryBulletType
+            speed: 2
+            lifetime: 300
+            backRegion: missile-large-back
+            frontRegion: missile-large-back
+            sprite: missile-large-back
+            backColor: ff894bff
+            width: 20
+            height: 30
+            frontColor: ff894aff
+            shootEffect: scatheExplosionSmall
+            hitColor: ff7335ff
+            trailLength: 20
+            trailWidth: 7
+            despawnEffect: titanExplosionLarge
+            despawnHit: "true"
+            splashDamageRadius: 120
+            splashDamage: 200
+            hitEffect: titanSmokeLarge
+            creeperDamageMultiplier: 10
+          }
           damage: 200
           type: ArtilleryBulletType
-          speed: 5
-          lifetime: 140
+          speed: 2
+          lifetime: 300
           backRegion: missile-large-back
           frontRegion: missile-large-back
           sprite: missile-large-back
@@ -378,7 +260,7 @@ unit: {
           splashDamageRadius: 120
           splashDamage: 200
           hitEffect: titanSmokeLarge
-          creeperDamageMultiplier: 10
+          creeperDamageMultiplier: 15
         }
         reload: 600
       }
@@ -623,10 +505,8 @@ unit: {
     creeperEvade: 0.92
     weapons.+: [
       {
-        reload: 480
         bullet: {
-          speed: 4
-          lifetime: 120
+          lifetime: 300
           sprite: large-bomb
           width: 100
           height: 100
@@ -634,56 +514,44 @@ unit: {
           frontColor: 97ffa8ff
           shrinkY: 0
           spin: 10
-          shootEffect: teleportOut
-          trailEffect: squareWaveEffect
           trailColor: 97ffa8ff
-          hitEffect: greenBomb
-          despawnEffect: greenBomb
-          damage: 0
-          splashDamage: 480
-          splashDamageRadius: 100
-          healPercent: 15
           type: ArtilleryBulletType
           keepVelocity: "false"
+          creeperAppliedMultiplier: -0.5
+          splashDamageRadius: 40
+          splashDamage: 1
+          trailEffect: squareWaveEffect
+          hitEffect: greenBomb
+          shootEffect: teleportOut
+          despawnEffect: greenBomb
         }
-        y: -12
-        x: -60
+        y: 0
+        x: 0
         ignoreRotation: "true"
         rotate: "true"
         ejectEffect: greenBomb
-      }
-      {
-        reload: 480
-        bullet: {
-          speed: 4
-          lifetime: 120
-          sprite: large-bomb
-          width: 100
-          height: 100
-          backColor: 97ffa8ff
-          frontColor: 97ffa8ff
-          shrinkY: 0
-          spin: 10
-          shootEffect: teleportOut
-          trailEffect: squareWaveEffect
-          trailColor: 97ffa8ff
-          hitEffect: greenBomb
-          despawnEffect: greenBomb
-          damage: 0
-          splashDamage: 480
-          splashDamageRadius: 100
-          healPercent: 15
-          type: ArtilleryBulletType
-          keepVelocity: "false"
-        }
-        y: -12
-        x: 60
-        ignoreRotation: "true"
-        rotate: "true"
-        ejectEffect: greenBomb
+        name: 反转炮
+        reload: 900
+        mirror: "false"
       }
     ]
     targetHighestCreeper: "true"
+    description:
+      '''
+      发射大型电磁爆弹，对敌方电网造成重大破坏，同时可修复友军建筑，压制敌方修复建筑。 搭载4台自动激光炮台，能熔化靠近的敌人。
+      [gold]装载一门反转炮，击中目标后以一定比例将C转换为AC
+      并附带一个中范围的强力孢子瓦解场
+      [gray]design by LC
+      effect by blac
+      '''
+    abilities: {
+      0: {
+        type: SporeDisruptFieldAbility
+        range: 400
+        reload: 300
+        damage: 10
+      }
+    }
   }
   collaris: {
     creeperEvade: 0.75
@@ -699,19 +567,6 @@ unit: {
           velocityScaleRandMin: 1.1
           velocityScaleRandMax: 1.1
           collidesAir: "true"
-          fragBullet: {
-            collidesAir: "true"
-            creeperDamageMultiplier: 1.5
-            sprite: missile-large
-            followAimSpeed: 2
-            backRegion: missile-large-back
-            frontRegion: missile-large
-          }
-          creeperDamageMultiplier: 1.5
-          sprite: missile-large
-          followAimSpeed: 3
-          backRegion: missile-large-back
-          frontRegion: missile-large
         }
       }
       1: {
@@ -725,27 +580,15 @@ unit: {
           velocityScaleRandMin: 1.1
           velocityScaleRandMax: 1.1
           collidesAir: "true"
-          fragBullet: {
-            collidesAir: "true"
-            creeperDamageMultiplier: 1.5
-            sprite: missile-large
-            backRegion: missile-large-back
-            frontRegion: missile-large
-            followAimSpeed: 2
-          }
-          creeperDamageMultiplier: 1.5
-          sprite: missile-large
-          backRegion: missile-large-back
-          frontRegion: missile-large
-          followAimSpeed: 3
         }
       }
     }
     targetAir: "true"
     description:
       '''
-      向敌人发射远程分裂对空火炮。可以跨越大多数地形。 
-      [gold]不用小心obv，这种粘鞋底最难清理了。
+      向敌人发射远程分裂火炮。可以跨越大多数地形。
+      [gold]添加了对空功能
+      孩子们想我了吗
       '''
   }
   eclipse: {
@@ -755,7 +598,6 @@ unit: {
         bullet: {
           type: FlakBulletType
           speed: 8
-          damage: 70
           hitSize: 7
           drawSize: 192
           hitEffect: hitSquaresColor
@@ -765,7 +607,7 @@ unit: {
           ammoMultiplier: 1
           splashDamage: 0
           collidesGround: "true"
-          range: 320
+          range: 400
           despawnHit: "true"
           despawnShake: 3
           fragBullet: {
@@ -787,6 +629,7 @@ unit: {
             sideLength: 40
             sideWidth: 1
             sideAngle: 175
+            knockback: 5
           }
           fragRandomSpread: 0
           intervalRandomSpread: 0
@@ -813,12 +656,14 @@ unit: {
           explodeDelay: 0
           flakInterval: 20
           followAimSpeed: 4
-          lifetime: 70
+          lifetime: 50
           fragBullets: 3
+          knockback: 5
+          damage: 70
         }
-        reload: 15
         inaccuracy: 15
         rotateSpeed: 6
+        reload: 30
       }
       1: {
         bullet: {
@@ -834,7 +679,7 @@ unit: {
           ammoMultiplier: 1
           splashDamage: 0
           collidesGround: "true"
-          range: 320
+          range: 400
           despawnHit: "true"
           despawnShake: 3
           fragBullet: {
@@ -857,6 +702,7 @@ unit: {
             sideLength: 40
             sideWidth: 1
             sideAngle: 175
+            knockback: 5
           }
           fragRandomSpread: 0
           intervalRandomSpread: 0
@@ -883,12 +729,43 @@ unit: {
           explodeDelay: 0
           flakInterval: 20
           followAimSpeed: 4
-          lifetime: 70
+          lifetime: 50
           fragBullets: 3
+          knockback: 5
         }
-        reload: 15
         inaccuracy: 15
         rotateSpeed: 6
+        reload: 30
+      }
+      2: {
+        bullet: {
+          width: 4
+          height: 32
+          frontColor: ffdb8aff
+          trailColor: e5dc83ff
+          trailLength: 2
+          trailWidth: 2
+          speed: 8.5
+          knockback: 1
+        }
+      }
+      3: {
+        bullet: {
+          speed: 8.5
+          knockback: 1
+        }
+      }
+      4: {
+        bullet: {
+          speed: 8.5
+          knockback: 1
+        }
+      }
+      5: {
+        bullet: {
+          knockback: 1
+          speed: 8.5
+        }
       }
       2: {
         bullet: {
@@ -921,125 +798,183 @@ unit: {
         reload: 12
       }
     }
-    range: 520
-    maxRange: 560
+    range: 400
+    maxRange: 400
+    description:
+      '''
+      向敌人发射穿透性激光和爆炸性炮弹。
+      [gold]具有较低的DPS和高击退
+      可用于有效阻止对方高T冲家
+
+      [gray]design by lemonfox
+      balance by lc
+      '''
   }
   omura: {
     creeperEvade: 0.92
     weapons: {
       0: {
+        reload: 900
         bullet: {
-          type: BasicBulletType
-          lifetime: 60
-          speed: 8
-          damage: 1200
-          drawSize: 120
-          pierce: "true"
-          shootEffect: instBomb
-          despawnSound: explosionAfflict
-          range: 480
-          despawnHit: "true"
-          fragOnHit: "false"
-          fragBullet: {
-            type: BasicBulletType
-            lifetime: 28
-            speed: 3
-            damage: 25
-            hitSize: 5
-            pierce: "true"
-            pierceBuilding: "true"
-            keepVelocity: "false"
-            range: 84
-            hitColor: aca555ff
-            trailColor: "#f3e979ff"
-            trailLength: 5
-            trailWidth: 2.0999999046325684
-            homingPower: 0.10000000149011612
-            lightningType: damageLightning
-            lightRadius: 25
-            backColor: "#f3e979ff"
-            frontColor: "#ffffffff"
-            width: 12
-            height: 18
-            backRegion: bullet-back
-            frontRegion: bullet
-            splashDamage: 100
-            splashDamageRadius: 24
-            despawnEffect: launchPod
+          weapons: {
+            0: {
+              bullet: {
+                type: ArtilleryBulletType
+                height: 70
+                width: 70
+                shrinkY: 0
+                sprite: block-impact-reactor-full
+                spin: 5
+                backSprite: block-impact-reactor-full
+                frontColor: ffffffff
+                hitEffect: impactReactorExplosion
+                splashDamage: 1250
+                splashDamageRadius: 220
+                speed: 6
+                lifetime: 120
+                shootEffect: coreExplosion
+                chargeEffect: teleport
+                hitSound: explosionReactor2
+                damage: 1250
+                trailEffect: missileTrailSmoke
+                despawnHit: "true"
+              }
+              reload: 840
+              shoot: {
+                firstShotDelay: 60
+              }
+              shootSound: acceleratorLaunch
+              chargeSound: chargeVela
+              heatColor: ff4d00ff
+              recoilTime: 780
+              recoilPow: 1.2
+              cooldownTime: 720
+              shootStatus: unmoving
+              shootStatusDuration: 60
+            }
           }
-          fragBullets: 20
-          fragVelocityMin: 0.5
-          fragVelocityMax: 1.2000000476837158
-          fragLifeMin: 0.5
-          intervalBullet: {
-            type: BasicBulletType
-            lifetime: 28
-            speed: 3
-            damage: 25
-            hitSize: 5
-            pierce: "true"
-            pierceBuilding: "true"
-            keepVelocity: "false"
-            range: 84
-            hitColor: "#f3e979ff"
-            trailColor: "#f3e979ff"
-            trailLength: 5
-            trailWidth: 2.0999999046325684
-            homingPower: 0.10000000149011612
-            lightningType: damageLightning
-            lightRadius: 25
-            backColor: "#f3e979ff"
-            frontColor: "#ffffffff"
-            width: 9
-            height: 15
-            backRegion: bullet-back
-            frontRegion: bullet
-            splashDamage: 25
-            splashDamageRadius: 16
-            hitEffect: disperseTrail
-            despawnEffect: flakExplosion
-          }
-          bulletInterval: 6
-          hitColor: b8b15cff
-          trailColor: b0a957ff
-          trailInterval: 3
-          trailParam: 4
-          trailLength: 12
-          trailWidth: 2.200000047683716
-          lightRadius: 20
-          backColor: b3ac59ff
-          frontColor: "#ffffffff"
-          width: 16
-          height: 32
+          range: 800
+          speed: 2
+          type: ArtilleryBulletType
+          height: 70
+          width: 70
           shrinkY: 0
-          backRegion: missile-large-back
-          frontRegion: missile-back
-          intervalAngle: 0
-          intervalRandomSpread: 0
+          sprite: block-impact-reactor-full
+          spin: 5
+          backSprite: block-impact-reactor-full
+          frontColor: ffffffff
+          hitEffect: impactReactorExplosion
+          splashDamage: 200
+          splashDamageRadius: 220
+          lifetime: 400
+          shootEffect: coreExplosion
+          chargeEffect: teleport
+          hitSound: explosionReactor2
+          damage: 1250
+          trailEffect: missileTrailSmoke
+          despawnHit: "true"
+          creeperDamageMultiplier: 10
         }
-        reload: 220
+        shoot: {
+          firstShotDelay: 60
+        }
+        shootSound: acceleratorLaunch
+        chargeSound: chargeVela
+        heatColor: ff4d00ff
+        recoilTime: 780
+        recoilPow: 1.2
+        cooldownTime: 720
+        shootStatus: unmoving
+        shootStatusDuration: 60
       }
     }
-    description: 使用远程穿透轨道炮，将一切阻挡的敌人撕裂。
+    description:
+      '''
+      [gold]火炮支援单位
+      装载超长攻击与超大范围的主炮
+      [gray]附带产轰炸机（孩子们想我了吗）
+      [gray]balance by LC
+      effect by blac
+      '''
+    range: 800
+    rotateSpeed: 1.6
+    abilities.+: [
+      {
+        type: UnitSpawnAbility
+        unit: horizon
+        spawnTime: 900
+        spawnX: 19.25
+        spawnY: -31.75
+      }
+      {
+        type: UnitSpawnAbility
+        unit: horizon
+        spawnTime: 900
+        spawnX: -19.25
+        spawnY: -31.75
+      }
+    ]
+    maxRange: 800
+    targetHighestCreeper: "true"
+    targetAir: "false"
   }
   oct: {
+    mineTier: 8
+    mineSpeed: 75
+    mineWalls: "true"
+    mineItems: [
+      tungsten
+      thorium
+    ]
+    commands.+: [
+      mine
+    ]
+    mineRange: 240
+    itemCapacity: 500
     creeperEvade: 0.9
     payloadCapacity: 6400
-  }
-  disrupt-missile: {
-    weapons: {
-      0: {
+    description:
+      '''
+      用它的再生护盾保护附近的友方单位。能够携带大多数单位。
+      [gold]全能辅助单位
+      更高的装载容量，自带持续AC，回血，高额高度盾，我们还需要什么
+      '''
+    weapons.+: [
+      {
+        name: 持续出水
+        reload: 30
         bullet: {
-          splashDamageRadius: 80
-          hitEffect: titanSmoke
-          despawnEffect: titanExplosion
-          hitColor: 7b2cc2ff
-          splashDamage: 150
+          creeperOnRemove: 50
+          range: 0
+          homingRange: 0
+          lifetime: 0
+          fragOnDespawn: "false"
+          displayAmmoMultiplier: "false"
+          speed: 0
+          suppressionEffectChance: 0
+          despawnEffect: none
+          hitEffect: none
+          shootEffect: none
+          smokeEffect: none
+          healEffect: none
+          trailEffect: none
         }
+        mirror: "false"
+        predictTarget: "false"
+        controllable: "false"
+        aiControllable: "false"
+        targetInterval: 1.0e10
+        display: "false"
+        top: "false"
+        alwaysShooting: "true"
+      }
+    ]
+    abilities: {
+      0: {
+        radius: 210
+        heightEnhance: 100
       }
     }
-    health: 0.5
-    targetHighestCreeper: "true"
   }
   merui: {
     weapons: {
@@ -1115,6 +1050,9 @@ unit: {
       }
     }
     description: "[gold]自爆，造成伤害，并产生少量水"
+    immunities.+: [
+      spore-slowed
+    ]
   }
   nova: {
     mineItems: [
@@ -1156,16 +1094,13 @@ unit: {
     commands: {
       3: mine
     }
-    commands.+: [
-      move
-    ]
+    mineRange: 160
+    itemCapacity: 300
     description:
       '''
       发射巨大的持续激光束攻击敌人并引起燃烧，修复己方建筑。能够助推。
-      [gold]能够挖掘钍与钨。
+      [gold]能够挖掘钍和钨。
       '''
-    mineRange: 160
-    itemCapacity: 300
   }
   oxynoe: {
     weapons: {
@@ -1195,6 +1130,9 @@ unit: {
         }
       }
     }
+    immunities.+: [
+      spore-slowed
+    ]
   }
   spiroct: {
     weapons: [
@@ -1294,6 +1232,10 @@ unit: {
     maxRange: 120
     targetAir: "false"
     range: 60
+    immunities.+: [
+      spore-slowed
+    ]
+    creeperEvade: 0.5
   }
   fortress: {
     weapons: {
@@ -1561,39 +1503,35 @@ unit: {
       0: {
         bullet: {
           pierceCap: 8
-          fragBullet: {
-            pierceCap: 5
-            pierce: "true"
-          }
-          damage: 200
           lifetime: 40
+          creeperDamageMultiplier: 2
         }
         reload: 60
       }
       1: {
         bullet: {
-          pierceCap: 3
+          pierceCap: 2
           pierce: "true"
           lifetime: 30
         }
       }
       2: {
         bullet: {
-          pierceCap: 3
+          pierceCap: 2
           pierce: "true"
           lifetime: 30
         }
       }
       3: {
         bullet: {
-          pierceCap: 3
+          pierceCap: 2
           pierce: "true"
           lifetime: 30
         }
       }
       4: {
         bullet: {
-          pierceCap: 3
+          pierceCap: 2
           pierce: "true"
           lifetime: 30
         }
@@ -1601,22 +1539,45 @@ unit: {
     }
     range: 320
     maxRange: 360
+    description:
+      '''
+      向敌人发射大型穿透性分裂子弹。
+      [cyan]能够碾压建筑(对墙5倍伤害)
+      [gold]更大的攻击范围，清水用
+      '''
   }
   tecta: {
     weapons: {
-      0: {
-        bullet: {
-          pierceCap: 2
-          pierce: "true"
-        }
-      }
       1: {
         bullet: {
           pierceCap: 2
           pierce: "true"
+          damage: 120
+          pierceBuilding: "true"
+        }
+      }
+      0: {
+        bullet: {
+          pierce: "true"
+          pierceCap: 2
+          damage: 120
+          pierceBuilding: "true"
         }
       }
     }
+    abilities: {
+      0: {
+        type: ForceFieldAbility
+        radius: 90
+        heightEnhance: 5
+      }
+    }
+    description:
+      '''
+      向敌人发射等离子追踪导弹。用它前方的护盾保护自己。可以跨越大多数地形。
+
+      [gold]附带高度立场，拆建筑效率很高
+      '''
   }
   risso: {
     targetHighestCreeper: "true"
@@ -1631,18 +1592,15 @@ unit: {
     creeperEvade: 0.85
   }
   quell: {
-    targetHighestCreeper: "true"
     weapons: {
       0: {
         bullet: {
           fragOnHit: "false"
           fragOnAbsorb: "false"
           fragOnDespawn: "false"
-          damage: 110
+          damage: 1
           lifetime: 90
           speed: 4
-          splashDamage: 110
-          splashDamageRadius: 56
           hitColor: a88eff41
           hitEffect: scatheExplosionSmall
           type: BasicBulletType
@@ -1662,6 +1620,9 @@ unit: {
           collidesAir: "false"
           hitSize: 7
           drawSize: 102
+          splashDamageRadius: 56
+          splashDamage: 110
+          creeperOnRemove: 2
         }
       }
       1: {
@@ -1669,7 +1630,7 @@ unit: {
           fragOnHit: "false"
           fragOnAbsorb: "false"
           fragOnDespawn: "false"
-          damage: 110
+          damage: 1
           lifetime: 90
           speed: 4
           splashDamage: 110
@@ -1693,9 +1654,22 @@ unit: {
           collidesAir: "false"
           hitSize: 7
           drawSize: 102
+          creeperOnRemove: 2
         }
       }
     }
+    abilities.+: [
+      {
+        type: SporeDisruptFieldAbility
+        range: 320
+        reload: 300
+      }
+    ]
+    description:
+      '''
+      向敌人发射远程追踪导弹。能够压制敌方修复建筑。
+      [gold]额外提供一个较弱的孢子瓦解场
+      '''
   }
   anthicus: {
     weapons: {
@@ -1775,17 +1749,33 @@ unit: {
   }
   arkyid: {
     targetHighestCreeper: "true"
+    immunities.+: [
+      spore-slowed
+    ]
+    creeperEvade: 0.95
   }
   retusa: {
     creeperEvade: 0.8
   }
   quad: {
+    mineTier: 5
+    mineSpeed: 15
+    mineWalls: "true"
+    mineItems: [
+      tungsten
+      thorium
+    ]
+    commands.+: [
+      mine
+    ]
+    mineRange: 240
+    itemCapacity: 300
     weapons: {
       0: {
         reload: 24
         bullet: {
           killShooter: "true"
-          creeperOnRemove: 50000
+          creeperOnRemove: 25000
         }
         minShootVelocity: 0
       }
@@ -1803,12 +1793,14 @@ unit: {
           killShooter: "true"
           creeperOnRemove: 250
         }
+        minShootVelocity: 0
       }
       1: {
         bullet: {
           killShooter: "true"
           creeperOnRemove: 250
         }
+        minShootVelocity: 0
       }
     }
     description: "[gold]自杀，产生少量水"
@@ -1870,6 +1862,9 @@ unit: {
         }
       }
     }
+    immunities.+: [
+      spore-slowed
+    ]
   }
   scathe-missile-surge: {
     weapons: {
@@ -1884,6 +1879,9 @@ unit: {
         }
       }
     }
+    immunities.+: [
+      spore-slowed
+    ]
   }
   scathe-missile: {
     weapons: {
@@ -1893,30 +1891,9 @@ unit: {
         }
       }
     }
-  }
-  precept: {
-    weapons: {
-      0: {
-        bullet: {
-          pierceCap: 3
-        }
-      }
-    }
-  }
-  cleroi: {
-    targetHighestCreeper: "true"
-    weapons: {
-      0: {
-        bullet: {
-          splashDamageRadius: 16
-        }
-      }
-      1: {
-        bullet: {
-          splashDamageRadius: 16
-        }
-      }
-    }
+    immunities.+: [
+      spore-slowed
+    ]
   }
 }
 block: {
@@ -1924,29 +1901,95 @@ block: {
     consumes: {
       remove: [
         items
+        liquid
       ]
       items: {
         type: ConsumeItems
         items: [
           {
             item: silicon
-            amount: 2000
+            amount: 2500
           }
           {
             item: plastanium
-            amount: 1200
+            amount: 1800
           }
           {
             item: surge-alloy
-            amount: 1000
+            amount: 800
           }
           {
             item: phase-fabric
-            amount: 700
+            amount: 600
+          }
+          {
+            item: titanium
+            amount: 1000
           }
         ]
       }
+      liquid: {
+        liquid: gallium
+        amount: 0.5
+      }
     }
+    upgrades.0: {
+      0: flare
+    }
+    upgrades.1: {
+      0: crawler
+    }
+    upgrades.2: {
+      0: dagger
+    }
+    upgrades.3: {
+      0: risso
+    }
+    upgrades.4: {
+      0: mono
+    }
+    upgrades.5: {
+      0: nova
+    }
+    upgrades.6: {
+      0: retusa
+    }
+    description:
+      '''
+      [gold]输入T1直接构造T5级单位
+      需要镓液
+      '''
+    requirements: [
+      {
+        item: lead
+        amount: 10000
+      }
+      {
+        item: titanium
+        amount: 2500
+      }
+      {
+        item: thorium
+        amount: 5000
+      }
+      {
+        item: silicon
+        amount: 6000
+      }
+      {
+        item: plastanium
+        amount: 2000
+      }
+      {
+        item: phase-fabric
+        amount: 2000
+      }
+      {
+        item: surge-alloy
+        amount: 1200
+      }
+    ]
+    liquidCapacity: 120
   }
   scorch: {
     ammoTypes: {
@@ -1962,16 +2005,6 @@ block: {
     requirements: {
       0: {
         amount: 80
-      }
-    }
-  }
-  ship-fabricator: {
-    requirements: {
-      0: {
-        amount: 60
-      }
-      1: {
-        amount: 120
       }
     }
   }
@@ -2627,14 +2660,12 @@ block: {
         amount: 500
       }
     ]
-    shootType: {
-      fragBullet: {
-        pierceCap: -1
-        damage: 15
-        creeperDamageMultiplier: 0.5
-      }
-      creeperDamageMultiplier: 0.5
-    }
+    canOverdrive: "false"
+    description:
+      '''
+      向敌方发射一连串的追踪子弹并放出激光。需要大量热量。
+      [gold]不可超速
+      '''
   }
   neoplasia-reactor: {
     canOverdrive: "true"
@@ -2659,17 +2690,6 @@ block: {
       }
     }
   }
-  afflict: {
-    shootType: {
-      intervalBullet: {
-        creeperDamageMultiplier: 0.5
-      }
-      creeperDamageMultiplier: 0.5
-      fragBullet: {
-        creeperDamageMultiplier: 0.5
-      }
-    }
-  }
   smite: {
     ammoTypes: {
       surge-alloy: {
@@ -2681,101 +2701,303 @@ block: {
     }
   }
   exponential-reconstructor: {
-    requirements: [
-      {
-        item: lead
-        amount: 2000
-      }
-      {
-        item: titanium
-        amount: 2000
-      }
-      {
-        item: thorium
-        amount: 750
-      }
-      {
-        item: silicon
-        amount: 1000
-      }
-      {
-        item: plastanium
-        amount: 450
-      }
-    ]
     consumes: {
       remove: [
         items
-        liquid
       ]
       items: {
         items: [
           {
             item: silicon
-            amount: 425
+            amount: 1200
           }
           {
             item: titanium
-            amount: 375
+            amount: 1000
           }
           {
             item: plastanium
-            amount: 325
+            amount: 650
+          }
+          {
+            item: graphite
+            amount: 50
+          }
+          {
+            item: metaglass
+            amount: 50
           }
         ]
       }
-      liquid: {
-        liquid: cryofluid
-        amount: 1
+    }
+    description: "[gold]输入T1直接构造T4级单位"
+    upgrades.0: {
+      0: flare
+    }
+    upgrades.1: {
+      0: crawler
+    }
+    upgrades.2: {
+      0: dagger
+    }
+    upgrades.3: {
+      0: risso
+    }
+    upgrades.4: {
+      0: mono
+    }
+    upgrades.5: {
+      0: nova
+    }
+    upgrades.6: {
+      0: retusa
+    }
+  }
+  large-constructor: {
+    requirements: {
+      0: {
+        amount: 1000
       }
+      3: {
+        amount: 400
+      }
+      2: {
+        amount: 2000
+      }
+      1: {
+        amount: 1500
+      }
+    }
+    requirements.+: [
+      {
+        item: carbide
+        amount: 300
+      }
+    ]
+    description:
+      '''
+      构筑 3x3 至 4x4 大小的方块
+      [gold]代表着eT4构造阶段
+      [gray]造价约为原T4级厂
+      '''
+  }
+  tank-assembler: {
+    requirements: {
+      2: {
+        amount: 20
+      }
+      3: {
+        amount: 10
+      }
+      0: {
+        amount: 200
+      }
+      1: {
+        amount: 100
+      }
+    }
+    health: 250
+    plans: {
+      1: {
+        requirements: [
+          {
+            item: scathe
+            amount: 6
+          }
+        ]
+        liquidReq: [
+          {
+            liquid: gallium
+            amount: 0.5
+          }
+        ]
+        time: 14400
+      }
+      0: {
+        requirements: [
+          {
+            item: lustre
+            amount: 4
+          }
+        ]
+        liquidReq: [
+          {
+            liquid: nitrogen
+            amount: 0.25
+          }
+        ]
+      }
+    }
+    consumes: {
+      remove: [
+        liquid
+      ]
+    }
+    liquidCapacity: 120
+    description:
+      '''
+      [gold]构建eT4与T5坦
+      造价极为便宜以方便切换兵种
+      T4需求氮，T5需求镓
+      '''
+  }
+  ship-assembler: {
+    health: 360
+    requirements: {
+      0: {
+        amount: 100
+      }
+      1: {
+        amount: 150
+      }
+      2: {
+        amount: 50
+      }
+      3: {
+        amount: 20
+      }
+      4: {
+        amount: 10
+      }
+    }
+    plans: {
+      1: {
+        requirements: [
+          {
+            item: scathe
+            amount: 6
+          }
+        ]
+        time: 14400
+        liquidReq: [
+          {
+            liquid: gallium
+            amount: 0.5
+          }
+        ]
+      }
+      0: {
+        requirements: [
+          {
+            item: lustre
+            amount: 4
+          }
+        ]
+        liquidReq: [
+          {
+            liquid: nitrogen
+            amount: 0.25
+          }
+        ]
+      }
+    }
+    consumes: {
+      remove: [
+        liquid
+      ]
+    }
+    description:
+      '''
+      [gold]构建eT4与T5坦
+      造价极为便宜以方便切换兵种
+      T4需求氮，T5需求镓
+      '''
+  }
+  mech-assembler: {
+    health: 360
+    requirements: {
+      0: {
+        amount: 100
+      }
+      1: {
+        amount: 150
+      }
+      2: {
+        amount: 50
+      }
+      3: {
+        amount: 20
+      }
+      4: {
+        amount: 20
+      }
+    }
+    plans: {
+      1: {
+        requirements: [
+          {
+            item: scathe
+            amount: 6
+          }
+        ]
+        liquidReq: [
+          {
+            liquid: gallium
+            amount: 0.5
+          }
+        ]
+        time: 14400
+      }
+      0: {
+        requirements: [
+          {
+            item: lustre
+            amount: 4
+          }
+        ]
+        liquidReq: [
+          {
+            liquid: nitrogen
+            amount: 0.25
+          }
+        ]
+      }
+    }
+    description:
+      '''
+      [gold]构建eT4与T5爬
+      造价极为便宜以方便切换兵种
+      T4需求氮，T5需求镓
+      '''
+    consumes: {
+      remove: [
+        liquid
+      ]
     }
   }
   basic-assembler-module: {
-    requirements: [
-      {
-        item: silicon
-        amount: 3000
+    requirements: {
+      0: {
+        amount: 5000
       }
-      {
-        item: phase-fabric
+      1: {
         amount: 1000
       }
-      {
-        item: surge-alloy
+      2: {
         amount: 1000
       }
-      {
-        item: oxide
-        amount: 500
+      3: {
+        amount: 1000
       }
+    }
+    requirements.+: [
       {
-        item: carbide
-        amount: 1500
+        item: tungsten
+        amount: 4000
       }
     ]
+    description:
+      '''
+      当放置在构造边界旁边时，增加输出等级。需要电力。可以用作载荷输入。
+      [gold]修订造价，代表着eT5构造阶段
+      '''
   }
-  carbide-wall-large: {
-    requirements: [
-      {
-        item: thorium
-        amount: 48
-      }
-      {
-        item: phase-fabric
-        amount: 24
-      }
-      {
-        item: surge-alloy
-        amount: 24
-      }
-      {
-        item: oxide
-        amount: 12
-      }
-      {
-        item: carbide
-        amount: 24
-      }
-    ]
+  afflict: {
+    canOverdrive: "false"
+    description:
+      '''
+      向敌人发射巨大的带电碎片弹。 需要热量。
+      [gold]不可超速
+      '''
   }
 }
