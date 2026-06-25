@@ -1018,6 +1018,7 @@ unit: {
         }
       }
     }
+    targetHighestCreeper: "true"
   }
   cyerce: {
     weapons: {
