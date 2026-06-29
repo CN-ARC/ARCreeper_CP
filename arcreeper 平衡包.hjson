@@ -285,8 +285,8 @@ unit: {
     description:
       '''
       向敌人发射大型集束炮弹和穿透性激光。
-      [gold]登陆+反sleeper单位，高额水免和buff免，主炮极高建筑伤害
-      dps为2.5w
+      [gold]登陆+反sleeper单位，高额水免和buff免，主炮极高建筑与水伤害
+      dps为2.5w + 4.5w(近战主炮)
       [gray]balance by LC
       '''
     immunities.+: [
@@ -296,17 +296,53 @@ unit: {
       0: {
         bullet: {
           buildingDamageMultiplier: 5
+          creeperDamageMultiplier: 15
         }
       }
       1: {
         bullet: {
           buildingDamageMultiplier: 5
+          creeperDamageMultiplier: 15
         }
       }
     }
   }
   navanax: {
     creeperEvade: 0.92
+    weapons: {
+      2: {
+        bullet: {
+          range: 140
+          maxRange: 140
+          frontLength: 140
+          creeperDamageMultiplier: 5
+        }
+      }
+      3: {
+        bullet: {
+          range: 140
+          maxRange: 140
+          frontLength: 140
+          creeperDamageMultiplier: 5
+        }
+      }
+      5: {
+        bullet: {
+          range: 140
+          maxRange: 140
+          frontLength: 140
+          creeperDamageMultiplier: 5
+        }
+      }
+      4: {
+        bullet: {
+          range: 140
+          maxRange: 140
+          frontLength: 140
+          creeperDamageMultiplier: 5
+        }
+      }
+    }
     weapons.+: [
       {
         bullet: {
@@ -321,13 +357,13 @@ unit: {
           trailColor: 97ffa8ff
           type: ArtilleryBulletType
           keepVelocity: "false"
-          creeperAppliedMultiplier: -0.5
           splashDamageRadius: 40
           splashDamage: 1
           trailEffect: squareWaveEffect
           hitEffect: greenBomb
           shootEffect: teleportOut
           despawnEffect: greenBomb
+          creeperAppliedMultiplier: -1
         }
         y: 0
         x: 0
@@ -345,7 +381,7 @@ unit: {
       海军辅助单位
       [gold]装载一门反转炮，击中目标后以一定比例将C转换为AC
       并附带一个中范围的强力孢子瓦解场
-      dps为3w (除反转炮)
+      dps为2w(主炮)+3w (近战激光)+?反转炮
       [gray]design by LC
       effect by blac
       '''
@@ -1434,11 +1470,47 @@ unit: {
       '''
   }
   arkyid: {
-    targetHighestCreeper: "true"
     immunities.+: [
       spore-slowed
     ]
     creeperEvade: 0.95
+    description:
+      '''
+      向敌人发射大型激光束，并在该过程中自我修复。可以跨越大多数地形。
+      [gold]dps为7k，免疫孢子污染，高建筑伤害
+      '''
+    weapons: {
+      0: {
+        bullet: {
+          buildingDamageMultiplier: 5
+        }
+      }
+      1: {
+        bullet: {
+          buildingDamageMultiplier: 5
+        }
+      }
+      2: {
+        bullet: {
+          buildingDamageMultiplier: 5
+        }
+      }
+      3: {
+        bullet: {
+          buildingDamageMultiplier: 5
+        }
+      }
+      4: {
+        bullet: {
+          buildingDamageMultiplier: 5
+        }
+      }
+      5: {
+        bullet: {
+          buildingDamageMultiplier: 5
+        }
+      }
+    }
   }
   retusa: {
     creeperEvade: 0.8
