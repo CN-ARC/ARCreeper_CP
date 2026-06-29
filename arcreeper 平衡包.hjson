@@ -839,6 +839,11 @@ unit: {
         reload: 30
       }
     }
+    description:
+      '''
+      向敌人发射螺旋状扭曲子弹。
+      [gold]dps为150
+      '''
   }
   crawler: {
     weapons: {
@@ -913,6 +918,11 @@ unit: {
       }
     }
     creeperEvade: 0.85
+    description:
+      '''
+      向附近的敌人发射火焰束，并修复己方建筑。 搭载一台单点防御炮塔，能够防御来袭的子弹。
+      [gold]dps 1100
+      '''
   }
   atrax: {
     weapons: {
@@ -1070,6 +1080,11 @@ unit: {
       }
     }
     creeperEvade: 0.85
+    description:
+      '''
+      向敌人发射追踪集束导弹，并修复己方单位。
+      [gold]dps为1k
+      '''
   }
   sei: {
     weapons: {
@@ -1283,14 +1298,29 @@ unit: {
   risso: {
     targetHighestCreeper: "true"
     creeperEvade: 0.8
+    description:
+      '''
+      向附近的敌人发射一连串的导弹与子弹。
+      [gold]dps 200
+      '''
   }
   minke: {
     targetHighestCreeper: "true"
     creeperEvade: 0.85
+    description:
+      '''
+      向附近的地面敌人发射抛射炮，和向空军敌人发射分裂炮。
+      [gold]dps 600
+      '''
   }
   bryde: {
     targetHighestCreeper: "true"
     creeperEvade: 0.85
+    description:
+      '''
+      向敌人远距离发射抛射炮和导弹。
+      [gold]dps为2.2k
+      '''
   }
   quell: {
     weapons: {
@@ -1370,6 +1400,7 @@ unit: {
       '''
       向敌人发射远程追踪导弹。能够压制敌方修复建筑。
       [gold]额外提供一个较弱的孢子瓦解场
+      dps为500-3.5k
       '''
   }
   cleroi: {
@@ -1514,6 +1545,11 @@ unit: {
   }
   retusa: {
     creeperEvade: 0.8
+    description:
+      '''
+      向附近的敌人发射追踪鱼雷，并修复己方单位。
+      [gold]dps 1.4k
+      '''
   }
   quad: {
     mineTier: 5
@@ -1567,13 +1603,16 @@ unit: {
     weapons: {
       0: {
         bullet: {
-          splashDamageRadius: 24
-          splashDamage: 20
           pierceCap: 3
           pierce: "true"
         }
       }
     }
+    description:
+      '''
+      向敌人发射螺旋状闪电球。
+      [gold]dps 约1k
+      '''
   }
   locus: {
     weapons: {
