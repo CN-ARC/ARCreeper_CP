@@ -1832,7 +1832,7 @@ block: {
     requirements: [
       {
         item: lead
-        amount: 10000
+        amount: 5000
       }
       {
         item: titanium
@@ -1844,19 +1844,19 @@ block: {
       }
       {
         item: silicon
-        amount: 6000
+        amount: 5000
       }
       {
         item: plastanium
-        amount: 2000
+        amount: 3500
       }
       {
         item: phase-fabric
-        amount: 2000
+        amount: 1500
       }
       {
         item: surge-alloy
-        amount: 1200
+        amount: 1600
       }
     ]
     liquidCapacity: 120
@@ -2577,6 +2577,17 @@ block: {
     upgrades.6: {
       0: retusa
     }
+    requirements: {
+      0: {
+        amount: 3000
+      }
+      4: {
+        amount: 1300
+      }
+      3: {
+        amount: 2500
+      }
+    }
   }
   large-constructor: {
     requirements: {
@@ -2584,7 +2595,7 @@ block: {
         amount: 1000
       }
       3: {
-        amount: 400
+        amount: 300
       }
       2: {
         amount: 2000
@@ -2596,14 +2607,13 @@ block: {
     requirements.+: [
       {
         item: carbide
-        amount: 300
+        amount: 400
       }
     ]
     description:
       '''
       构筑 3x3 至 4x4 大小的方块
-      [gold]代表着eT4构造阶段
-      [gray]造价约为原T4级厂
+      [gold]修订造价，代表着eT4构造阶段
       '''
   }
   tank-assembler: {
@@ -2673,7 +2683,7 @@ block: {
         amount: 100
       }
       1: {
-        amount: 150
+        amount: 100
       }
       2: {
         amount: 50
@@ -2723,7 +2733,7 @@ block: {
     }
     description:
       '''
-      [gold]构建eT4与T5坦
+      [gold]构建eT4与T5飞船
       造价极为便宜以方便切换兵种
       T4需求氮，T5需求镓
       '''
@@ -2791,31 +2801,45 @@ block: {
     }
   }
   basic-assembler-module: {
-    requirements: {
-      0: {
-        amount: 5000
-      }
-      1: {
-        amount: 1000
-      }
-      2: {
-        amount: 1000
-      }
-      3: {
-        amount: 1000
-      }
-    }
-    requirements.+: [
-      {
-        item: tungsten
-        amount: 4000
-      }
-    ]
     description:
       '''
       当放置在构造边界旁边时，增加输出等级。需要电力。可以用作载荷输入。
       [gold]修订造价，代表着eT5构造阶段
       '''
+    requirements: [
+      {
+        item: tungsten
+        amount: 6000
+      }
+      {
+        item: thorium
+        amount: 5000
+      }
+      {
+        item: silicon
+        amount: 6000
+      }
+      {
+        item: graphite
+        amount: 5000
+      }
+      {
+        item: oxide
+        amount: 1500
+      }
+      {
+        item: carbide
+        amount: 2500
+      }
+      {
+        item: phase-fabric
+        amount: 1000
+      }
+      {
+        item: surge-alloy
+        amount: 1000
+      }
+    ]
   }
   afflict: {
     canOverdrive: "false"
