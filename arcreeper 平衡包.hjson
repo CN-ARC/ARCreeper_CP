@@ -2001,12 +2001,13 @@ block: {
         fragOffsetMax: 0
         fragOffsetMin: 0
         damage: 80
+        creeperDamageMultiplier: 1.5
       }
     }
     description:
       '''
       向空中和地面目标发射大型穿甲子弹。
-      [gold]石墨子弹dps4k，钍子弹12k(大超无液)
+      [gold]石墨子弹dps6k，钍子弹12k(大超无液)
       '''
   }
   thorium-reactor: {
@@ -2502,10 +2503,6 @@ block: {
       [gold]不可超速，dps约为2.2w
       '''
   }
-  neoplasia-reactor: {
-    canOverdrive: "true"
-    powerProduction: 100
-  }
   titan: {
     ammoTypes: {
       thorium: {
@@ -2861,6 +2858,67 @@ block: {
       '''
       向敌人发射放电穿透子弹。
       [gold]dps约为1.7w(大超无液)
+      '''
+  }
+  arc: {
+    shootType: {
+      creeperDamageMultiplier: 0.3
+      lightningType: {
+        creeperDamageMultiplier: 0.3
+      }
+    }
+    description:
+      '''
+      向地面单位发射电弧。
+      [cyan]用于破盾，临时防御T3以下，或配合潮湿打真伤效果
+      [gold]dps70
+      '''
+  }
+  lancer: {
+    description:
+      '''
+      充能并向地面单位发射强力能量束。
+      [cyan]由于需要充能，更适合攻击T3以上单位。
+      大超后加液体并不提高射速
+      [gold]dps300(深水)
+      '''
+    shootType: {
+      pierceCap: -1
+      creeperDamageMultiplier: 0.2
+    }
+  }
+  salvo: {
+    ammoTypes: {
+      copper: {
+        creeperDamageMultiplier: 2
+      }
+      graphite: {
+        creeperDamageMultiplier: 2
+      }
+      pyratite: {
+        creeperDamageMultiplier: 2
+      }
+      silicon: {
+        creeperDamageMultiplier: 2
+      }
+      thorium: {
+        creeperDamageMultiplier: 2
+      }
+    }
+  }
+  sublimate: {
+    ammoTypes: {
+      ozone: {
+        pierceCap: -1
+      }
+      cyanogen: {
+        pierceCap: -1
+      }
+    }
+    description:
+      '''
+      向敌人持续喷射火焰。 穿透敌方装甲。
+      [gold]dps2500/15000
       '''
   }
 }
