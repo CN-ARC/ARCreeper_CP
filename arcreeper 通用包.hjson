@@ -141,6 +141,19 @@ block: {
   slag-centrifuge: {
     alwaysUnlocked: "true"
     buildVisibility: shown
+    outputLiquid: {
+      amount: 0.16666668
+    }
+    consumes: {
+      power: {
+        usage: 50
+      }
+      items: {
+        items: []
+      }
+    }
+    description: "[gold]消耗大量电力，产出镓液，可用于转换为AC"
+    details: "[gray]遗落科技"
   }
   advanced-launch-pad: {
     alwaysUnlocked: "true"
